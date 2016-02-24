@@ -7,6 +7,8 @@ public class mariaTest : MonoBehaviour {
 	void Start () {
 
         string hej = "hej";
+
+        string test = "Maria is testing ifrån Hällesåker, the outback";
 	
 	}
 	
