@@ -1,6 +1,23 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
+/*
+    **** WAOW STUDIOS **** 
+    [DISCLAIMER]
+    
+    Script is just a testScript and are to be placed within the folder TEST(DEVELOPER ONLY) until further notice
+
+    TO DO:
+    - Retrieve the manager for input and assign the corresponding input to the player.
+    - Check so that input is corresponding to input manager.
+
+    *** THIS SCRIPT IS TO BE HANDELD BY ASSIGNED RESOURCE UNTIL OTHERWISE AND NOT TO BE EDITED WITHOUT PERMISSION ***
+*/
+
+
+
+[RequireComponent(typeof(CharacterController))] // Fetches the needed components from CharacterController manager script.
 public class testMovement : MonoBehaviour
 {
     public float mSpeed;
@@ -35,7 +52,7 @@ public class testMovement : MonoBehaviour
         {
             position = new Vector3(hit.point.x, hit.point.y, hit.point.z);
         }
-    }
+    }// End LocatePosition function
 
     void MoveToPosition()
     {
@@ -62,4 +79,4 @@ public class testMovement : MonoBehaviour
         }
     }
 
-}
+}//End Class
