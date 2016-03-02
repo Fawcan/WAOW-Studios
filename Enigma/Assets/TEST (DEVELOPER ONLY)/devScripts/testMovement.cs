@@ -24,6 +24,8 @@ public class testMovement : MonoBehaviour
     public CharacterController controller;
     private Vector3 position;
 
+    [SerializeField] private GameObject currentTarget;
+
     public AnimationClip run;
     public AnimationClip idle;
 
@@ -50,7 +52,24 @@ public class testMovement : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, 1000))
         {
-            position = new Vector3(hit.point.x, hit.point.y, hit.point.z);
+            currentTarget = null;
+
+            if(hit.transform.tag == "Selectable")
+            {
+                currentTarget = hit.transform.gameObject;
+
+                if (Vector3.Distance(gameObject.transform.position, hit.transform.position) < 5.0f)
+                    Debug.Log("Attack!");
+
+                //hit.transform.GetComponent<Enemy>().Damage(5.0f);
+
+            }
+            else if (hit.transform.tag == "Door")
+            {
+                //hit.transform.GetComponent<DoorScript>().OpenDoor();
+            }
+            else
+                position = new Vector3(hit.point.x, hit.point.y, hit.point.z);
         }
     }// End LocatePosition function
 
