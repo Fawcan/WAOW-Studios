@@ -6,7 +6,6 @@ using System.Collections;
      [DISCLAIMER]
 
     This script includes the movement for the player with the controls WASD.
-    The players rotation follows the mouse
 
 This is the final movement code
 
