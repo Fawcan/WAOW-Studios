@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Door
+  - Walls
   layers:
   - Default
   - TransparentFX
@@ -17,7 +18,7 @@ TagManager:
   - Floor
   - Shootable
   - LightMask
-  - Invisible
+  - 
   - 
   - 
   - 
