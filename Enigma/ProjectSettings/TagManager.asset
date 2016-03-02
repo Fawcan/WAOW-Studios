@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Door
+<<<<<<< HEAD
+  - Walls
+=======
+  - Selectable
+>>>>>>> dc021ecf7dbdc39a1f5d8b8361680c2ce1762bd1
   layers:
   - Default
   - TransparentFX
@@ -16,7 +22,7 @@ TagManager:
   - Floor
   - Shootable
   - LightMask
-  - Invisible
+  - 
   - 
   - 
   - 

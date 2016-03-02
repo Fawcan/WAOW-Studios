@@ -1,11 +1,30 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
+/*
+    **** WAOW STUDIOS **** 
+    [DISCLAIMER]
+    
+    Script is just a testScript and are to be placed within the folder TEST(DEVELOPER ONLY) until further notice
+
+    TO DO:
+    - Retrieve the manager for input and assign the corresponding input to the player.
+    - Check so that input is corresponding to input manager.
+
+    *** THIS SCRIPT IS TO BE HANDELD BY ASSIGNED RESOURCE UNTIL OTHERWISE AND NOT TO BE EDITED WITHOUT PERMISSION ***
+*/
+
+
+
+[RequireComponent(typeof(CharacterController))] // Fetches the needed components from CharacterController manager script.
 public class testMovement : MonoBehaviour
 {
     public float mSpeed;
     public CharacterController controller;
     private Vector3 position;
+
+    [SerializeField] private GameObject currentTarget;
 
     public AnimationClip run;
     public AnimationClip idle;
@@ -33,9 +52,26 @@ public class testMovement : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, 1000))
         {
-            position = new Vector3(hit.point.x, hit.point.y, hit.point.z);
+            currentTarget = null;
+
+            if(hit.transform.tag == "Selectable")
+            {
+                currentTarget = hit.transform.gameObject;
+
+                if (Vector3.Distance(gameObject.transform.position, hit.transform.position) < 5.0f)
+                    Debug.Log("Attack!");
+
+                //hit.transform.GetComponent<Enemy>().Damage(5.0f);
+
+            }
+            else if (hit.transform.tag == "Door")
+            {
+                //hit.transform.GetComponent<DoorScript>().OpenDoor();
+            }
+            else
+                position = new Vector3(hit.point.x, hit.point.y, hit.point.z);
         }
-    }
+    }// End LocatePosition function
 
     void MoveToPosition()
     {
@@ -62,4 +98,4 @@ public class testMovement : MonoBehaviour
         }
     }
 
-}
+}//End Class
