@@ -3296,8 +3296,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 516887225}
   m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: -0.0045527313, y: 0.4920809, z: 0.0072357664}
-  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 1}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 219527053}
   m_Father: {fileID: 648261124}
@@ -3762,7 +3762,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43a34467c0c0ac3478f521a2c25fb855, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mSpeed: 5
   controller: {fileID: 648261126}
   run: {fileID: 7400002, guid: 86c591ebd74142c4d93243d9fa9544da, type: 3}
   idle: {fileID: 7400000, guid: 86c591ebd74142c4d93243d9fa9544da, type: 3}
@@ -3777,7 +3776,7 @@ CharacterController:
   m_Enabled: 1
   serializedVersion: 2
   m_Height: 1
-  m_Radius: 0.5
+  m_Radius: 0.25
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
@@ -5148,7 +5147,7 @@ Transform:
   m_GameObject: {fileID: 839201228}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.3483, y: 1.3482997, z: 1.3482997}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 648261124}
   m_RootOrder: 1
@@ -8321,22 +8320,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 93c9fb3e60489064791596a9de87878f, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1507704968 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 100000, guid: c3e9e64ea3420884ca5ed70789bdfe0c, type: 2}
-  m_PrefabInternal: {fileID: 218797770}
---- !u!65 &1507704973
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1507704968}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.10000608, y: 3, z: 2.4999995}
-  m_Center: {x: -1.1999941, y: 1.5, z: 0.00000035762787}
 --- !u!4 &1508184501 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 6929339097af8ce4bbd6c6d39728a5cc, type: 2}
