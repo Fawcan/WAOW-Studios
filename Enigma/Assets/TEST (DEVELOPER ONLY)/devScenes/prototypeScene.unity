@@ -417,7 +417,7 @@ Transform:
   m_LocalScale: {x: 10, y: 1, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 2
 --- !u!218 &49414386
 Terrain:
   m_ObjectHideFlags: 0
@@ -7648,7 +7648,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11488642, guid: c1bd09688f4492247af679b15f247af8, type: 2}
       propertyPath: mSpeed
-      value: 3
+      value: 2.2
       objectReference: {fileID: 0}
     - target: {fileID: 11448140, guid: c1bd09688f4492247af679b15f247af8, type: 2}
       propertyPath: mInteractDist
