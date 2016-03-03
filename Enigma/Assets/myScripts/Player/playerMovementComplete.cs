@@ -42,23 +42,23 @@ public class playerMovementComplete : MonoBehaviour
 
         if (Input.GetKey(KeyCode.W))
         {
-            transform.Translate(Vector3.forward * Time.deltaTime);  // Transform so the player can move
+            transform.Translate(Vector3.forward * 2 * Time.deltaTime);  // Transform so the player can move
             GetComponent<Animation>().Play(run.name);               // Running animation
         }
         if (Input.GetKey(KeyCode.A))
         {
-            transform.Translate(Vector3.left * Time.deltaTime);
+            transform.Translate(Vector3.left * 2 * Time.deltaTime);
             GetComponent<Animation>().Play(run.name);
         }
 
         if (Input.GetKey(KeyCode.S))
         {
-            transform.Translate(Vector3.back * Time.deltaTime);
+            transform.Translate(Vector3.back * 2 * Time.deltaTime);
             GetComponent<Animation>().Play(run.name);
         }
         if (Input.GetKey(KeyCode.D))
         {
-            transform.Translate(Vector3.right * Time.deltaTime);
+            transform.Translate(Vector3.right * 2 * Time.deltaTime);
             GetComponent<Animation>().Play(run.name);
         }
     } // End of void Update()
