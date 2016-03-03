@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityStandardAssets.CrossPlatformInput;
 
 /*
     Player enters an attackstate when click on enemies and destroyable objects (PIVOTALTRACKER)
