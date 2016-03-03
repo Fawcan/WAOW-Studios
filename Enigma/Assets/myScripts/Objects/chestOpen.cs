@@ -21,7 +21,7 @@ public class chestOpen : MonoBehaviour
         //Checks if player has clicked and if player is within collision, then play chest animation.
         
             
-            Ray ray = new Ray(transform.position, transform.forward);
+            Ray ray = new Ray(transform.position, transform.right);
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit, mInteractDist))
             {
@@ -31,9 +31,9 @@ public class chestOpen : MonoBehaviour
 
                     if (Input.GetMouseButton(0) && !mChestOpen)
                     {
-                        Debug.Log("klickad");
+                        //Debug.Log("klickad");
                        
-                        gameObject.GetComponent<Collider>().enabled = false;
+                        gameObject.GetComponent<BoxCollider>().enabled = false;
                         GetComponent<Animation>().Play("ChestAnim");
                         mChestOpen = true;
                     }

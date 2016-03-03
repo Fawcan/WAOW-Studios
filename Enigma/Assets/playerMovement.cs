@@ -20,7 +20,8 @@ public class playerMovement : MonoBehaviour
     Rigidbody playerRigidbody;      // Reference to the player's rigidbody.
     int floorMask;                  // A layer mask so that a ray can be cast just at gameobjects on the floor layer.
     float camRayLength = 100f;      // The length of the ray from the camera into the scene.
-    float mSpeed = 3f;
+    [SerializeField]
+    float mSpeed = 2.25f;
 
     // Run and idle animation for the player character.
     [SerializeField]

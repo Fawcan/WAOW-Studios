@@ -6,9 +6,9 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: fi_village_walls
+  m_Name: fi_village_floor_stone03_hd_ao
   m_Shader: {fileID: 45, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: _NORMALMAP
+  m_ShaderKeywords: 
   m_LightmapFlags: 5
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -19,14 +19,14 @@ Material:
         first:
           name: _MainTex
         second:
-          m_Texture: {fileID: 2800000, guid: 106aac74b940b9a47a477445da0f2bb8, type: 3}
+          m_Texture: {fileID: 2800000, guid: a9564f54d0e71ab4b8b733f610d579fb, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
           name: _BumpMap
         second:
-          m_Texture: {fileID: 2800000, guid: 52fa96a4693b5e04b8bee08ce0a7cbd3, type: 3}
+          m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -68,7 +68,7 @@ Material:
         first:
           name: _OcclusionMap
         second:
-          m_Texture: {fileID: 2800000, guid: be6ccdf1660f84347ae34ef0f075bb6d, type: 3}
+          m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -123,15 +123,11 @@ Material:
         first:
           name: _Mode
         second: 0
-      data:
-        first:
-          name: _EmissionScaleUI
-        second: 0
     m_Colors:
       data:
         first:
           name: _EmissionColor
-        second: {r: 0, g: 0, b: 0, a: 0}
+        second: {r: 0, g: 0, b: 0, a: 1}
       data:
         first:
           name: _Color
@@ -139,8 +135,4 @@ Material:
       data:
         first:
           name: _SpecColor
-        second: {r: 0.29411763, g: 0.27428108, b: 0.25302768, a: 1}
-      data:
-        first:
-          name: _EmissionColorUI
-        second: {r: 1, g: 1, b: 1, a: 1}
+        second: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
