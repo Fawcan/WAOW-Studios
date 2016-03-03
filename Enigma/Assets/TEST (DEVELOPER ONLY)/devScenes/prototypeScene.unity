@@ -6701,7 +6701,7 @@ GameObject:
   - 137: {fileID: 839201230}
   m_Layer: 0
   m_Name: skeleton
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15734,7 +15734,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 461022, guid: 97a5370926a5afe459de07335829d2d3, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 8.942091
+      value: 8.89
       objectReference: {fileID: 0}
     - target: {fileID: 461022, guid: 97a5370926a5afe459de07335829d2d3, type: 2}
       propertyPath: m_LocalPosition.y
@@ -15790,10 +15790,10 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2126041014}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 1, z: 3}
+  m_Size: {x: 2, y: 2, z: 3}
   m_Center: {x: 0.36538127, y: 0.032909513, z: -0.061851382}
 --- !u!1001 &2128605221
 Prefab:
