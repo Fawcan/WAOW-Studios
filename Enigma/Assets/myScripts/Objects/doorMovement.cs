@@ -22,10 +22,10 @@ public class doorMovement : MonoBehaviour
     private float mOpenAngle = 90f;
     
     //Variable commented out in case of later use, se desription on line 51.
-
+    /*
     [SerializeField]
     private float mCloseAngle = 0f;
-    
+    */
 
     private float mSmooth = 2f;
 
@@ -54,13 +54,13 @@ public class doorMovement : MonoBehaviour
         commented out in case of later use. The else statement
         would then be used for closing the door. Remember to
         uncomment the variable mCloseAnge as well.
-        */
+        
         else
         {
             Quaternion targetRotation2 = Quaternion.Euler(0, mCloseAngle, 0);
             transform.localRotation = Quaternion.Slerp(transform.localRotation, targetRotation2, mSmooth * Time.deltaTime);
         }
-        
+        */
 	
 	}
 }
