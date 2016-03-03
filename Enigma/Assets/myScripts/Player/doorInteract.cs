@@ -10,7 +10,7 @@ using System.Collections;
 
 */
 
-public class DoorInteractScript : MonoBehaviour {
+public class doorInteract : MonoBehaviour {
 
     [SerializeField]
     private float mInteractDist = 3f; //This variable determines the distance from wich the player can interact with the door, needs tweaking. 

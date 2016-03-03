@@ -18,7 +18,7 @@ using System.Collections;
 
 
 [RequireComponent(typeof(CharacterController))] // Fetches the needed components from CharacterController manager script.
-public class testMovement : MonoBehaviour
+public class REMOVE_testMovement : MonoBehaviour
 {
     public float mSpeed;
     public CharacterController controller;

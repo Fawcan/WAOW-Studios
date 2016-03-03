@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class testNavMovement : MonoBehaviour
+public class REMOVE_testNavMovement : MonoBehaviour
 {
 
     public Transform targetClick;

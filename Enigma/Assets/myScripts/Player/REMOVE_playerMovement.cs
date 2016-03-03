@@ -5,15 +5,14 @@ using System.Collections;
 **** WAOW STUDIOS **** 
      [DISCLAIMER]
 
-    This script includes the movement for the player with the controls WASD.
+OBSOLETE SCRIPT
 
-This is the final movement code
 
 
 *** THIS SCRIPT IS TO BE HANDELD BY ASSIGNED RESOURCE UNTIL OTHERWISE AND NOT TO BE EDITED WITHOUT PERMISSION ***
 */
 
-public class playerMovement : MonoBehaviour
+public class REMOVE_playerMovement : MonoBehaviour
 {
 
     public CharacterController controller;

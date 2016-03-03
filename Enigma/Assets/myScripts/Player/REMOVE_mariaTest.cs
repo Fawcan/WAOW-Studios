@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class mariaTest : MonoBehaviour
+public class REMOVE_mariaTest : MonoBehaviour
 {
 
 	// Use this for initialization

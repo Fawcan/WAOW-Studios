@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ChestOpen : MonoBehaviour
+public class chestOpen : MonoBehaviour
 {
 
     [SerializeField]

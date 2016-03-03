@@ -5,13 +5,13 @@ using UnitySampleAssets.CrossPlatformInput;
 **** WAOW STUDIOS **** 
      [DISCLAIMER]
 
-    This script includes the players rotation that it looks towards the mouse.
+OBSOLETE SCRIPT
 
 
 *** THIS SCRIPT IS TO BE HANDELD BY ASSIGNED RESOURCE UNTIL OTHERWISE AND NOT TO BE EDITED WITHOUT PERMISSION ***
 */
 
-public class mouseFollow : MonoBehaviour
+public class REMOVE_mouseFollow : MonoBehaviour
 {
     //public float speed = 6f;            // The speed that the player will move at.
     //Vector3 movement;                   // The vector to store the direction of the player's movement.

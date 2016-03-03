@@ -5,20 +5,21 @@ using System.Collections;
 **** WAOW STUDIOS **** 
      [DISCLAIMER]
 
-This script includes the movement for the player with the controls WASD and so the players rotation follows the camera
-You need to name the terrain Floor and put it in a Floor layer
+    This script includes the movement for the player with the controls WASD and so the players rotation follows the camera
+    You need to name the terrain Floor and put it in a Floor layer
+
+    Notes:
 
 *** THIS SCRIPT IS TO BE HANDELD BY ASSIGNED RESOURCE UNTIL OTHERWISE AND NOT TO BE EDITED WITHOUT PERMISSION ***
 */
 
 public class playerMovementComplete : MonoBehaviour
 {
-
     [SerializeField]
     CharacterController controller; // The Players Character Controller
-    Rigidbody playerRigidbody;  // Reference to the player's rigidbody.
-    int floorMask;              // A layer mask so that a ray can be cast just at gameobjects on the floor layer.
-    float camRayLength = 100f;  // The length of the ray from the camera into the scene.
+    Rigidbody playerRigidbody;      // Reference to the player's rigidbody.
+    int floorMask;                  // A layer mask so that a ray can be cast just at gameobjects on the floor layer.
+    float camRayLength = 100f;      // The length of the ray from the camera into the scene.
 
     // Run and idle animation for the player character.
     [SerializeField]
@@ -43,7 +44,7 @@ public class playerMovementComplete : MonoBehaviour
         if (Input.GetKey(KeyCode.W))
         {
             transform.Translate(Vector3.forward * 2 * Time.deltaTime);  // Transform so the player can move
-            GetComponent<Animation>().Play(run.name);               // Running animation
+            GetComponent<Animation>().Play(run.name);                   // Running animation
         }
         if (Input.GetKey(KeyCode.A))
         {
