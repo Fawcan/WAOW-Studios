@@ -17,7 +17,7 @@ public class playerMovement : MonoBehaviour
 {
 
     public CharacterController controller;
-    private Vector3 position;
+    //private Vector3 position;
 
     // Run and idle animation for the player character.
     public AnimationClip run;

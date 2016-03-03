@@ -11,14 +11,11 @@ using UnitySampleAssets.CrossPlatformInput;
 *** THIS SCRIPT IS TO BE HANDELD BY ASSIGNED RESOURCE UNTIL OTHERWISE AND NOT TO BE EDITED WITHOUT PERMISSION ***
 */
 
-// ???
-//namespace CompleteProject
-//{
 public class mouseFollow : MonoBehaviour
 {
     //public float speed = 6f;            // The speed that the player will move at.
     //Vector3 movement;                   // The vector to store the direction of the player's movement.
-    Animator anim;                      // Reference to the animator component.
+    //Animator anim;                      // Reference to the animator component.
     Rigidbody playerRigidbody;          // Reference to the player's rigidbody.
     int floorMask;                      // A layer mask so that a ray can be cast just at gameobjects on the floor layer.
     float camRayLength = 100f;          // The length of the ray from the camera into the scene.
@@ -63,4 +60,3 @@ public class mouseFollow : MonoBehaviour
     } // End of void Turning()
 
 }
-//}

@@ -5,6 +5,8 @@ using System.Collections;
 
 public class DestroyBarrel : MonoBehaviour
 {
+    GameObject Player;
+
     // Update is called once per frame
     void Update()
     {
