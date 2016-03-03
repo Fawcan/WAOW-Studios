@@ -310,13 +310,48 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 14385020, guid: ff4581f6c9649c048afcb0d4d934d680, type: 2}
+      propertyPath: m_StepOffset
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 11456094, guid: ff4581f6c9649c048afcb0d4d934d680, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11492848, guid: ff4581f6c9649c048afcb0d4d934d680, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ff4581f6c9649c048afcb0d4d934d680, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1464482360 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 182508, guid: ff4581f6c9649c048afcb0d4d934d680, type: 2}
+  m_PrefabInternal: {fileID: 1462268215}
+--- !u!143 &1464482366 stripped
+CharacterController:
+  m_PrefabParentObject: {fileID: 14385020, guid: ff4581f6c9649c048afcb0d4d934d680,
+    type: 2}
+  m_PrefabInternal: {fileID: 1462268215}
 --- !u!4 &1464482368 stripped
 Transform:
   m_PrefabParentObject: {fileID: 442548, guid: ff4581f6c9649c048afcb0d4d934d680, type: 2}
   m_PrefabInternal: {fileID: 1462268215}
+--- !u!114 &1464482369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1464482360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4eddc4ad680cd7449adaf055ac4a3773, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 1464482366}
+  run: {fileID: 7400002, guid: 86c591ebd74142c4d93243d9fa9544da, type: 3}
+  idle: {fileID: 7400000, guid: 86c591ebd74142c4d93243d9fa9544da, type: 3}
 --- !u!1 &2143853415
 GameObject:
   m_ObjectHideFlags: 0
