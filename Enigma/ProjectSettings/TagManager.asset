@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
+<<<<<<< HEAD
   tags: []
+=======
+  tags:
+  - Destroyable
+>>>>>>> d1787a021818418a2e10456b2ef4dd23ffad3dda
   layers:
   - Default
   - TransparentFX
@@ -13,8 +18,13 @@ TagManager:
   - UI
   - 
   - 
+<<<<<<< HEAD
   - 
   - 
+=======
+  - Floor
+  - Destroyable
+>>>>>>> d1787a021818418a2e10456b2ef4dd23ffad3dda
   - 
   - 
   - 
