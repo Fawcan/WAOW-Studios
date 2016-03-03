@@ -8,7 +8,11 @@ TagManager:
 =======
   tags:
   - Destroyable
+<<<<<<< HEAD
 >>>>>>> d1787a021818418a2e10456b2ef4dd23ffad3dda
+=======
+  - Door
+>>>>>>> b1c1ef1e211ae16f587352276050ba4afce6f374
   layers:
   - Default
   - TransparentFX
