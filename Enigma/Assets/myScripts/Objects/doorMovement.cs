@@ -14,16 +14,15 @@ using System.Collections;
 
 
 
-public class doorMovement : MonoBehaviour {
-
+public class doorMovement : MonoBehaviour
+{
     [SerializeField]
     private bool mOpen = false;
     [SerializeField]
     private float mOpenAngle = 90f;
     
-    /*
-    Variable commented out in case of later use, se desription on line 51.
-*/
+    //Variable commented out in case of later use, se desription on line 51.
+
     [SerializeField]
     private float mCloseAngle = 0f;
     
@@ -41,7 +40,6 @@ public class doorMovement : MonoBehaviour {
         mOpen = !mOpen;
     }
 	
-	// Update is called once per frame
 	void Update ()
     {
         //Rotates the position of the door's Y-axis.
@@ -56,7 +54,7 @@ public class doorMovement : MonoBehaviour {
         commented out in case of later use. The else statement
         would then be used for closing the door. Remember to
         uncomment the variable mCloseAnge as well.
-*/
+        */
         else
         {
             Quaternion targetRotation2 = Quaternion.Euler(0, mCloseAngle, 0);

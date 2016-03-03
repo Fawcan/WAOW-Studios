@@ -25,7 +25,7 @@ public class doorInteract : MonoBehaviour {
 	void Update ()
     {
         //Checks if player has clicked and if player is within collision, then change door state.
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetMouseButton(0))
         {
             Ray ray = new Ray(transform.position, transform.forward);
             RaycastHit hit;
@@ -34,7 +34,7 @@ public class doorInteract : MonoBehaviour {
                 if(hit.collider.CompareTag("Door"))
                 {
                     
-                    hit.collider.transform.parent.GetComponent<DoorMovementScript>().ChangeDoorState();
+                    hit.collider.transform.parent.GetComponent<doorMovement>().ChangeDoorState();
                 }
             }
         }
