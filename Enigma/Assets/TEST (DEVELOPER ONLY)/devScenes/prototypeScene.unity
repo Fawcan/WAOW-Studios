@@ -6074,7 +6074,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 493450, guid: 537d053b45ecb3340a07f6f06a5b62d8, type: 2}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 184180, guid: 537d053b45ecb3340a07f6f06a5b62d8, type: 2}
       propertyPath: m_Name
@@ -7652,6 +7652,18 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11448140, guid: c1bd09688f4492247af679b15f247af8, type: 2}
       propertyPath: mInteractDist
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 14368998, guid: c1bd09688f4492247af679b15f247af8, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5426188, guid: c1bd09688f4492247af679b15f247af8, type: 2}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
+    - target: {fileID: 13743222, guid: c1bd09688f4492247af679b15f247af8, type: 2}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
@@ -14277,7 +14289,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0ccc65feebde1d04e921f8c1bc592e5b, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0ccc65feebde1d04e921f8c1bc592e5b, type: 3}
       propertyPath: m_LocalScale.x

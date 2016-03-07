@@ -45,8 +45,8 @@ public class playerMovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.W))
         {
-            transform.Translate(Vector3.forward * mSpeed * Time.deltaTime);  // Transform so the player can move
-            GetComponent<Animation>().Play(run.name);                   // Running animation
+            transform.Translate(Vector3.forward * mSpeed * Time.deltaTime);     // Transform so the player can move
+            GetComponent<Animation>().Play(run.name);                           // Running animation
         }
         if (Input.GetKey(KeyCode.A))
         {
