@@ -6,6 +6,7 @@ public class enemyMovement : MonoBehaviour
     Rigidbody enemyRigidBody;
     public Transform destination;
     private NavMeshAgent agent;
+    Rigidbody playerRigidbody;      // Reference to the enemy's rigidbody.
     [SerializeField]
     Transform mPlayer;
     float mTurnSpeed = 100f;
@@ -16,10 +17,14 @@ public class enemyMovement : MonoBehaviour
     [SerializeField]
     AnimationClip idle;
 
-	
-	void Update()
+    void Awake()
     {
-        GetComponent<Animation>().Play(run.name);                           // Running animation
+        playerRigidbody = GetComponent<Rigidbody>();
+    }
+
+    void Update()
+    {
+        GetComponent<Animation>().Play(run.name);   // Running animation
 
 
         Vector3 targetDir = mPlayer.position - transform.position;
