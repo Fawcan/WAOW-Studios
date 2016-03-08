@@ -13,7 +13,7 @@ using System.Collections;
 *** THIS SCRIPT IS TO BE HANDELD BY ASSIGNED RESOURCE UNTIL OTHERWISE AND NOT TO BE EDITED WITHOUT PERMISSION ***
 */
 
-public class destroyBarrel : MonoBehaviour
+public class OLD_destroyBarrel : MonoBehaviour
 {
     RaycastHit hit;
 

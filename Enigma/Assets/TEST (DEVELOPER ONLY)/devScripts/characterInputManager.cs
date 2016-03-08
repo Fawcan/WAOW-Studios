@@ -1,5 +1,8 @@
-﻿using UnityEngine;
+﻿/*using UnityEngine;
 using System.Collections;
+
+// ******************* NEED TO LOOK AT THIS SCRIPT
+
 
 public class characterInputManager : MonoBehaviour {
 
@@ -13,3 +16,4 @@ public class characterInputManager : MonoBehaviour {
 	
 	}
 }
+*/

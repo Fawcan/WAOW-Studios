@@ -15,6 +15,7 @@ using System.Collections;
 
 public class playerMovement : MonoBehaviour
 {
+
     [SerializeField]
     CharacterController controller; // The Players Character Controller
     Rigidbody playerRigidbody;      // Reference to the player's rigidbody.
