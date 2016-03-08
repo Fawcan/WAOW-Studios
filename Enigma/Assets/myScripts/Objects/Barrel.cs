@@ -3,24 +3,32 @@ using System.Collections;
 
 public class Barrel : MonoBehaviour
 {
-    public Sprite dmgSprite;
-    public int hp = 1;
+    [SerializeField]
+    Sprite dmgSprite;   //Alternate sprite to display after barrel has been attacked by player.
+    [SerializeField]
+    int mHp = 1;        //hit points for the barrel.
 
-    private SpriteRenderer spriteRenderer;
+    private SpriteRenderer spriteRenderer;  //Store a component reference to the attached SpriteRenderer.
 
-	// Use this for initialization
-	void Awake ()
+
+    void Awake ()
     {
+        //Get a component reference to the SpriteRenderer.
         spriteRenderer = GetComponent<SpriteRenderer>();
 	
 	}
-	
+
+    //DamageBarrel is called when the player attacks a barrel.
     public void DamageBarrel (int loss)
     {
+        //Set spriteRenderer to the damaged barrel sprite.
         spriteRenderer.sprite = dmgSprite;
-        hp -= loss;
-        if (hp <=0)
+        //Subtract loss from hit point total.
+        mHp -= loss;
+        //If hit points are less than or equal to zero:
+        if (mHp <=0)
         {
+            //Disable the gameObject.
             gameObject.SetActive(false);
         }
     }
