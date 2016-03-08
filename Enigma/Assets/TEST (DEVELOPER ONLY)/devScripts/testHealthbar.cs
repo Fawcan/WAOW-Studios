@@ -32,9 +32,12 @@ public class testHealthbar : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update ()
-    { 
-
-
+    {
+        if(mTestCurrentHP <= 0)
+        {
+            Application.LoadLevel(1);
+            //SceneManager.LoadScene(1);    <--- Note no self: Needs fixing from here.
+        }
     }
 
     public void decreaseHealth()
