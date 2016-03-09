@@ -7,26 +7,24 @@ using System.Collections;
     
     ***SCRIPT IS UNDER DEVELOPMENT DO NOT OPEN OR WRITE CODE UNTIL OTHERWISE***
     - Add descritption and disclaimer for this script [X]
-    - Script contains defined input systems and what the actions provide. []
-    - Script is checked and uses at least one 'Debug.Log' statement []
-    - Input in script is correspondent to its update function. []
+    - Script contains defined input systems and what the actions provide. [X]
+    - Script is checked and uses at least one 'Debug.Log' statement [X]
+    - Input in script is correspondent to its update function. [X]
 
-    characterInputManager controls the given input and returns value to players movement represented.
+    CharacterInputManager controls the given input and returns value to players movement represented.
     This script is independent and not to be inherited unless needed.
 */
-//[RequireComponent(typeof(baseUnit))]
-//To be put in Player.cs player : baseUnit
-//player : characaterInputManager
+
 public class CharacterInputManager : MonoBehaviour
 {
-    //CharacterController mController; - REMOVE WHEN DONE!
+    
     Player mPlayer;
     private float mInteractRange;
     Rigidbody playerRigidbody;      // Reference to the player's rigidbody.
     int floorMask;                  // A layer mask so that a ray can be cast just at gameobjects on the floor layer.
     float camRayLength = 100f;      // The length of the ray from the camera into the scene.
 
-    //BaseObject m_baseObject;
+
 
     void Awake()
     {
@@ -44,7 +42,7 @@ public class CharacterInputManager : MonoBehaviour
         HandleWASD();
         HandleMouse();
 
-        //GetComponent<BaseObject>().DoStuff(); - IN order to assign something without.
+        //GetComponent<BaseObject>().DoStuff(); - IN order to assign something without. - (LEAVE BE)
         
     }
 
@@ -54,37 +52,6 @@ public class CharacterInputManager : MonoBehaviour
         if (Input.GetButton("Horizontal") || Input.GetButton("Vertical"))
         {
             mPlayer.GetInput(new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")));
-
-
-            //mPlayer.Move()
-
-
-            //Function to end here
-
-            /*      **[THIS TO BE PUT INTO BASEUNIT SCRIPT]**
-
-                        if (Input.GetKey(KeyCode.W))
-                    {
-                        transform.Translate(Vector3.forward * mSpeed * Time.deltaTime);     // Transform so the player can move
-                        GetComponent<Animation>().Play(run.name);                           // Running animation
-                    }
-                    if (Input.GetKey(KeyCode.A))
-                    {
-                        transform.Translate(Vector3.left * mSpeed * Time.deltaTime);
-                        GetComponent<Animation>().Play(run.name);
-                    }
-
-                    if (Input.GetKey(KeyCode.S))
-                    {
-                        transform.Translate(Vector3.back * mSpeed * Time.deltaTime);
-                        GetComponent<Animation>().Play(run.name);
-                    }
-                    if (Input.GetKey(KeyCode.D))
-                    {
-                        transform.Translate(Vector3.right * mSpeed * Time.deltaTime);
-                        GetComponent<Animation>().Play(run.name);
-                    }
-                    */
         }
     }//End HandleWASD()
 
@@ -118,21 +85,21 @@ public class CharacterInputManager : MonoBehaviour
         
     }//End HandleMouse()
 
-    void Interact()//preferable use tag "selectable" or "interaction". Function for interaction with objects
-    {
-        //Get click by racast
-        //return the object from the raycast
-        //Does the object have the correct tag?
-        //Run the standard "DoStuff" on the object
+    //void Interact()//preferable use tag "selectable" or "interaction". Function for interaction with objects
+    //{
+    //    Get click by racast
+    //    return the object from the raycast
+    //    Does the object have the correct tag?
+    //    Run the standard "DoStuff" on the object
 
-        //if(Input.GetMouseButton(0))
-        //{
-        //    Vector3 mRayOrigin = transform.position + new Vector3(0, 1, 0);
-        //    Ray mRay = new Ray(mRayOrigin, transform.forward);
-        //}
-        
-
-    }//End Interact()
+    //    if (Input.GetMouseButton(0))
+    //    {
+    //        Vector3 mRayOrigin = transform.position + new Vector3(0, 1, 0);
+    //        Ray mRay = new Ray(mRayOrigin, transform.forward);
+    //    }
 
 
-}
+    //}//End Interact()
+
+    
+}//End class CharacterInputManager

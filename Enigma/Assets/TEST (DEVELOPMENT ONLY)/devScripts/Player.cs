@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
+[RequireComponent(typeof(Animation))]
+
 public class Player : BaseUnit
 {
     [SerializeField]
@@ -8,13 +11,18 @@ public class Player : BaseUnit
     // Use this for initialization
     public virtual void Start()
     {
-        //base.start();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+       
+    }
 
+    public override void Die()
+    {
+        base.Die();
     }
 
 
@@ -22,6 +30,7 @@ public class Player : BaseUnit
     {
         //if (input.x > 0)
             //go up
+        
 
     }
 }

@@ -10,7 +10,7 @@ using System.Collections;
 
 */
 
-public class doorInteract : MonoBehaviour {
+public class DoorInteract : MonoBehaviour {
 
     [SerializeField]
     private float mInteractDist = 10f; //This variable determines the distance from wich the player can interact with the door, needs tweaking. 
@@ -22,12 +22,12 @@ public class doorInteract : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update ()
+	void FixedUpdate ()
     {
         
 
         //Checks if player has clicked and if player is within collision, then change door state.
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButtonDown(0))
         {
             //Debug.Log("Klickad");
 
@@ -48,7 +48,7 @@ public class doorInteract : MonoBehaviour {
                 {
                     //Debug.Log(hit.collider.gameObject.name);
                     
-                    hit.collider.gameObject.GetComponent<doorMovement>().ChangeDoorState();
+                    hit.collider.gameObject.GetComponent<DoorMovement>().ChangeDoorState();
                     //hit.collider.transform.parent.BroadcastMessage("ChangeDoorState");
                 }
             }

@@ -14,7 +14,7 @@ using System.Collections;
 
 
 
-public class doorMovement : MonoBehaviour
+public class DoorMovement : MonoBehaviour
 {
     [SerializeField]
     private bool mOpen = false;
@@ -40,7 +40,7 @@ public class doorMovement : MonoBehaviour
         mOpen = !mOpen;
     }
 	
-	void Update ()
+	void FixedUpdate ()
     {
         //Rotates the position of the door's Y-axis.
         if (mOpen)
