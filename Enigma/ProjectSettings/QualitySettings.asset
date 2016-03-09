@@ -166,7 +166,7 @@ QualitySettings:
     Android: 0
     BlackBerry: 0
     Samsung TV: 0
-    Standalone: 0
+    Standalone: 5
     WP8: 0
     Web: 5
     WebGL: 5

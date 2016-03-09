@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class testHealthbar : MonoBehaviour {
 
@@ -35,8 +36,7 @@ public class testHealthbar : MonoBehaviour {
     {
         if(mTestCurrentHP <= 0)
         {
-            Application.LoadLevel(1);
-            //SceneManager.LoadScene(1);    <--- Note no self: Needs fixing from here.
+          SceneManager.LoadScene(1);    
         }
     }
 
