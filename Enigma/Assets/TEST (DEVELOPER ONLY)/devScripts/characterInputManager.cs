@@ -14,16 +14,40 @@ using System.Collections;
     characterInputManager controls the given input and returns value to players movement represented.
     This script is independent and not to be inherited unless needed.
 */
-
+//[RequireComponent(typeof(baseUnit))]
+//To be put in Player.cs player : baseUnit
+//player : characaterInputManager
 public class characterInputManager : MonoBehaviour
 {
+    player mPlayer;
+    private float mInteractRange;
 
-
+    
+    
+    void Awake()
+    {
+        mPlayer = GameObject.FindGameObjectWithTag("Player").GetComponent<player>();
+    }
 	void Start ()
     {
 	
 	}
 	
+    void HandleWASD()//Function for Keyboard WASD input
+    {
+
+
+    }
+
+    void HandleMouse()//Function for mouse input
+    {
+
+    }
+
+    void Interact()//preferable use tag "selectable" or "interaction". Function for interaction with objects
+    {
+
+    }
 
 	void Update ()
     {
