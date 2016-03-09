@@ -16,13 +16,13 @@ public class BaseUnit : MonoBehaviour
     [SerializeField]
     protected int mHealth = 10; 
     [SerializeField]
-    float mSpeed = 2;
+    protected float mSpeed = 2;
     [SerializeField]
-    float mAttackSpeed = 1;
+    protected float mAttackSpeed = 1;
     [SerializeField]
-    float mAttackRange = 10f;
+    protected float mAttackRange = 10f;
     [SerializeField]
-    int mDamage = 3;
+    protected int mDamage = 3;
 
     Animation mAnimation;
     Rigidbody mRigidBody;
