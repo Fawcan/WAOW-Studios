@@ -4,6 +4,7 @@ using System.Collections;
     *** DISCLAIMER ***
     This script handels all base information and values for characters and are to be placed in the world as a GameObject by the name UNIT
     Script to be handeld by given resource until otherwise
+
 */
 public class baseUnit : MonoBehaviour
 {
