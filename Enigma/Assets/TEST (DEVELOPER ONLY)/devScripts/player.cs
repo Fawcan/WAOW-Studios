@@ -3,17 +3,18 @@ using System.Collections;
 
 public class player : baseUnit
 {
-
+    [SerializeField]
+    characterInputManager Input;
     // Use this for initialization
-    void Start()
+    public virtual void Start()
     {
-        //init kod
+        //base.start();
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        //
     }
 
     public void GetInput(Vector2 input)
