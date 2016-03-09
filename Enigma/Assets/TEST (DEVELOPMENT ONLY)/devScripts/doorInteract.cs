@@ -22,12 +22,12 @@ public class doorInteract : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update ()
+	void FixedUpdate ()
     {
         
 
         //Checks if player has clicked and if player is within collision, then change door state.
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButtonDown(0))
         {
             //Debug.Log("Klickad");
 

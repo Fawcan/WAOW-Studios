@@ -824,6 +824,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mChestOpen: 0
+  mInteractDist: 0.8
 --- !u!65 &406825427
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2641,6 +2642,54 @@ Transform:
   - {fileID: 972854140}
   m_Father: {fileID: 947041967}
   m_RootOrder: 0
+--- !u!1 &1603031952 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 178706, guid: e5e4495da67f6d44ca6875c3984a0c3c, type: 2}
+  m_PrefabInternal: {fileID: 1194373631}
+--- !u!114 &1603031953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1603031952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 027162f14418e1348b78a1ebd70bb4d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1603031954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1603031952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc75ecde858407847863694c38696898, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mHealth: 10
+  mSpeed: 2
+  mAttackSpeed: 1
+  mAttackRange: 10
+  mDamage: 3
+  Input: {fileID: 0}
+--- !u!114 &1603031955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1603031952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c028756935cc784f8c0fd539948c06b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mHealth: 10
+  mSpeed: 2
+  mAttackSpeed: 1
+  mAttackRange: 10
+  mDamage: 3
 --- !u!1 &1663867868
 GameObject:
   m_ObjectHideFlags: 0
