@@ -13,7 +13,7 @@ using System.Collections;
 public class doorInteract : MonoBehaviour {
 
     [SerializeField]
-    private float mInteractDist = 3f; //This variable determines the distance from wich the player can interact with the door, needs tweaking. 
+    private float mInteractDist = 10f; //This variable determines the distance from wich the player can interact with the door, needs tweaking. 
 
 	// Use this for initialization
 	void Start ()
@@ -24,17 +24,32 @@ public class doorInteract : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
+        
+
         //Checks if player has clicked and if player is within collision, then change door state.
         if (Input.GetMouseButton(0))
         {
-            Ray ray = new Ray(transform.position, transform.forward);
+            //Debug.Log("Klickad");
+
+
+            Vector3 mRayOrigin = transform.position + new Vector3(0, 1, 0);
+
+            Ray ray = new Ray(mRayOrigin, transform.forward);
+
+            //Debug.DrawRay(rayorigin, transform.forward * mInteractDist, Color.green);
+
             RaycastHit hit;
-            if(Physics.Raycast(ray, out hit, mInteractDist))
+            if (Physics.Raycast(ray, out hit, mInteractDist))
+                
             {
-                if(hit.collider.CompareTag("Door"))
+                
+
+                if (hit.collider.CompareTag("Door"))
                 {
+                    //Debug.Log(hit.collider.gameObject.name);
                     
-                    hit.collider.transform.parent.GetComponent<doorMovement>().ChangeDoorState();
+                    hit.collider.gameObject.GetComponent<doorMovement>().ChangeDoorState();
+                    //hit.collider.transform.parent.BroadcastMessage("ChangeDoorState");
                 }
             }
         }

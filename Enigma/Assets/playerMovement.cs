@@ -15,12 +15,13 @@ using System.Collections;
 
 public class playerMovement : MonoBehaviour
 {
+
     [SerializeField]
     CharacterController controller; // The Players Character Controller
     Rigidbody playerRigidbody;      // Reference to the player's rigidbody.
     int floorMask;                  // A layer mask so that a ray can be cast just at gameobjects on the floor layer.
     float camRayLength = 100f;      // The length of the ray from the camera into the scene.
-    float mSpeed = 3f;
+    float mSpeed = 2.25f;
 
     // Run and idle animation for the player character.
     [SerializeField]
@@ -44,8 +45,8 @@ public class playerMovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.W))
         {
-            transform.Translate(Vector3.forward * mSpeed * Time.deltaTime);  // Transform so the player can move
-            GetComponent<Animation>().Play(run.name);                   // Running animation
+            transform.Translate(Vector3.forward * mSpeed * Time.deltaTime);     // Transform so the player can move
+            GetComponent<Animation>().Play(run.name);                           // Running animation
         }
         if (Input.GetKey(KeyCode.A))
         {

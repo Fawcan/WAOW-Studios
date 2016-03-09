@@ -1,5 +1,8 @@
-using UnityEditor;
+/*using UnityEditor;
 using System.Collections.Generic;
+
+// ******************* NEED TO LOOK AT THIS SCRIPT
+
 
 namespace UnitySampleAssets.CrossPlatformInput.Inspector
 {
@@ -136,4 +139,4 @@ namespace UnitySampleAssets.CrossPlatformInput.Inspector
             return new List<string>(PlayerSettings.GetScriptingDefineSymbolsForGroup(group).Split(';'));
         }
     }
-}
+}*/
