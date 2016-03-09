@@ -201,10 +201,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3e2b23ea5359284290c3650a253a7d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destination: {fileID: 1326422603}
-  mPlayer: {fileID: 1326422603}
-  run: {fileID: 7400002, guid: 86c591ebd74142c4d93243d9fa9544da, type: 3}
-  idle: {fileID: 7400000, guid: 86c591ebd74142c4d93243d9fa9544da, type: 3}
 --- !u!1 &176071231
 GameObject:
   m_ObjectHideFlags: 0
@@ -1319,11 +1315,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c028756935cc784f8c0fd539948c06b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mHealth: 0
-  mSpeed: 0
-  mAttackSpeed: 0
-  mAttackRange: 0
-  mDamage: 0
 --- !u!4 &848711061
 Transform:
   m_ObjectHideFlags: 0
@@ -1805,11 +1796,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11462520, guid: e9451735b672ae14b8eee4bcec5acc29, type: 2}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 14333670, guid: e9451735b672ae14b8eee4bcec5acc29, type: 2}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 14333670, guid: e9451735b672ae14b8eee4bcec5acc29, type: 2}
+      propertyPath: m_StepOffset
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e9451735b672ae14b8eee4bcec5acc29, type: 2}
@@ -2192,7 +2187,7 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1194373631}
   m_GameObject: {fileID: 1631282728}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2a11c1b2c31e510409c7480d38b44d49, type: 3}
   m_Name: 
@@ -2252,7 +2247,7 @@ CharacterController:
   m_GameObject: {fileID: 1631282728}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Height: 1
   m_Radius: 0.25
@@ -2297,6 +2292,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mTestMaxHP: 100
   mTestCurrentHP: 0
+  mTimeCount: 60
 --- !u!114 &1631282736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2308,12 +2304,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc75ecde858407847863694c38696898, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mHealth: 0
-  mSpeed: 0
-  mAttackSpeed: 0
-  mAttackRange: 0
-  mDamage: 0
-  Input: {fileID: 1130880800}
 --- !u!1 &1675447299
 GameObject:
   m_ObjectHideFlags: 0

@@ -23,21 +23,40 @@ public class HealthBar : MonoBehaviour {
     private float mTestMaxHP = 100f;
     [SerializeField]
     private float mTestCurrentHP = 0f;
+    [SerializeField]
+    private float mTimeCount = 60f; //This serialized variable is mincapped @ 60 seconds.
+    private float mMaxTimeCount;
+
 
     // Use this for initialization
     void Start ()
     {
         mTestCurrentHP = mTestMaxHP;
         InvokeRepeating("decreaseHealth", 1f, 1f);
-	}
-	
-	// Update is called once per frame
-	void Update ()
+        mMaxTimeCount = mTimeCount;
+    }
+
+    // Update is called once per frame
+    void Update ()
     {
         if(mTestCurrentHP <= 0)
         {
-          SceneManager.LoadScene(1);    
+            StartCoroutine(StartDelay());    
         }
+    }
+
+    void FixedUpdate()
+    {
+        mTimeCount -= Time.deltaTime; //Counts down time per seconds per frame
+        if (mTimeCount <= 0f)
+        {
+            SceneManager.LoadScene(1);
+        }
+    }
+
+    IEnumerator StartDelay()
+    {
+        yield return new WaitForSeconds(1);
     }
 
     public void decreaseHealth()
