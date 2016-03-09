@@ -6,7 +6,7 @@ public class enemyMovement : MonoBehaviour
     Rigidbody enemyRigidBody;
     public Transform destination;
     private NavMeshAgent agent;
-    Rigidbody playerRigidbody;      // Reference to the enemy's rigidbody.
+    //Rigidbody playerRigidbody;      // Reference to the enemy's rigidbody.
     [SerializeField]
     Transform mPlayer;
     float mTurnSpeed = 100f;
@@ -19,7 +19,7 @@ public class enemyMovement : MonoBehaviour
 
     void Awake()
     {
-        playerRigidbody = GetComponent<Rigidbody>();
+        //playerRigidbody = GetComponent<Rigidbody>();
     }
 
     void Update()

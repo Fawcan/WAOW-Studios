@@ -7,7 +7,8 @@ public class chestOpen : MonoBehaviour
     [SerializeField]
     private bool mChestOpen = false;
     private Animation mAnimChest;
-    private float mInteractDist = 20f;
+    [SerializeField]
+    private float mInteractDist = 0.8f;
 
     void Start()
     {

@@ -1,4 +1,4 @@
-﻿/*using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 
 /*
@@ -13,17 +13,17 @@ using System.Collections;
 
     characterInputManager controls the given input and returns value to players movement represented.
     This script is independent and not to be inherited unless needed.
-*//*
+*/
 //[RequireComponent(typeof(baseUnit))]
 //To be put in Player.cs player : baseUnit
 //player : characaterInputManager
 public class characterInputManager : MonoBehaviour
 {
-    CharacterController mController;
+    //CharacterController mController; - REMOVE WHEN DONE!
     player mPlayer;
     private float mInteractRange;
-
-    BaseObject m_baseObject;
+    
+    //BaseObject m_baseObject;
 
     void Awake()
     {
@@ -37,13 +37,11 @@ public class characterInputManager : MonoBehaviour
     void Update()
     {
         HandleWASD();
+        HandleMouse();
 
-        //Get click by racast
-        //return the object from the raycast
-        //Does the object have the correct tag?
-        //Run the standard "DoStuff" on the object
+        
 
-        GetComponent<BaseObject>().DoStuff();
+        //GetComponent<BaseObject>().DoStuff();
     }
 
     void HandleWASD()//Function for Keyboard WASD input
@@ -51,8 +49,9 @@ public class characterInputManager : MonoBehaviour
 
         if(Input.GetButton("Horizontal") || Input.GetButton("Vertical"))
             mPlayer.GetInput(new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")));
+        //Function to end here
 
-
+/*      **[THIS TO BE PUT INTO BASEUNIT SCRIPT]**
 
             if (Input.GetKey(KeyCode.W))
         {
@@ -75,19 +74,29 @@ public class characterInputManager : MonoBehaviour
             transform.Translate(Vector3.right * mSpeed * Time.deltaTime);
             GetComponent<Animation>().Play(run.name);
         }
+        */
 
+    }//End HandleWASD()
 
-    }
 
     void HandleMouse()//Function for mouse input
     {
-
-    }
+        if (Input.GetMouseButton(0))
+        {
+            Vector3 mRayOrigin = transform.position + new Vector3(0, 1, 0);
+            Ray mRay = new Ray(mRayOrigin, transform.forward);
+        }
+        //Get click by racast
+        //return the object from the raycast
+        //Does the object have the correct tag?
+        //Run the standard "DoStuff" on the object
+        
+    }//End HandleMouse()
 
     void Interact()//preferable use tag "selectable" or "interaction". Function for interaction with objects
     {
 
-    }
+    }//End Interact()
 
 
-}*/
+}
