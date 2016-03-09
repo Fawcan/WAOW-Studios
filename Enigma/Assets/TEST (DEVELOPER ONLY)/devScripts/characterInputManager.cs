@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+﻿/*using UnityEngine;
 using System.Collections;
 
 /*
@@ -13,7 +13,7 @@ using System.Collections;
 
     characterInputManager controls the given input and returns value to players movement represented.
     This script is independent and not to be inherited unless needed.
-*/
+*//*
 //[RequireComponent(typeof(baseUnit))]
 //To be put in Player.cs player : baseUnit
 //player : characaterInputManager
@@ -24,7 +24,7 @@ public class characterInputManager : MonoBehaviour
     private float mInteractRange;
 
     BaseObject m_baseObject;
-    
+
     void Awake()
     {
         mPlayer = GameObject.FindGameObjectWithTag("Player").GetComponent<player>();
@@ -90,4 +90,4 @@ public class characterInputManager : MonoBehaviour
     }
 
 
-}
+}*/
