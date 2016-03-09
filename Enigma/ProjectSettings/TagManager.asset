@@ -3,14 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-<<<<<<< HEAD
   tags: []
-=======
-  tags:
-  - Door
-  - Destroyable
-  - Canvas
->>>>>>> 20d0c4ad09a93866cfefdfa9bff625dd3b6b265a
   layers:
   - Default
   - TransparentFX
@@ -20,13 +13,8 @@ TagManager:
   - UI
   - 
   - 
-<<<<<<< HEAD
   - 
   - 
-=======
-  - Floor
-  - Destroyable
->>>>>>> 20d0c4ad09a93866cfefdfa9bff625dd3b6b265a
   - 
   - 
   - 

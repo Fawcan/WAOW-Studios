@@ -6,11 +6,11 @@ public class BillBoard : MonoBehaviour {
     /*
     Script by Maria
 
-        This Scipt is used for controlling the enemy healthbars
-        to make sure that they will always face the mein camera 
+        This Script is used for controlling the enemy healthbars
+        to make sure that they will always face the Main Camera 
         and not rotate when the enemy rotates. Please add this
         script as a component on the enemy-canvas and drag the 
-        main camera to the mCamera slot.
+        Main Camera to the mCamera slot in the inspector.
 
     */
 
