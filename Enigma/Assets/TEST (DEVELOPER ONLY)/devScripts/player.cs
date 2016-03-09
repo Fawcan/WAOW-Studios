@@ -15,4 +15,11 @@ public class player : baseUnit
     {
 	
 	}
+
+    public void GetInput(Vector2 input)
+    {
+        if(input.x > 0)
+            //go up
+        
+    }
 }

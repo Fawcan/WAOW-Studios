@@ -19,10 +19,11 @@ using System.Collections;
 //player : characaterInputManager
 public class characterInputManager : MonoBehaviour
 {
+    CharacterController mController;
     player mPlayer;
     private float mInteractRange;
 
-    
+    BaseObject m_baseObject;
     
     void Awake()
     {
@@ -32,9 +33,48 @@ public class characterInputManager : MonoBehaviour
     {
 	
 	}
-	
+
+    void Update()
+    {
+        HandleWASD();
+
+        //Get click by racast
+        //return the object from the raycast
+        //Does the object have the correct tag?
+        //Run the standard "DoStuff" on the object
+
+        GetComponent<BaseObject>().DoStuff();
+    }
+
     void HandleWASD()//Function for Keyboard WASD input
     {
+
+        if(Input.GetButton("Horizontal") || Input.GetButton("Vertical"))
+            mPlayer.GetInput(new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")));
+
+
+
+            if (Input.GetKey(KeyCode.W))
+        {
+            transform.Translate(Vector3.forward * mSpeed * Time.deltaTime);     // Transform so the player can move
+            GetComponent<Animation>().Play(run.name);                           // Running animation
+        }
+        if (Input.GetKey(KeyCode.A))
+        {
+            transform.Translate(Vector3.left * mSpeed * Time.deltaTime);
+            GetComponent<Animation>().Play(run.name);
+        }
+
+        if (Input.GetKey(KeyCode.S))
+        {
+            transform.Translate(Vector3.back * mSpeed * Time.deltaTime);
+            GetComponent<Animation>().Play(run.name);
+        }
+        if (Input.GetKey(KeyCode.D))
+        {
+            transform.Translate(Vector3.right * mSpeed * Time.deltaTime);
+            GetComponent<Animation>().Play(run.name);
+        }
 
 
     }
@@ -49,8 +89,5 @@ public class characterInputManager : MonoBehaviour
 
     }
 
-	void Update ()
-    {
-	
-	}
+
 }
