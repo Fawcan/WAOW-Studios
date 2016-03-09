@@ -13,7 +13,7 @@ public class player : baseUnit
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
     public void GetInput(Vector2 input)

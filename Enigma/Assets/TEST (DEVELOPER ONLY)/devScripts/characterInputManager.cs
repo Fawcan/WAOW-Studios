@@ -49,6 +49,9 @@ public class characterInputManager : MonoBehaviour
 
         if(Input.GetButton("Horizontal") || Input.GetButton("Vertical"))
             mPlayer.GetInput(new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")));
+
+        //mPlayer.Move()
+
         //Function to end here
 
 /*      **[THIS TO BE PUT INTO BASEUNIT SCRIPT]**
