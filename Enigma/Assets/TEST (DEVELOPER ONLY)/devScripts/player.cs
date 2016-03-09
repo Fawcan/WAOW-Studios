@@ -4,7 +4,7 @@ using System.Collections;
 public class Player : BaseUnit
 {
     [SerializeField]
-    characterInputManager Input;
+    CharacterInputManager Input;
     // Use this for initialization
     public virtual void Start()
     {
@@ -14,12 +14,9 @@ public class Player : BaseUnit
     // Update is called once per frame
     void Update()
     {
-<<<<<<< HEAD
-        //
-=======
-        
->>>>>>> bf294d9d35bd90e78c3c27335c19c01a81e2ccc7
+
     }
+
 
     public void GetInput(Vector2 input)
     {

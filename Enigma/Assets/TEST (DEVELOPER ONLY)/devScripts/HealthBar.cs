@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
 
-public class testHealthbar : MonoBehaviour {
+public class HealthBar : MonoBehaviour {
 
     /*
     Script created by Maria.
@@ -46,6 +46,6 @@ public class testHealthbar : MonoBehaviour {
         float mCalcHealth = mTestCurrentHP / mTestMaxHP; //Calculation for how much the Healthbar will shrink when HP is reduced.
 
         //Calls function SetHealthBar from the 'userInterface' Script.
-        GameObject.FindGameObjectWithTag("Canvas").GetComponent<userInterface>().SetHealthBar(mCalcHealth);
+        GameObject.FindGameObjectWithTag("Canvas").GetComponent<UserInterface>().SetHealthBar(mCalcHealth);
     }
 }

@@ -17,10 +17,10 @@ using System.Collections;
 //[RequireComponent(typeof(baseUnit))]
 //To be put in Player.cs player : baseUnit
 //player : characaterInputManager
-public class characterInputManager : MonoBehaviour
+public class CharacterInputManager : MonoBehaviour
 {
     //CharacterController mController; - REMOVE WHEN DONE!
-    player mPlayer;
+    Player mPlayer;
     private float mInteractRange;
     Rigidbody playerRigidbody;      // Reference to the player's rigidbody.
     int floorMask;                  // A layer mask so that a ray can be cast just at gameobjects on the floor layer.
@@ -36,24 +36,15 @@ public class characterInputManager : MonoBehaviour
          playerRigidbody = GetComponent<Rigidbody>();
          // End of void Awake()
 
-        mPlayer = GameObject.FindGameObjectWithTag("Player").GetComponent<player>();
+        mPlayer = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
     }
-	void Start ()
-    {
 	
-	}
-
-    void Update()
-    {
-        
-
-    }
     void FixedUpdate()
     {
         HandleWASD();
         HandleMouse();
 
-        //GetComponent<BaseObject>().DoStuff();
+        //GetComponent<BaseObject>().DoStuff(); - IN order to assign something without.
         
     }
 
@@ -63,40 +54,38 @@ public class characterInputManager : MonoBehaviour
         if (Input.GetButton("Horizontal") || Input.GetButton("Vertical"))
         {
             mPlayer.GetInput(new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")));
-<<<<<<< HEAD
+
+
+            //mPlayer.Move()
+
+
+            //Function to end here
+
+            /*      **[THIS TO BE PUT INTO BASEUNIT SCRIPT]**
+
+                        if (Input.GetKey(KeyCode.W))
+                    {
+                        transform.Translate(Vector3.forward * mSpeed * Time.deltaTime);     // Transform so the player can move
+                        GetComponent<Animation>().Play(run.name);                           // Running animation
+                    }
+                    if (Input.GetKey(KeyCode.A))
+                    {
+                        transform.Translate(Vector3.left * mSpeed * Time.deltaTime);
+                        GetComponent<Animation>().Play(run.name);
+                    }
+
+                    if (Input.GetKey(KeyCode.S))
+                    {
+                        transform.Translate(Vector3.back * mSpeed * Time.deltaTime);
+                        GetComponent<Animation>().Play(run.name);
+                    }
+                    if (Input.GetKey(KeyCode.D))
+                    {
+                        transform.Translate(Vector3.right * mSpeed * Time.deltaTime);
+                        GetComponent<Animation>().Play(run.name);
+                    }
+                    */
         }
-=======
-
-        //mPlayer.Move()
-
->>>>>>> bf294d9d35bd90e78c3c27335c19c01a81e2ccc7
-        //Function to end here
-
-/*      **[THIS TO BE PUT INTO BASEUNIT SCRIPT]**
-
-            if (Input.GetKey(KeyCode.W))
-        {
-            transform.Translate(Vector3.forward * mSpeed * Time.deltaTime);     // Transform so the player can move
-            GetComponent<Animation>().Play(run.name);                           // Running animation
-        }
-        if (Input.GetKey(KeyCode.A))
-        {
-            transform.Translate(Vector3.left * mSpeed * Time.deltaTime);
-            GetComponent<Animation>().Play(run.name);
-        }
-
-        if (Input.GetKey(KeyCode.S))
-        {
-            transform.Translate(Vector3.back * mSpeed * Time.deltaTime);
-            GetComponent<Animation>().Play(run.name);
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            transform.Translate(Vector3.right * mSpeed * Time.deltaTime);
-            GetComponent<Animation>().Play(run.name);
-        }
-        */
-
     }//End HandleWASD()
 
 
@@ -136,11 +125,12 @@ public class characterInputManager : MonoBehaviour
         //Does the object have the correct tag?
         //Run the standard "DoStuff" on the object
 
-        if(Input.GetMouseButton(0))
-        {
-            Vector3 mRayOrigin = transform.position + new Vector3(0, 1, 0);
-            Ray mRay = new Ray(mRayOrigin, transform.forward);
-        }
+        //if(Input.GetMouseButton(0))
+        //{
+        //    Vector3 mRayOrigin = transform.position + new Vector3(0, 1, 0);
+        //    Ray mRay = new Ray(mRayOrigin, transform.forward);
+        //}
+        
 
     }//End Interact()
 

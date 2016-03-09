@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class userInterface : MonoBehaviour {
+public class UserInterface : MonoBehaviour
+{
 
     /*
     Script by Maria
@@ -23,17 +24,17 @@ public class userInterface : MonoBehaviour {
 	void Start ()
     {
 	
-	}
+	}//End Start()
 	
 	// Update is called once per frame
 	void Update ()
     {
 	
-	}
+	}//End Update()
 
     //This function is called by the 'testHealthBar' Script.
     public void SetHealthBar(float mHealth)
     {
         mHealthBar.transform.localScale = new Vector3(Mathf.Clamp(mHealth, 0f, 1f), mHealthBar.transform.localScale.y, mHealthBar.transform.localScale.z);
-    }
+    }//End SetHealthBar
 }
