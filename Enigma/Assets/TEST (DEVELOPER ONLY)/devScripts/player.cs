@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class player : baseUnit
+public class Player : BaseUnit
 {
 
     // Use this for initialization

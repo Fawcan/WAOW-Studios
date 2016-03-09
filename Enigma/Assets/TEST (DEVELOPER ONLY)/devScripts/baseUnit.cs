@@ -11,7 +11,7 @@ using System.Collections;
 */
 [RequireComponent (typeof(Animation))] 
 [RequireComponent(typeof(Rigidbody))]
-public class baseUnit : MonoBehaviour
+public class BaseUnit : MonoBehaviour
 {
     [SerializeField]
     protected int mHealth = 10; 
