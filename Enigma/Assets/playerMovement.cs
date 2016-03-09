@@ -74,7 +74,7 @@ public class playerMovement : MonoBehaviour
 
     void Turning()
     {
-        // Create a ray from the mouse cursor on screen in the direction of the camera.
+        // Create a ray from the mouse cursor on screen in the direction of the camera. [CHARACTERINPUT]
         Ray camRay = Camera.main.ScreenPointToRay(Input.mousePosition);
 
         // Create a RaycastHit variable to store information about what was hit by the ray.
@@ -92,7 +92,7 @@ public class playerMovement : MonoBehaviour
             // Create a quaternion (rotation) based on looking down the vector from the player to the mouse.
             Quaternion newRotatation = Quaternion.LookRotation(playerToMouse);
 
-            // Set the player's rotation to this new rotation.
+            // Set the player's rotation to this new rotation. [BASEUNIT]
             playerRigidbody.MoveRotation(newRotatation);
         }
     } // End of void Turning()

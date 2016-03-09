@@ -9,53 +9,51 @@ using System.Collections;
     Script to be handeld by given resource until otherwise
 
 */
+[RequireComponent (typeof(Animation))] 
+[RequireComponent(typeof(Rigidbody))]
 public class baseUnit : MonoBehaviour
 {
     [SerializeField]
-    int mHealth;
+    protected int mHealth = 10; 
     [SerializeField]
-    float mSpeed;
+    float mSpeed = 2;
     [SerializeField]
-    float mAttackSpeed;
+    float mAttackSpeed = 1;
     [SerializeField]
-    float mAttackRange;
+    float mAttackRange = 10f;
     [SerializeField]
-    int mDamage;
-    // [SerializeField]
-    // int mEnergy;
+    int mDamage = 3;
 
-    void Start()
+    Animation mAnimation;
+    Rigidbody mRigidBody;
+
+    void Awake()
     {
-        mHealth = 10;
-        mSpeed = 2;
-        mAttackSpeed = 1;
-        mAttackRange = 10;
-        mDamage = 3;
-
+        mAnimation = GetComponent<Animation>();
+        mRigidBody = GetComponent<Rigidbody>();
+    }
+        
+    public virtual void Move(Vector2 direction)
+    {
+        transform.Translate(new Vector3(direction.x,0, direction.y) * mSpeed * Time.deltaTime);     // Transform so the player can move
+        mAnimation.Play("Run", PlayMode.StopAll);
     }
 
-    void Update()
+    public virtual void Rotate(Quaternion rotation)
     {
-
+        mRigidBody.MoveRotation(rotation);
 
     }
+    
+    public virtual void Die()
+    {
+        //Do not write here
+    }
 
-    //virtual void Move(Vector2 direction)
-    //{
-
-
-    //}
-
-    //virtual Rotate()
-    //{
-
-
-    //}
-
-    //virtual Attack()
-    //{
-
-
-    //}
+    public virtual void Attack()
+    {
+        //Do not write here
+        mAnimation.Play("attack", PlayMode.StopAll);
+    }
 
 }
