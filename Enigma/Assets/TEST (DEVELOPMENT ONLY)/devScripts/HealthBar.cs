@@ -55,7 +55,7 @@ public class HealthBar : MonoBehaviour {
         mTimeCount -= Time.deltaTime; //Counts down time per seconds per frame
         if (mTimeCount <= 0f)
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(0);
         }
     }
 
