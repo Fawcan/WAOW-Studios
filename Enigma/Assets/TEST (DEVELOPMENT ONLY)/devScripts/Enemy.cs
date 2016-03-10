@@ -1,28 +1,21 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/*
+    Add description - Dont write in this script until otherwise given OKAY
+
+*/
+
+
 public class Enemy : BaseUnit
 {
-    [SerializeField]
-    protected int mEnemyHP = 10;
-    [SerializeField]
-    protected float mEnemySpeed = 2f;
-    [SerializeField]
-    protected float mEnemyAttackSpeed = 1f;
-    [SerializeField]
-    protected float mEnemyAttackRange = 10f;
-    [SerializeField]
-    protected int mEnemyDamage = 2;
+    private NavMeshAgent agent;
 
-    void Awake()
+    public void Move(Vector3 destination)
     {
-        GetComponent<Animation>();
-        GetComponent<Rigidbody>();
-    }
-
-    public override void Move(Vector2 direction)
-    {
-        base.Move(direction);
+        base.PlayAnimation("run");
+        agent = gameObject.GetComponent<NavMeshAgent>();
+        agent.SetDestination(destination);
     }
 
     public override void Attack()

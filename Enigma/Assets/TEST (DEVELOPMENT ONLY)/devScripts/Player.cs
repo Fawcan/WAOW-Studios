@@ -6,31 +6,32 @@ using System.Collections;
 
 public class Player : BaseUnit
 {
-    [SerializeField]
-    CharacterInputManager Input;
-    // Use this for initialization
+    
     public virtual void Start()
     {
         
     }
 
-    // Update is called once per frame
+    public void Move(Vector2 direction)
+    {
+        base.PlayAnimation("run");
+        Vector3 mMovement = new Vector3();
+        mMovement.Set(direction.x, 0f, direction.y);
+        mMovement = mMovement.normalized * mSpeed * Time.deltaTime;
+        mRigidBody.MovePosition(transform.position + mMovement);
+    }
+
+
     void Update()
     {
        
     }
 
-    public override void Die()
+    public override void Rotate(Quaternion rotation)
     {
-        base.Die();
+        base.Rotate(rotation);
     }
 
 
-    public void GetInput(Vector2 input)
-    {
-        //if (input.x > 0)
-            //go up
-        
 
-    }
 }

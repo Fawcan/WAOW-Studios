@@ -25,7 +25,7 @@ public class BaseUnit : MonoBehaviour
     protected int mDamage = 3;
 
     Animation mAnimation;
-    Rigidbody mRigidBody;
+    protected Rigidbody mRigidBody;
 
     void Awake()
     {
@@ -33,10 +33,9 @@ public class BaseUnit : MonoBehaviour
         mRigidBody = GetComponent<Rigidbody>();
     }
         
-    public virtual void Move(Vector2 direction)
+    protected void PlayAnimation(string animationName)
     {
-        transform.Translate(new Vector3(direction.x,0, direction.y) * mSpeed * Time.deltaTime);     // Transform so the player can move
-        mAnimation.Play("Run", PlayMode.StopAll);
+        mAnimation.Play(animationName, PlayMode.StopAll);
     }
 
     public virtual void Rotate(Quaternion rotation)
@@ -45,6 +44,11 @@ public class BaseUnit : MonoBehaviour
 
     }
     
+    void Update()
+    {
+       
+    }
+
     public virtual void Die()
     {
         //Do not write here
@@ -52,7 +56,6 @@ public class BaseUnit : MonoBehaviour
 
     public virtual void Attack()
     {
-        //Do not write here
         mAnimation.Play("attack", PlayMode.StopAll);
     }
 
