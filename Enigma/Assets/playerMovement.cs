@@ -9,6 +9,7 @@ using System.Collections;
     You need to name the terrain Floor and put it in a Floor layer
 
     Notes:
+    Commented out line 45. Se below for further information. / Maria
 
 *** THIS SCRIPT IS TO BE HANDELD BY ASSIGNED RESOURCE UNTIL OTHERWISE AND NOT TO BE EDITED WITHOUT PERMISSION ***
 */
@@ -41,28 +42,28 @@ public class playerMovement : MonoBehaviour
     void Update()
     {
         // Idle animation
-        GetComponent<Animation>().CrossFade(idle.name);
+        //GetComponent<Animation>().CrossFade(idle.name);   *** This code is used only for 'Legacy' animations and is NOT compatible with the Player Character Animations! - Maria ***
 
         if (Input.GetKey(KeyCode.W))
         {
             transform.Translate(Vector3.forward * mSpeed * Time.deltaTime);     // Transform so the player can move
-            GetComponent<Animation>().Play(run.name);                           // Running animation
+            //GetComponent<Animation>().Play(run.name);                           // Running animation
         }
         if (Input.GetKey(KeyCode.A))
         {
             transform.Translate(Vector3.left * mSpeed * Time.deltaTime);
-            GetComponent<Animation>().Play(run.name);
+            //GetComponent<Animation>().Play(run.name);
         }
 
         if (Input.GetKey(KeyCode.S))
         {
             transform.Translate(Vector3.back * mSpeed * Time.deltaTime);
-            GetComponent<Animation>().Play(run.name);
+            //GetComponent<Animation>().Play(run.name);
         }
         if (Input.GetKey(KeyCode.D))
         {
             transform.Translate(Vector3.right * mSpeed * Time.deltaTime);
-            GetComponent<Animation>().Play(run.name);
+            //GetComponent<Animation>().Play(run.name);
         }
     } // End of void Update()
 

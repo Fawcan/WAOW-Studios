@@ -8,6 +8,9 @@ using System.Collections;
     This script handels all base information and values for characters and are to be placed in the world as a GameObject by the name UNIT
     Script to be handeld by given resource until otherwise
 
+    Notes:
+    Commented out line 66. Se below for further information. / Maria
+
 */
 [RequireComponent (typeof(Animation))] 
 [RequireComponent(typeof(Rigidbody))]
@@ -23,7 +26,10 @@ public class BaseUnit : MonoBehaviour
     protected float mAttackRange = 10f;
     [SerializeField]
     protected int mDamage = 3;
+    [SerializeField]
+    protected AnimationClip Attacking;     // Added by Maria 10/3 22:45
 
+    private Animator mAnimator;     // Added by Maria 10/3 22:45
     Animation mAnimation;
     protected Rigidbody mRigidBody;
 
@@ -56,8 +62,9 @@ public class BaseUnit : MonoBehaviour
 
     public virtual void Attack(BaseUnit target)
     {
-        
-        mAnimation.Play("attack", PlayMode.StopAll);
+        mAnimator.SetBool("Attacking", true);   // Added by Maria 10/3 22:45
+        //mAnimation.Play("attack", PlayMode.StopAll);  *** This code is used only for 'Legacy' animations and is NOT compatible with the Player Character Animations! - Maria ***
+
     }
 
 }

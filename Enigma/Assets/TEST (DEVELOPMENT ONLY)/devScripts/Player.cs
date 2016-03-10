@@ -2,7 +2,7 @@
 using System.Collections;
 
 
-[RequireComponent(typeof(Animation))]
+//[RequireComponent(typeof(Animation))]
 
 public class Player : BaseUnit
 {
@@ -14,7 +14,7 @@ public class Player : BaseUnit
 
     public void Move(Vector2 direction)
     {
-        base.PlayAnimation("run");
+        //base.PlayAnimation("run");
         Vector3 mMovement = new Vector3();
         mMovement.Set(direction.x, 0f, direction.y);
         mMovement = mMovement.normalized * mSpeed * Time.deltaTime;
@@ -28,7 +28,7 @@ public class Player : BaseUnit
     }
     public override void Attack(BaseUnit target)
     {
-        base.Attack(target);
+            base.Attack(target);
     }
 
     public override void Rotate(Quaternion rotation)
