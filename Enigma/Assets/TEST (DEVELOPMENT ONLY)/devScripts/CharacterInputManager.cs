@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
 /*
     Script by Maria and David
     [DISCLAIMER] ***
@@ -14,17 +15,24 @@ using System.Collections;
     CharacterInputManager controls the given input and returns value to players movement represented.
     This script is independent and not to be inherited unless needed.
 */
-
+[RequireComponent(typeof(Animation))]
+[RequireComponent(typeof(Rigidbody))]
 public class CharacterInputManager : MonoBehaviour
 {
-    
+    [SerializeField]
+    AnimationClip run;
+    [SerializeField]
+    AnimationClip idle;
     Player mPlayer;
+    [SerializeField]
+    private float mSpeed;
+    [SerializeField]
     private float mInteractRange;
     Rigidbody playerRigidbody;      // Reference to the player's rigidbody.
     int floorMask;                  // A layer mask so that a ray can be cast just at gameobjects on the floor layer.
     float camRayLength = 100f;      // The length of the ray from the camera into the scene.
 
-
+   
 
     void Awake()
     {
@@ -48,11 +56,34 @@ public class CharacterInputManager : MonoBehaviour
 
     void HandleWASD()//Function for Keyboard WASD input
     {
-
-        if (Input.GetButton("Horizontal") || Input.GetButton("Vertical"))
+        if (Input.GetKey(KeyCode.W))
         {
-            mPlayer.GetInput(new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")));
+            transform.Translate(Vector3.forward * mSpeed * Time.deltaTime);     // Transform so the player can move
+            GetComponent<Animation>().Play(run.name);                           // Running animation
         }
+        if (Input.GetKey(KeyCode.A))
+        {
+            transform.Translate(Vector3.left * mSpeed * Time.deltaTime);
+            GetComponent<Animation>().Play(run.name);
+        }
+
+        if (Input.GetKey(KeyCode.S))
+        {
+            transform.Translate(Vector3.back * mSpeed * Time.deltaTime);
+            GetComponent<Animation>().Play(run.name);
+        }
+        if (Input.GetKey(KeyCode.D))
+        {
+            transform.Translate(Vector3.right * mSpeed * Time.deltaTime);
+            GetComponent<Animation>().Play(run.name);
+        }
+        //if (Input.GetButtonDown("Horizontal") || Input.GetButtonDown("Vertical"))
+        //{
+        //    mPlayer.GetInput(new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")));
+        //    transform.Translate(Vector3.forward * mSpeed * Time.deltaTime);
+        //    transform.Translate(Vector3.back * mSpeed * Time.deltaTime);
+
+        //}
     }//End HandleWASD()
 
 
