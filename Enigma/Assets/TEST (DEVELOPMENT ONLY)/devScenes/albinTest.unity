@@ -286,6 +286,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3e2b23ea5359284290c3650a253a7d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destination: {fileID: 0}
 --- !u!1 &200614895
 GameObject:
   m_ObjectHideFlags: 0
@@ -1939,7 +1940,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11410748, guid: e5e4495da67f6d44ca6875c3984a0c3c, type: 2}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 14326196, guid: e5e4495da67f6d44ca6875c3984a0c3c, type: 2}
       propertyPath: m_Height
@@ -1967,19 +1968,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 412856, guid: e5e4495da67f6d44ca6875c3984a0c3c, type: 2}
       propertyPath: m_LocalScale.x
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 412856, guid: e5e4495da67f6d44ca6875c3984a0c3c, type: 2}
       propertyPath: m_LocalScale.y
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 412856, guid: e5e4495da67f6d44ca6875c3984a0c3c, type: 2}
       propertyPath: m_LocalScale.z
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11440520, guid: e5e4495da67f6d44ca6875c3984a0c3c, type: 2}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11157940, guid: e5e4495da67f6d44ca6875c3984a0c3c, type: 2}
       propertyPath: m_Enabled
@@ -2665,22 +2666,20 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1603031952}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 027162f14418e1348b78a1ebd70bb4d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  run: {fileID: 0}
-  idle: {fileID: 0}
-  mSpeed: 0
   mInteractRange: 0
+  camRayLength: 100
 --- !u!114 &1603031954
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1603031952}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cc75ecde858407847863694c38696898, type: 3}
   m_Name: 
@@ -2690,7 +2689,6 @@ MonoBehaviour:
   mAttackSpeed: 1
   mAttackRange: 10
   mDamage: 3
-  Input: {fileID: 0}
 --- !u!114 &1603031955
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3357,15 +3355,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 475982, guid: 3b6e1309dad51ee48b4f546f64b69ea7, type: 2}
       propertyPath: m_LocalScale.x
-      value: 0.5
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 475982, guid: 3b6e1309dad51ee48b4f546f64b69ea7, type: 2}
       propertyPath: m_LocalScale.y
-      value: 0.5
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 475982, guid: 3b6e1309dad51ee48b4f546f64b69ea7, type: 2}
       propertyPath: m_LocalScale.z
-      value: 0.5
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 159718, guid: 3b6e1309dad51ee48b4f546f64b69ea7, type: 2}
       propertyPath: m_NavMeshLayer
