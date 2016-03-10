@@ -26,6 +26,10 @@ public class Player : BaseUnit
     {
        
     }
+    public override void Attack(BaseUnit target)
+    {
+        base.Attack(target);
+    }
 
     public override void Rotate(Quaternion rotation)
     {

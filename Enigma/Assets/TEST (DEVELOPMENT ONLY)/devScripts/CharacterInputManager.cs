@@ -43,8 +43,9 @@ public class CharacterInputManager : MonoBehaviour
     {
         if (Input.GetButton("Horizontal") || Input.GetButton("Vertical"))
         {
-            mPlayer.Move(new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")));
+            mPlayer.Move(new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")));
         }
+        //Bug reported to pivotal tracker and description is written - check next monday
 
     }//End HandleWASD()
 
