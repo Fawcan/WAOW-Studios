@@ -179,7 +179,6 @@ GameObject:
   - 4: {fileID: 172263562}
   - 111: {fileID: 172263561}
   - 54: {fileID: 172263563}
-  - 143: {fileID: 172263560}
   - 136: {fileID: 172263558}
   - 195: {fileID: 172263559}
   - 114: {fileID: 172263565}
@@ -224,24 +223,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 5
   m_ObstacleAvoidanceType: 4
---- !u!143 &172263560
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 14385020, guid: ff4581f6c9649c048afcb0d4d934d680,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 172263557}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Height: 1
-  m_Radius: 0.25
-  m_SlopeLimit: 45
-  m_StepOffset: 10
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 1
-  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!111 &172263561
 Animation:
   m_ObjectHideFlags: 0
@@ -1915,7 +1896,7 @@ Prefab:
     - target: {fileID: 11410748, guid: e5e4495da67f6d44ca6875c3984a0c3c, type: 2}
       propertyPath: controller
       value: 
-      objectReference: {fileID: 1277586184}
+      objectReference: {fileID: 0}
     - target: {fileID: 11410748, guid: e5e4495da67f6d44ca6875c3984a0c3c, type: 2}
       propertyPath: run
       value: 
@@ -1954,7 +1935,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 14326196, guid: e5e4495da67f6d44ca6875c3984a0c3c, type: 2}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11410748, guid: e5e4495da67f6d44ca6875c3984a0c3c, type: 2}
       propertyPath: m_Enabled
@@ -1998,7 +1979,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11440520, guid: e5e4495da67f6d44ca6875c3984a0c3c, type: 2}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11157940, guid: e5e4495da67f6d44ca6875c3984a0c3c, type: 2}
       propertyPath: m_Enabled
@@ -2008,7 +1989,20 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 5422494, guid: e5e4495da67f6d44ca6875c3984a0c3c, type: 2}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
+    - target: {fileID: 13691848, guid: e5e4495da67f6d44ca6875c3984a0c3c, type: 2}
+      propertyPath: m_Direction
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 13691848, guid: e5e4495da67f6d44ca6875c3984a0c3c, type: 2}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 14326196, guid: e5e4495da67f6d44ca6875c3984a0c3c, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e5e4495da67f6d44ca6875c3984a0c3c, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1215334880
@@ -2100,11 +2094,6 @@ Light:
   m_ShadowRadius: 0
   m_ShadowAngle: 0
   m_AreaSize: {x: 1, y: 1}
---- !u!143 &1277586184 stripped
-CharacterController:
-  m_PrefabParentObject: {fileID: 14326196, guid: e5e4495da67f6d44ca6875c3984a0c3c,
-    type: 2}
-  m_PrefabInternal: {fileID: 1194373631}
 --- !u!1 &1315481256
 GameObject:
   m_ObjectHideFlags: 0
@@ -2676,18 +2665,22 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1603031952}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 027162f14418e1348b78a1ebd70bb4d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  run: {fileID: 0}
+  idle: {fileID: 0}
+  mSpeed: 0
+  mInteractRange: 0
 --- !u!114 &1603031954
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1603031952}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cc75ecde858407847863694c38696898, type: 3}
   m_Name: 
