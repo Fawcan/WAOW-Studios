@@ -54,8 +54,9 @@ public class BaseUnit : MonoBehaviour
         //Do not write here
     }
 
-    public virtual void Attack()
+    public virtual void Attack(BaseUnit target)
     {
+        
         mAnimation.Play("attack", PlayMode.StopAll);
     }
 

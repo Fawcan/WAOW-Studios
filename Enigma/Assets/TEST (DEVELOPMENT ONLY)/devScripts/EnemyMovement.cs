@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class EnemyMovement : MonoBehaviour
 {
@@ -14,6 +15,9 @@ public class EnemyMovement : MonoBehaviour
     float mDetectionRange = 10.0f;
 
     private Enemy mEnemy;
+
+   
+   
 
     void Awake()
     {
@@ -42,6 +46,8 @@ public class EnemyMovement : MonoBehaviour
             if (mCurrentDestination == mPlayer.position)
             {
                 //Attack
+                SceneManager.LoadScene(2);
+
             }
             else if(mCurrentDestination == mHome)
             {

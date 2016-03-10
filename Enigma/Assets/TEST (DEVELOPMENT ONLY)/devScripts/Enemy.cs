@@ -11,6 +11,7 @@ public class Enemy : BaseUnit
 {
     private NavMeshAgent agent;
 
+
     public void Move(Vector3 destination)
     {
         base.PlayAnimation("run");
@@ -18,9 +19,11 @@ public class Enemy : BaseUnit
         agent.SetDestination(destination);
     }
 
-    public override void Attack()
+    public override void Attack(BaseUnit target)
     {
-        base.Attack();
+        base.Attack(GetComponent<BaseUnit>());
+        
+         
 
     }
 
