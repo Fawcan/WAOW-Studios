@@ -27,8 +27,8 @@ public class HealthBar : MonoBehaviour {
     private float mTimeCount = 60f; //This serialized variable is mincapped @ 60 seconds.
     private float mMaxTimeCount;
     [SerializeField]
-    //AnimationClip die;
-    //private Animator mAnimator;
+    AnimationClip die;
+    private Animator mAnimator;
 
 
     // Use this for initialization
@@ -45,7 +45,7 @@ public class HealthBar : MonoBehaviour {
     {
         if(mTestCurrentHP <= 0)
         {
-            GetComponent<Animation>().Play(die.name);
+            mAnimator.SetBool("Die", true);
             StartCoroutine(StartDelay());    
         }
     }
@@ -61,7 +61,7 @@ public class HealthBar : MonoBehaviour {
 
     IEnumerator StartDelay()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.3f);
     }
 
     public void decreaseHealth()
