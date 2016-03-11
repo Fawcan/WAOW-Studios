@@ -14,7 +14,7 @@ using System.Collections;
 
 
 
-public class DoorMovement : MonoBehaviour
+public class fixDoorMovement : MonoBehaviour
 {
     [SerializeField]
     private bool mOpen = false;
