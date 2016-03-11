@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Destroyable
   - Enemy
+  - Door
+  - Canvas
+  - chest
+  - Floor
   layers:
   - Default
   - TransparentFX

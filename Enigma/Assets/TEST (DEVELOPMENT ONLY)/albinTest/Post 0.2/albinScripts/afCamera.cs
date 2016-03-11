@@ -13,12 +13,13 @@ using System.Collections;
 *** THIS SCRIPT IS TO BE HANDELD BY ASSIGNED RESOURCE UNTIL OTHERWISE AND NOT TO BE EDITED WITHOUT PERMISSION ***
 */
 
-public class playerCamera : MonoBehaviour
+public class afCamera : MonoBehaviour
 {
     public Transform target;            // The position that that camera will be following.
     public float smoothing = 5f;        // The speed with which the camera will be following.
 
     Vector3 offset;                     // The initial offset from the target.
+
 
     void Start()
     {

@@ -3,23 +3,32 @@ using System.Collections;
 
 public class afMovement : MonoBehaviour
 {
-    public float speed = 3.0f;
-    private Vector3 targetPos;
+    [SerializeField]
+    GameObject mPlayer;
+    Vector3 targetPosition;
+    float mSpeed = 3;
+    public CharacterController controller;
 
     void Start()
     {
-        targetPos = transform.position;
-    }
 
+        targetPosition = transform.position;
+    }
     void Update()
     {
+
         if (Input.GetMouseButtonDown(0))
         {
-            float distance = transform.position.z - Camera.main.transform.position.z;
-            targetPos = new Vector3(Input.mousePosition.x, Input.mousePosition.y, distance);
-            targetPos = Camera.main.ScreenToWorldPoint(targetPos);
-        }
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
 
-        transform.position = Vector3.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
+            if (Physics.Raycast(ray, out hit))
+            {
+                targetPosition = hit.point;
+                //mPlayer.transform.position = targetPosition;
+                controller.SimpleMove(transform.forward * mSpeed);
+
+            }
+        }
     }
 }
