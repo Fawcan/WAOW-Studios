@@ -5,25 +5,26 @@ using UnityEngine.SceneManagement;
 public class EnemyMovement : MonoBehaviour
 {
     public Transform destination;
-    private Transform mPlayer;
+    public Transform mPlayer;
     private Vector3 mHome;
     private Vector3 mCurrentDestination;
     float mTurnSpeed = 100f;
-    float mDetectionRange = 10.0f;
+    float mDetectionRange = 15.0f;
     private Enemy mEnemy;
 
     void Awake()
     {
         mEnemy = GetComponent<Enemy>();
-        mPlayer = GameObject.FindGameObjectWithTag("Player").transform;
+        //mPlayer = GameObject.FindGameObjectWithTag("Player").transform;
         mHome = transform.position;
-
+        if (mPlayer == null)
+            Debug.Log("Cant find player");
     }
 
     void Update()
     {
-
-        if (Vector3.Distance(transform.position, mPlayer.transform.position) < mDetectionRange)
+        //Debug.Log("Name of player: " + mPlayer.);
+        if (Vector3.Distance(transform.position, mPlayer.position) < mDetectionRange)
         {
             mCurrentDestination = mPlayer.position;
         }
@@ -48,13 +49,12 @@ public class EnemyMovement : MonoBehaviour
         else
         {
             //Rotate
-            Vector3 targetDir = mCurrentDestination - transform.position;
+            /*Vector3 targetDir = mCurrentDestination - transform.position;
             float step = mTurnSpeed * Time.deltaTime;
             Vector3 newDir = Vector3.RotateTowards(transform.forward, targetDir, step, 0.0F);
-            mEnemy.Rotate(Quaternion.LookRotation(newDir));
+            mEnemy.Rotate(Quaternion.LookRotation(newDir));*/
             //Move
             mEnemy.Move(mCurrentDestination);
-
         }
 
 

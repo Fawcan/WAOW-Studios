@@ -35,7 +35,7 @@ public class CharacterInputManager : MonoBehaviour
 	
     void FixedUpdate()
     {
-        HandleWASD();
+        //HandleWASD();
         HandleMouse();    
 
         //Ful lösning, använd inte!! 
@@ -59,15 +59,15 @@ public class CharacterInputManager : MonoBehaviour
         }
     }
 
-    void HandleWASD()//Function for Keyboard WASD input
-    {
-        if (Input.GetButton("Horizontal") || Input.GetButton("Vertical"))
-        {
-            mPlayer.Move(new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")));
-        }
-        //Bug reported to pivotal tracker and description is written - check next monday
+    //void HandleWASD()//Function for Keyboard WASD input
+    //{
+    //    if (Input.GetButton("Horizontal") || Input.GetButton("Vertical"))
+    //    {
+    //        mPlayer.Move(new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")));
+    //    }
+    //    //Bug reported to pivotal tracker and description is written - check next monday
 
-    }//End HandleWASD()
+    //}//End HandleWASD()
 
     void HandleMouse()//Function for mouse input
     {

@@ -27,7 +27,7 @@ public class playerCamera : MonoBehaviour
     }
 
 
-    void FixedUpdate()
+    void LateUpdate()
     {
         // Create a postion the camera is aiming for based on the offset from the target.
         Vector3 targetCamPos = target.position + offset;

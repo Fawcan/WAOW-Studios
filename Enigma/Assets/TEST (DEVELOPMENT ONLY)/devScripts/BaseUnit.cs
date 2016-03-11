@@ -29,7 +29,8 @@ public class BaseUnit : MonoBehaviour
     [SerializeField]
     protected AnimationClip Attacking;     // Added by Maria 10/3 22:45
 
-    private Animator mAnimator;     // Added by Maria 10/3 22:45
+    [SerializeField]
+    protected Animator mAnimatorPlayer;     // Added by Maria 10/3 22:45
     Animation mAnimation;
     protected Rigidbody mRigidBody;
 
@@ -39,6 +40,7 @@ public class BaseUnit : MonoBehaviour
     {
         mAnimation = GetComponent<Animation>();
         mRigidBody = GetComponent<Rigidbody>();
+        mAnimation.Stop();
     }
         
     protected void PlayAnimation(string animationName)
@@ -72,11 +74,13 @@ public class BaseUnit : MonoBehaviour
 
     public virtual void Attack(BaseUnit target)
     {
-        mAnimation.Play("attack");
+        // ("Attacking", true);//player
+        mAnimation.Play("attack");//fiende
         mAttackSpeedCounter += Time.deltaTime;
 
         if(mAttackSpeedCounter >= mAttackSpeed)
         {
+            mAnimatorPlayer.SetTrigger("Attacking");
             target.ApplyDamage(mDamage);
             mAttackSpeedCounter = 0.0f;
         }

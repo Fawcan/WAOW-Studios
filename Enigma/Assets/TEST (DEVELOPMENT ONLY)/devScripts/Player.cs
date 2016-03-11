@@ -9,7 +9,7 @@ public class Player : BaseUnit
     private float mInteractDist; // for debug purposue
     public virtual void Start()
     {
-        
+        mAnimatorPlayer = GetComponent<Animator>();
     }
 
     public void Move(Vector2 direction)
