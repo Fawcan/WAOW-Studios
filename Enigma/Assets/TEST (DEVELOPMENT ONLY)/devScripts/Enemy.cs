@@ -21,10 +21,7 @@ public class Enemy : BaseUnit
 
     public override void Attack(BaseUnit target)
     {
-        base.Attack(GetComponent<BaseUnit>());
-        
-         
-
+        base.Attack(target);
     }
 
     public override void Rotate(Quaternion rotation)
@@ -34,6 +31,7 @@ public class Enemy : BaseUnit
 
     public override void Die()
     {
+        Destroy(gameObject);
         base.Die();
     }
 

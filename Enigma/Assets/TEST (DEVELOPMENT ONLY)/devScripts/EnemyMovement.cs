@@ -5,24 +5,16 @@ using UnityEngine.SceneManagement;
 public class EnemyMovement : MonoBehaviour
 {
     public Transform destination;
-  
     private Transform mPlayer;
     private Vector3 mHome;
     private Vector3 mCurrentDestination;
-
     float mTurnSpeed = 100f;
-
     float mDetectionRange = 10.0f;
-
     private Enemy mEnemy;
-
-   
-   
 
     void Awake()
     {
         mEnemy = GetComponent<Enemy>();
-
         mPlayer = GameObject.FindGameObjectWithTag("Player").transform;
         mHome = transform.position;
 
@@ -45,9 +37,7 @@ public class EnemyMovement : MonoBehaviour
  
             if (mCurrentDestination == mPlayer.position)
             {
-                //Attack
-                SceneManager.LoadScene(2);
-
+                mEnemy.Attack(mPlayer.GetComponent<BaseUnit>());
             }
             else if(mCurrentDestination == mHome)
             {

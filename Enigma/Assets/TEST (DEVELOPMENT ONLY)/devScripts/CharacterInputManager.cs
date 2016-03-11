@@ -37,6 +37,26 @@ public class CharacterInputManager : MonoBehaviour
     {
         HandleWASD();
         HandleMouse();    
+
+        //Ful lösning, använd inte!! 
+        if(Input.GetMouseButton(0))
+        {
+            // Create a ray from the mouse cursor on screen in the direction of the camera.
+            Ray camRay = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+            // Create a RaycastHit variable to store information about what was hit by the ray.
+            RaycastHit hit;
+
+            // Perform the raycast and if it hits something on the floor layer...
+            if (Physics.Raycast(camRay, out hit, camRayLength))
+            {
+                if(hit.transform.tag == "Enemy")
+                {
+                    mPlayer.Attack(hit.transform.GetComponent<BaseUnit>());
+
+                }
+            }
+        }
     }
 
     void HandleWASD()//Function for Keyboard WASD input

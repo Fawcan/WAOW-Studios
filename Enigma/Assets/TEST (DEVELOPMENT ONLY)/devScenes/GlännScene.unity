@@ -130,7 +130,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 178706, guid: e5e4495da67f6d44ca6875c3984a0c3c, type: 2}
       propertyPath: m_TagString
-      value: Untagged
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 412856, guid: e5e4495da67f6d44ca6875c3984a0c3c, type: 2}
       propertyPath: m_LocalScale.x
@@ -568,3 +568,4 @@ MonoBehaviour:
   mAttackSpeed: 1
   mAttackRange: 10
   mDamage: 3
+  Attacking: {fileID: 0}

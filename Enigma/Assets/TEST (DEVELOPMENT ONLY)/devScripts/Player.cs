@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using UnityEngine.SceneManagement;
 
 //[RequireComponent(typeof(Animation))]
 
@@ -36,6 +36,11 @@ public class Player : BaseUnit
         base.Rotate(rotation);
     }
 
+    public override void Die()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        base.Die();
+    }
 
 
 }

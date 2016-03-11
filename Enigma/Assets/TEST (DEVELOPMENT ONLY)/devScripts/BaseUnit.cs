@@ -33,6 +33,8 @@ public class BaseUnit : MonoBehaviour
     Animation mAnimation;
     protected Rigidbody mRigidBody;
 
+    private float mAttackSpeedCounter = 0.0f;
+
     void Awake()
     {
         mAnimation = GetComponent<Animation>();
@@ -60,10 +62,31 @@ public class BaseUnit : MonoBehaviour
         //Do not write here
     }
 
+    public virtual void ApplyDamage(int damage)
+    {
+        mHealth -= damage;
+
+        if (mHealth <= 0)
+                Die();
+    }
+
     public virtual void Attack(BaseUnit target)
     {
-        mAnimator.SetBool("Attacking", true);   // Added by Maria 10/3 22:45
+        mAnimation.Play("attack");
+        mAttackSpeedCounter += Time.deltaTime;
+
+        if(mAttackSpeedCounter >= mAttackSpeed)
+        {
+            target.ApplyDamage(mDamage);
+            mAttackSpeedCounter = 0.0f;
+        }
+
+
+      
+
+        //mAnimator.SetBool("Attacking", true);   // Added by Maria 10/3 22:45
         //mAnimation.Play("attack", PlayMode.StopAll);  *** This code is used only for 'Legacy' animations and is NOT compatible with the Player Character Animations! - Maria ***
+
 
     }
 
