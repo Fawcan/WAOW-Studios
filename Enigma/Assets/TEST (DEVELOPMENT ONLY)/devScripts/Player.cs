@@ -6,7 +6,7 @@ using System.Collections;
 
 public class Player : BaseUnit
 {
-    
+    private float mInteractDist; // for debug purposue
     public virtual void Start()
     {
         
@@ -24,7 +24,11 @@ public class Player : BaseUnit
 
     void Update()
     {
-       
+        Vector3 mRayOrigin = transform.position + new Vector3(0, 1, 0);
+
+        Ray ray = new Ray(mRayOrigin, transform.forward);
+
+        Debug.DrawRay(mRayOrigin, transform.forward * mInteractDist, Color.green);
     }
     public override void Attack(BaseUnit target)
     {
