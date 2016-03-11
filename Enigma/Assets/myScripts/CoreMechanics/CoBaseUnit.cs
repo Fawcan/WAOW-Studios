@@ -41,10 +41,10 @@ public class CoBaseUnit : MonoBehaviour
 
     protected void PlayAnimation(string mAnimationName)
     {
-        switch(mAnimationName)
-        {
-            //Changes states of animation
-        }
+        //switch(mAnimationName)
+        //{
+        //    //Changes states of animation
+        //}
 
     }//End Function PlayAnimation()
 
