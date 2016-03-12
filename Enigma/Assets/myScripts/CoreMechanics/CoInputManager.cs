@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[RequireComponent(typeof(Renderer))]
 public class CoInputManager : MonoBehaviour
 {
     //Serialized variables below
@@ -10,7 +11,9 @@ public class CoInputManager : MonoBehaviour
     //Private variables below
     private Player mPlayer;
     private int mFloorMask;
-    private float mSpeed; 
+    private float mSpeed;
+    private Color mColor;
+    private Renderer mRenderer; 
     
 
     void Awake()
@@ -25,6 +28,8 @@ public class CoInputManager : MonoBehaviour
         HandleWASD();
         HandleMouse();
         OnMouseClick();
+        //OnMouseEnter();
+        //onMouseExit();
     }//End FixedUpdate()
 
     void HandleWASD()
@@ -56,6 +61,8 @@ public class CoInputManager : MonoBehaviour
             Quaternion mNewRotate = Quaternion.LookRotation(mPlayerToMouse);
             mPlayer.Rotate(mNewRotate);
 
+
+
         }
     }//End HandleMouse()
 
@@ -66,6 +73,8 @@ public class CoInputManager : MonoBehaviour
             HandleMouse();
         }
     }
+
+    
 
 
 
