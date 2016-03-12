@@ -12,7 +12,6 @@ using UnityEngine.UI;
     Sript
 */
 
-
 [RequireComponent(typeof(Animation))]
 [RequireComponent(typeof(Rigidbody))]
 

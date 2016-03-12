@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-[RequireComponent(typeof(Renderer))]
 public class CoInputManager : MonoBehaviour
 {
     //Serialized variables below
@@ -61,18 +60,25 @@ public class CoInputManager : MonoBehaviour
             Quaternion mNewRotate = Quaternion.LookRotation(mPlayerToMouse);
             mPlayer.Rotate(mNewRotate);
 
+            if(mFloorHit.transform.tag == "Enemy")
+            {
+                mPlayer.Attack(mFloorHit.transform.GetComponent<BaseUnit>());
+            }
 
-
+        
+            
         }
     }//End HandleMouse()
 
     void OnMouseClick()
     {
-        if(Input.GetMouseButton(0))
+        
+        if (Input.GetMouseButton(0))
         {
-            HandleMouse();
+            Debug.Log("Mousebutton left is clicked");
+            HandleMouse();            
         }
-    }
+    }//End OnMouseClick()
 
     
 
