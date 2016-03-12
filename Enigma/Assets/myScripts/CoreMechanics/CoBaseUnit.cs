@@ -19,49 +19,61 @@ using UnityEngine.UI;
 public class CoBaseUnit : MonoBehaviour
 {
     //Serialized protected variables below
-    [SerializeField] protected int mHealth;
-    [SerializeField] protected float mSpeed;
-    [SerializeField] protected float mAttackSpeed;
-    [SerializeField] protected float mAttackRange;
-    [SerializeField] protected int mDamage;
+    [SerializeField] protected int mHealth = 10;
+    [SerializeField] protected float mSpeed = 2f;
+    [SerializeField] protected float mAttackSpeed = 1f;
+    [SerializeField] protected float mAttackRange = 10f;
+    [SerializeField] protected int mDamage = 3;
 
     //Protected variables below
     protected Animator mAnimatorPlayer;
     protected Rigidbody mRigidBody;
+    Animation mAnimation;
+    Rigidbody mRigidbody;
 
     //Private variables below
-    private float mAttackSpeedCounter;
+    private float mAttackSpeedCounter = 0.0f;
 
     void Awake()
     {
         //Fetch Nessecary components such as animation rigs and rigidbody components
         //Initialize them in correct order and use void OnEnable() if nessecary.
         mRigidBody = GetComponent<Rigidbody>();
+        mAnimation = GetComponent<Animation>();
+        mAnimation.Stop();
     }//End void Awake
 
     protected void PlayAnimation(string mAnimationName)
     {
-        //switch(mAnimationName)
-        //{
-        //    //Changes states of animation
-        //}
+        mAnimation.Play(mAnimationName, PlayMode.StopAll);
 
     }//End Function PlayAnimation()
 
     public virtual void Rotate(Quaternion rotation)
     {
         mRigidBody.MoveRotation(rotation);
-    }
+    }//End Rotate()
 
     void Update()
     {
 
-    }
+    }//End Update()
+
+    public virtual void Die()
+    {
+        //Do not write here
+    }//End Die()
 
     public virtual void ApplyDamage(int damage)
     {
+        //Damage apllied and checks if the player or enemy reaches hp below zero
+        //return Die function
+    }//End ApplyDamage()
 
-    }
+    public virtual void Attack()
+    {
+
+    }//End Attack()
 
 
-}
+}//End CoBaseUnit : MonoBehaviour
