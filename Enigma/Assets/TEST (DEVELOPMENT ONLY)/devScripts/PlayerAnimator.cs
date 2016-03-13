@@ -16,7 +16,7 @@ public class PlayerAnimator : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-
+        // Animation parameter for blend between Walking and Idle
         mAnimator.SetFloat("VSpeed", Input.GetAxis("Vertical"));
 	
 	}
