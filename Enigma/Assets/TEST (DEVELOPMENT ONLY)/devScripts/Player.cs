@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class Player : BaseUnit
 {
     private float mInteractDist; // for debug purposue
+    public bool isGrounded;
     public virtual void Start()
     {
         mAnimatorPlayer = GetComponent<Animator>();

@@ -2005,6 +2005,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f2448c71bf1a2e4787d80a6a1424c8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mAnimator: {fileID: 0}
 --- !u!114 &11491670
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2021,6 +2022,9 @@ MonoBehaviour:
   mAttackSpeed: 1
   mAttackRange: 10
   mDamage: 3
+  Attacking: {fileID: 0}
+  mAnimatorPlayer: {fileID: 0}
+  isGrounded: 0
 --- !u!114 &11498126
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2032,6 +2036,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6a13cc0a4682474d92173b6094ed789, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mInteractDist: 10
 --- !u!136 &13622966
 CapsuleCollider:
   m_ObjectHideFlags: 1
