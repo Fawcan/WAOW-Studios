@@ -150,7 +150,7 @@ GameObject:
   - 33: {fileID: 1096864134}
   - 65: {fileID: 1096864133}
   - 23: {fileID: 1096864132}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -217,6 +217,11 @@ Transform:
 --- !u!1 &1537384420 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 105160, guid: 289815c6212334846b5805c1787f237c, type: 2}
+  m_PrefabInternal: {fileID: 2024818417}
+--- !u!95 &1537384422 stripped
+Animator:
+  m_PrefabParentObject: {fileID: 9581152, guid: 289815c6212334846b5805c1787f237c,
+    type: 2}
   m_PrefabInternal: {fileID: 2024818417}
 --- !u!114 &1537384429
 MonoBehaviour:
@@ -355,6 +360,14 @@ Prefab:
       propertyPath: m_Constraints
       value: 116
       objectReference: {fileID: 0}
+    - target: {fileID: 11486118, guid: 289815c6212334846b5805c1787f237c, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11486118, guid: 289815c6212334846b5805c1787f237c, type: 2}
+      propertyPath: mAnimator
+      value: 
+      objectReference: {fileID: 1537384422}
     m_RemovedComponents:
     - {fileID: 14311092, guid: 289815c6212334846b5805c1787f237c, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 289815c6212334846b5805c1787f237c, type: 2}
@@ -439,8 +452,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2025752830}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.03, y: 1, z: -2.95}
+  m_LocalRotation: {x: 0.24281365, y: 0, z: 0, w: 0.970073}
+  m_LocalPosition: {x: -0.03, y: 2.68, z: -2.95}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

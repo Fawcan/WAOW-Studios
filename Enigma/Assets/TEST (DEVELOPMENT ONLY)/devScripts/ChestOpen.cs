@@ -35,7 +35,7 @@ public class ChestOpen : MonoBehaviour
         {
             Ray ray = new Ray(transform.position, transform.right);
             RaycastHit hit;
-            Debug.Log("Klickad");
+            //Debug.Log("Klickad");
 
 
             if (Physics.Raycast(ray, out hit, mInteractDist))
