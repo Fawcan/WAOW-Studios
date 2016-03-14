@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[RequireComponent(typeof(Rigidbody))]
 public class CoInputManager : MonoBehaviour
 {
     //Serialized variables below
@@ -11,20 +12,22 @@ public class CoInputManager : MonoBehaviour
     private Player mPlayer;
     private int mFloorMask;
     private float mSpeed;
-    private Vector3 Move;
+    Rigidbody mRigidBody;
 
     void Awake()
     {
         mFloorMask = LayerMask.GetMask("Floor");
-        mPlayer = GetComponent<Player>();            
+        mPlayer = GetComponent<Player>();
+        mRigidBody = GetComponent<Rigidbody>();
+                    
 
     }//End Awake()
 
-    void FixedUpdate()
+    void LateUpdate()
     {
-        float mMoveH = Input.GetAxisRaw("Horizontal");
-        float mMoveV = Input.GetAxisRaw("Vertical");
-        HandleWASD(mMoveH, mMoveV);
+        //float mMoveH = Input.GetAxisRaw("Horizontal");
+        //float mMoveV = Input.GetAxisRaw("Vertical");
+        HandleWASD();
         HandleMouse();
         OnMouseClick();
         
@@ -32,21 +35,21 @@ public class CoInputManager : MonoBehaviour
         //onMouseExit();
     }//End FixedUpdate()
 
-    void HandleWASD(float h, float v)
+    void HandleWASD()
     {
 
         //Move.Set(h, 0f, v);
         //Move = Move.normalized * mSpeed * Time.deltaTime;
-        //mPlayer.GetComponent<Rigidbody>();
-        ////if (Input.GetButton("Horizontal") || Input.GetButton("Vertical"))
-        ////{
-        ////    mPlayer.Move(new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")));
+        mPlayer.GetComponent<Rigidbody>();
+        if (Input.GetButton("Horizontal") || Input.GetButton("Vertical"))
+        {
+            mPlayer.Move(new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")));
+            mPlayer.transform.Translate(Vector3.up * mSpeed * Time.deltaTime);
 
-        ////}
-        //mPlayer.transform
+        }
+        
+        
 
-
-     
     }//End HandleWASD()
 
     void HandleMouse()
