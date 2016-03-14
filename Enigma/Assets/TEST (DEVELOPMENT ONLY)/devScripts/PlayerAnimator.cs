@@ -3,14 +3,8 @@ using System.Collections;
 
 public class PlayerAnimator : MonoBehaviour
 {
-<<<<<<< HEAD
-
 
     /*
-=======
-
-   /*
->>>>>>> 9e8aed079abf3a21d64a850e6d632b4cac3144bd
     Script by Maria
 
         *** READ THIS FIRST ***
@@ -58,13 +52,6 @@ public class PlayerAnimator : MonoBehaviour
     // Triggers TAKE DAMAGE animation
     //      mAnimatorPlayer.SetTrigger("Hit");
 
-
-<<<<<<< HEAD
-=======
-
-    [SerializeField] private Animator mAnimator;
->>>>>>> 9e8aed079abf3a21d64a850e6d632b4cac3144bd
-
     [SerializeField]
     private Animator mAnimator;
 
@@ -80,13 +67,8 @@ public class PlayerAnimator : MonoBehaviour
     void FixedUpdate()
     {
         // Animation parameter for blend between Walking and Idle
-<<<<<<< HEAD
+
         mAnimator.SetFloat("VSpeed", Input.GetAxis("Vertical"));
 
     }
-=======
-        mAnimator.SetFloat("VSpeed", Input.GetAxis("Vertical"));	
-	}
-
->>>>>>> 9e8aed079abf3a21d64a850e6d632b4cac3144bd
 }
