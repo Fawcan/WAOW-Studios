@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PlayerAnimator : MonoBehaviour {
 
-    private Animator mAnimator;
+    [SerializeField] private Animator mAnimator;
 
 	// Use this for initialization
 	void Start ()
@@ -14,10 +14,11 @@ public class PlayerAnimator : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update ()
+	void FixedUpdate ()
     {
         // Animation parameter for blend between Walking and Idle
         mAnimator.SetFloat("VSpeed", Input.GetAxis("Vertical"));
+        
 	
 	}
 }
