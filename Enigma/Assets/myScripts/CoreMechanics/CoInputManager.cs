@@ -11,40 +11,42 @@ public class CoInputManager : MonoBehaviour
     private Player mPlayer;
     private int mFloorMask;
     private float mSpeed;
-    private Color mColor;
-    private Renderer mRenderer; 
-    
+    private Vector3 Move;
 
     void Awake()
     {
         mFloorMask = LayerMask.GetMask("Floor");
-        mPlayer = GetComponent<Player>();
+        mPlayer = GetComponent<Player>();            
 
     }//End Awake()
 
     void FixedUpdate()
     {
-        HandleWASD();
+        float mMoveH = Input.GetAxisRaw("Horizontal");
+        float mMoveV = Input.GetAxisRaw("Vertical");
+        HandleWASD(mMoveH, mMoveV);
         HandleMouse();
         OnMouseClick();
+        
         //OnMouseEnter();
         //onMouseExit();
     }//End FixedUpdate()
 
-    void HandleWASD()
+    void HandleWASD(float h, float v)
     {
-        if(Input.GetButton("W") || Input.GetButton("S"))
-        {
-            transform.Translate(Vector3.forward * mSpeed * Time.deltaTime);
-            transform.Translate(Vector3.back * mSpeed * Time.deltaTime);
 
-        }
+        //Move.Set(h, 0f, v);
+        //Move = Move.normalized * mSpeed * Time.deltaTime;
+        //mPlayer.GetComponent<Rigidbody>();
+        ////if (Input.GetButton("Horizontal") || Input.GetButton("Vertical"))
+        ////{
+        ////    mPlayer.Move(new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")));
 
-        if(Input.GetButton("A") || Input.GetButton("D"))
-        {
-            transform.Translate(Vector3.left * mSpeed * Time.deltaTime);
-            transform.Translate(Vector3.right * mSpeed * Time.deltaTime);
-        }
+        ////}
+        //mPlayer.transform
+
+
+     
     }//End HandleWASD()
 
     void HandleMouse()

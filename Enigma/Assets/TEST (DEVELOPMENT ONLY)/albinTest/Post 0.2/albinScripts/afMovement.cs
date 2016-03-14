@@ -25,7 +25,7 @@ public class afMovement : MonoBehaviour
             if (Physics.Raycast(ray, out hit))
             {
                 targetPosition = hit.point;
-                //mPlayer.transform.position = targetPosition;
+                mPlayer.transform.position = targetPosition;
                 controller.SimpleMove(transform.forward * mSpeed);
 
             }
