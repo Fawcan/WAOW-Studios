@@ -11,9 +11,6 @@ public class CoInputManager : MonoBehaviour
     private Player mPlayer;
     private int mFloorMask;
     private float mSpeed;
-    private Color mColor;
-    private Renderer mRenderer; 
-    
 
     void Awake()
     {
@@ -33,17 +30,9 @@ public class CoInputManager : MonoBehaviour
 
     void HandleWASD()
     {
-        if(Input.GetButton("W") || Input.GetButton("S"))
+        if(Input.GetButton("Horizontal") || Input.GetButton("Vertical"))
         {
-            transform.Translate(Vector3.forward * mSpeed * Time.deltaTime);
-            transform.Translate(Vector3.back * mSpeed * Time.deltaTime);
-
-        }
-
-        if(Input.GetButton("A") || Input.GetButton("D"))
-        {
-            transform.Translate(Vector3.left * mSpeed * Time.deltaTime);
-            transform.Translate(Vector3.right * mSpeed * Time.deltaTime);
+            mPlayer.Move();
         }
     }//End HandleWASD()
 
