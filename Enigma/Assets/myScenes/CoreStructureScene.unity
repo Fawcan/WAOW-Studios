@@ -368,6 +368,10 @@ Prefab:
       propertyPath: mAnimator
       value: 
       objectReference: {fileID: 1537384422}
+    - target: {fileID: 5487144, guid: 289815c6212334846b5805c1787f237c, type: 2}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 14311092, guid: 289815c6212334846b5805c1787f237c, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 289815c6212334846b5805c1787f237c, type: 2}
