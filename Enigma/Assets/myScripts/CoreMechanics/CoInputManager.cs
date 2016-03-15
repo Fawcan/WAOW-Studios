@@ -16,6 +16,8 @@ public class CoInputManager : MonoBehaviour
     private float mSpeed;
     Vector3 mMoveDirection = new Vector3();
     private int mPlayerInput;
+    private bool mRotating = false;
+    private float mPrevAngle = 0.0f;
   
 
     void Awake()
@@ -63,6 +65,33 @@ public class CoInputManager : MonoBehaviour
 
     public void HandleRotation()
     {
+        //float Axis5 = Input.GetAxis("CameraRotate");
+        //Debug.Log("Axis 5");
+        
+        
+        
+        //float mHor = Input.GetAxisRaw("Horizontal");
+        //float mVer = Input.GetAxisRaw("Vertical");
+
+        //if(mRotating)
+        //{
+        //    if(Mathf.Abs(mHor) < 0.99f && Mathf.Abs(mVer) < 0.99f)
+        //    {
+        //        mRotating = false;
+        //        return;
+        //    }
+        //    float mAngle = Mathf.Atan2(mVer, mHor) * Mathf.Rad2Deg;
+        //    transform.Rotate(0.0f, 0.0f, -(mAngle - mPrevAngle));
+        //    mPrevAngle = mAngle;
+        //}
+        //else
+        //{
+        //    if(Mathf.Abs(mHor) > 0.99f || Mathf.Abs(mVer) > 0.99f)
+        //    {
+        //        mPrevAngle = Mathf.Atan2(mVer, mHor) * Mathf.Rad2Deg;
+        //        mRotating = true;
+        //    }
+        //}
         //Read the axis of the controller
         //Send to mPlayer.Rotate(Quaternion):
         //mPlayer.Rotate();
