@@ -114,16 +114,14 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 449058}
-  - 111: {fileID: 11189240}
-  - 143: {fileID: 14311092}
   - 54: {fileID: 5487144}
   - 136: {fileID: 13622966}
+  - 95: {fileID: 9581152}
   - 114: {fileID: 11498126}
-  - 114: {fileID: 11418230}
   - 114: {fileID: 11471126}
   - 114: {fileID: 11491670}
-  - 95: {fileID: 9581152}
   - 114: {fileID: 11486118}
+  - 114: {fileID: 11419556}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1494,7 +1492,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 105160}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.21043968, y: -0.7465334, z: 0.4798231}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 497340}
@@ -1946,40 +1944,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!111 &11189240
-Animation:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 105160}
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 99069d4644247f44bb5dae1410484781, type: 3}
-  m_Animations:
-  - {fileID: 7400000, guid: 6dae2200b19a19c4b9f1fbb6c5804ab9, type: 3}
-  - {fileID: 7400000, guid: 85c753d166e66de4caf0aa73a6f9af67, type: 3}
-  - {fileID: 7400000, guid: 99069d4644247f44bb5dae1410484781, type: 3}
-  - {fileID: 7400002, guid: abaf61b34b276704cbe8441244ade734, type: 3}
-  - {fileID: 7400002, guid: ce491cb41a043f347b1c6eec619934bb, type: 3}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
---- !u!114 &11418230
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 105160}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a11c1b2c31e510409c7480d38b44d49, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  controller: {fileID: 14311092}
-  run: {fileID: 7400000, guid: 85c753d166e66de4caf0aa73a6f9af67, type: 3}
-  idle: {fileID: 7400000, guid: 99069d4644247f44bb5dae1410484781, type: 3}
---- !u!114 &11471126
+--- !u!114 &11419556
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -1987,12 +1952,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 105160}
   m_Enabled: 1
   m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40828c37956c2a9499cbac8a020d2ff7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mInteractRange: 1
+  mCamRayLenght: 100
+  mRigidBody: {fileID: 5487144}
+--- !u!114 &11471126
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 105160}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6163b53013f942349b2be7e5f3fe6891, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   mTestMaxHP: 100
   mTestCurrentHP: 0
-  mTimeCount: 60
+  mTimeCount: 10
   die: {fileID: 7400002, guid: 1e621bef8e132f148ac48975344d98e1, type: 3}
 --- !u!114 &11486118
 MonoBehaviour:
@@ -2005,7 +1984,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f2448c71bf1a2e4787d80a6a1424c8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mAnimator: {fileID: 0}
+  mAnimator: {fileID: 9581152}
 --- !u!114 &11491670
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2152,23 +2131,6 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.023250163, y: -0.20636421, z: 0.00078079104}
     m_Extent: {x: 1.0323384, y: 1.1148386, z: 0.30685547}
   m_DirtyAABB: 0
---- !u!143 &14311092
-CharacterController:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 105160}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Height: 1
-  m_Radius: 0.25
-  m_SlopeLimit: 45
-  m_StepOffset: 10
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 1
-  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

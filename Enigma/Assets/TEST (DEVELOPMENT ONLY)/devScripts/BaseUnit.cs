@@ -12,7 +12,6 @@ using System.Collections;
     Commented out line 66. Se below for further information. / Maria
 
 */
-[RequireComponent (typeof(Animation))] 
 [RequireComponent(typeof(Rigidbody))]
 public class BaseUnit : MonoBehaviour
 {
@@ -40,7 +39,6 @@ public class BaseUnit : MonoBehaviour
     {
         mAnimation = GetComponent<Animation>();
         mRigidBody = GetComponent<Rigidbody>();
-        mAnimation.Stop();
     }
         
     protected void PlayAnimation(string animationName)

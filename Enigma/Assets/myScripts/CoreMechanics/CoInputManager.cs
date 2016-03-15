@@ -15,6 +15,7 @@ public class CoInputManager : MonoBehaviour
     private int mFloorMask;
     private float mSpeed;
     Vector3 mMoveDirection = new Vector3();
+    private int mPlayerInput;
   
 
     void Awake()
@@ -29,31 +30,22 @@ public class CoInputManager : MonoBehaviour
     void FixedUpdate()
     {
         HandleWASD();
-        HandleMouse();
+        HandleMouseInput();
         OnMouseClick();
+        HandleRotation();
         //OnMouseEnter();
         //onMouseExit();
     }//End FixedUpdate()
 
     public void HandleWASD()
     {
-        if(Input.GetButton("Horizontal") || Input.GetButton("Vertical"))
-        {
-            mPlayer.Move(new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")));
-            mMoveDirection.Set(mMoveDirection.x, 0f, mMoveDirection.y);
-            mMoveDirection = mMoveDirection.normalized * mSpeed * Time.deltaTime;
-            mRigidBody.MovePosition(transform.position + mMoveDirection);
-           
-        }
+         mPlayer.Move(new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")));
     }
 
-   
-
-    void HandleMouse()
+    void HandleMouseInput()
     {
         Ray mCamRay = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit mFloorHit;
-
         if(Physics.Raycast(mCamRay, out mFloorHit, mCamRayLenght, mFloorMask))
         {
             Vector3 mPlayerToMouse = mFloorHit.point - transform.position;
@@ -66,19 +58,22 @@ public class CoInputManager : MonoBehaviour
             {
                 mPlayer.Attack(mFloorHit.transform.GetComponent<BaseUnit>());
             }
-
-        
-            
         }
     }//End HandleMouse()
 
+    public void HandleRotation()
+    {
+        //Read the axis of the controller
+        //Send to mPlayer.Rotate(Quaternion):
+        //mPlayer.Rotate();
+    }
+
     void OnMouseClick()
     {
-        
         if (Input.GetMouseButton(0))
         {
             Debug.Log("Mousebutton left is clicked");
-            HandleMouse();            
+            HandleMouseInput();            
         }
     }//End OnMouseClick()
 

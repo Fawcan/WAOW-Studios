@@ -280,7 +280,7 @@ AnimatorState:
   m_CycleOffsetParameterActive: 0
   m_Motion: {fileID: 20658834}
   m_Tag: 
-  m_SpeedParameter: 
+  m_SpeedParameter: VSpeed
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
 --- !u!1107 &110759026
