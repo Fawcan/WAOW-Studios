@@ -6113,7 +6113,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 796390423}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
-
 --- !u!1 &803354120
 GameObject:
   m_ObjectHideFlags: 0
@@ -6477,15 +6476,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 421318, guid: 018a9c8e4536add4483fb4d79f642400, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 15.846647
+      value: -73.14
       objectReference: {fileID: 0}
     - target: {fileID: 421318, guid: 018a9c8e4536add4483fb4d79f642400, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 5.068
       objectReference: {fileID: 0}
     - target: {fileID: 421318, guid: 018a9c8e4536add4483fb4d79f642400, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 26.943783
+      value: 19.27
       objectReference: {fileID: 0}
     - target: {fileID: 421318, guid: 018a9c8e4536add4483fb4d79f642400, type: 2}
       propertyPath: m_LocalRotation.x
@@ -6521,11 +6520,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11423728, guid: 018a9c8e4536add4483fb4d79f642400, type: 2}
       propertyPath: mSpeed
-      value: 20
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 018a9c8e4536add4483fb4d79f642400, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &877509578 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 421318, guid: 018a9c8e4536add4483fb4d79f642400, type: 2}
+  m_PrefabInternal: {fileID: 877509577}
 --- !u!1 &882883790
 GameObject:
   m_ObjectHideFlags: 0
@@ -11338,11 +11341,11 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1420196892}
-  m_LocalRotation: {x: 0.35777965, y: 0.124709494, z: -0.048278973, w: 0.924181}
-  m_LocalPosition: {x: -5.07, y: 17.34, z: -12.92}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.28263634, y: 0.11287314, z: -0.033511493, w: 0.95197344}
+  m_LocalPosition: {x: -1.6893485, y: 4.7712455, z: -5.2733836}
+  m_LocalScale: {x: 0.93334293, y: 0.9333421, z: 0.93334216}
   m_Children: []
-  m_Father: {fileID: 813953019}
+  m_Father: {fileID: 877509578}
   m_RootOrder: 1
 --- !u!1001 &1421280795
 Prefab:
@@ -16706,7 +16709,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!135 &1972098768
 SphereCollider:
   m_ObjectHideFlags: 0
