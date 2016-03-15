@@ -10,6 +10,7 @@ TagManager:
   - Canvas
   - chest
   - Floor
+  - Obstacle
   layers:
   - Default
   - TransparentFX
