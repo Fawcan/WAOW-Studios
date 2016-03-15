@@ -1927,7 +1927,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 1
-  m_Constraints: 112
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!95 &9581152
 Animator:
@@ -1971,7 +1971,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 105160}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2a11c1b2c31e510409c7480d38b44d49, type: 3}
   m_Name: 
@@ -2022,7 +2022,7 @@ MonoBehaviour:
   mAttackSpeed: 1
   mAttackRange: 10
   mDamage: 3
-  Attacking: {fileID: 0}
+  Attacking: {fileID: 7400002, guid: a87b85a37c7dc57449120b6637c8e0a7, type: 3}
   mAnimatorPlayer: {fileID: 0}
   isGrounded: 0
 --- !u!114 &11498126
@@ -2160,7 +2160,7 @@ CharacterController:
   m_GameObject: {fileID: 105160}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Height: 1
   m_Radius: 0.25

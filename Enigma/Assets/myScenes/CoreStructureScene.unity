@@ -152,7 +152,7 @@ GameObject:
   - 23: {fileID: 1096864132}
   m_Layer: 8
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -223,6 +223,11 @@ Animator:
   m_PrefabParentObject: {fileID: 9581152, guid: 289815c6212334846b5805c1787f237c,
     type: 2}
   m_PrefabInternal: {fileID: 2024818417}
+--- !u!54 &1537384428 stripped
+Rigidbody:
+  m_PrefabParentObject: {fileID: 5487144, guid: 289815c6212334846b5805c1787f237c,
+    type: 2}
+  m_PrefabInternal: {fileID: 2024818417}
 --- !u!114 &1537384429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -236,6 +241,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mInteractRange: 1
   mCamRayLenght: 100
+  mRigidBody: {fileID: 1537384428}
 --- !u!1 &2002964549
 GameObject:
   m_ObjectHideFlags: 0
@@ -371,6 +377,14 @@ Prefab:
     - target: {fileID: 5487144, guid: 289815c6212334846b5805c1787f237c, type: 2}
       propertyPath: m_IsKinematic
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9581152, guid: 289815c6212334846b5805c1787f237c, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11189240, guid: 289815c6212334846b5805c1787f237c, type: 2}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 14311092, guid: 289815c6212334846b5805c1787f237c, type: 2}
