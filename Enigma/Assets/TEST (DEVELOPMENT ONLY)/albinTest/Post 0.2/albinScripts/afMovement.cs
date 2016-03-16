@@ -59,14 +59,39 @@ public class afMovement : MonoBehaviour
         }
 
 
-        if (Input.GetMouseButton(0))
-        {
-            mSpeed = 4;
-            Debug.Log("Speed");
-        }
+        //if (Input.GetMouseButton(0))
+        //{
+        //    mSpeed = 4;
+        //    Debug.Log("Speed");
+        //}
 
 
     } // End of void Update()
+
+    public void ModeSelect()
+    {
+        StartCoroutine("Speed");
+        if (Input.GetMouseButton(0))
+        {
+            Debug.Log("Idk");
+
+
+        }
+
+    }
+
+    IEnumerator Speed()
+    {
+        Debug.Log("Idk");
+        if(Input.GetMouseButton(0))
+            {
+            yield return new WaitForSeconds(2);
+            mSpeed ++;
+            Debug.Log("Sanic");
+            }
+
+    }
+
 
     void FixedUpdate()
     {
