@@ -14,7 +14,7 @@ public class afMovement : MonoBehaviour
     int floorMask;                  // A layer mask so that a ray can be cast just at gameobjects on the floor layer.
     float camRayLength = 100f;      // The length of the ray from the camera into the scene.
     [SerializeField]
-    float mSpeed = 2.25f;
+    float mSpeed = 2f;
 
     // Run and idle animation for the player character.
     [SerializeField]
@@ -58,6 +58,15 @@ public class afMovement : MonoBehaviour
             //GetComponent<Animation>().Play(run.name);
         }
 
+        if (Input.GetMouseButton(0))
+        {
+            Debug.Log("POWEEEEEER");
+            mSpeed = 4;
+        }
+        else
+        {
+            mSpeed = 2;
+        }
 
         //if (Input.GetMouseButton(0))
         //{
