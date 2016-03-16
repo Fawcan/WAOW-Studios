@@ -32,8 +32,11 @@ public class PlayerAnimator : MonoBehaviour
     //      mAnimatorPlayer = GetComponent<Animator>();
 
 
-    // Animation parameter for blend between WALKING and IDLE
+    // Animation parameter for blend between IDLE, WALKING and BACKWARDS STRAFE.
     //      mAnimator.SetFloat("VSpeed", Input.GetAxis("Vertical"));
+
+    //Animation parameter for LEFT and RIGHT STRAFE.
+    //      mAnimator.SetFloat("HSpeed", Input.GetAxis("Horizontal"));
 
     // Triggers ATTACK animation
     //      mAnimatorPlayer.SetTrigger("Attacking");
