@@ -1,9 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/*
+This script works as of 16/3-16
+// Albin
+*/
+
 public class DamageObjectScript : MonoBehaviour
 {
-
     RaycastHit hit;
 
     void Update()
@@ -14,7 +18,7 @@ public class DamageObjectScript : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit))
             {
-                if (Vector3.Distance(transform.position, hit.transform.position) < 4.0f)  // Checks distance between player and target
+                if (Vector3.Distance(transform.position, hit.transform.position) < 1.0f)  // Checks distance between player and target
                 {
 
                     if (hit.collider.tag == "Destroyable") // Can only destroy objects with the tag "Destroyable"
