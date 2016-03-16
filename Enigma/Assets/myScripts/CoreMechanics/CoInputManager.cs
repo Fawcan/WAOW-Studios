@@ -14,10 +14,12 @@ public class CoInputManager : MonoBehaviour
     private Player mPlayer;
     private int mFloorMask;
     private float mSpeed;
-    Vector3 mMoveDirection = new Vector3();
-    private int mPlayerInput;
-    private bool mRotating = false;
-    private float mPrevAngle = 0.0f;
+    //Vector3 mMoveDirection = new Vector3();
+    //private int mPlayerInput;
+    //private bool mRotating = false;
+    //private float mPrevAngle = 0.0f;
+
+    public float mRotationSpeed = 100f;
   
 
     void Awake()
@@ -31,6 +33,8 @@ public class CoInputManager : MonoBehaviour
 
     void FixedUpdate()
     {
+        
+        //Debug.Log(Input.GetAxisRaw("CameraRotateX"));
         HandleWASD();
         HandleMouseInput();
         OnMouseClick();
@@ -46,30 +50,36 @@ public class CoInputManager : MonoBehaviour
 
     void HandleMouseInput()
     {
-        Ray mCamRay = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit mFloorHit;
-        if(Physics.Raycast(mCamRay, out mFloorHit, mCamRayLenght, mFloorMask))
-        {
-            Vector3 mPlayerToMouse = mFloorHit.point - transform.position;
-            mPlayerToMouse.y = 0f;
+        //Ray mCamRay = Camera.main.ScreenPointToRay(Input.mousePosition);
+        //RaycastHit mFloorHit;
+        //if(Physics.Raycast(mCamRay, out mFloorHit, mCamRayLenght, mFloorMask))
+        //{
+        //    Vector3 mPlayerToMouse = mFloorHit.point - transform.position;
+        //    mPlayerToMouse.y = 0f;
 
-            Quaternion mNewRotate = Quaternion.LookRotation(mPlayerToMouse);
-            mPlayer.Rotate(mNewRotate);
+        //    Quaternion mNewRotate = Quaternion.LookRotation(mPlayerToMouse);
+        //    mPlayer.Rotate(mNewRotate);
 
-            if(mFloorHit.transform.tag == "Enemy")
-            {
-                mPlayer.Attack(mFloorHit.transform.GetComponent<BaseUnit>());
-            }
-        }
+        //    if(mFloorHit.transform.tag == "Enemy")
+        //    {
+        //        mPlayer.Attack(mFloorHit.transform.GetComponent<BaseUnit>());
+        //    }
+
+            
+        //}
     }//End HandleMouse()
 
     public void HandleRotation()
     {
+        Vector2 rightAnalogue = new Vector2(Input.GetAxis("CameraRotateX"), Input.GetAxis("CameraRotateY"));
+        rightAnalogue.Normalize();
+        transform.LookAt(new Vector3(transform.position.x + rightAnalogue.x, transform.position.y, transform.position.z + rightAnalogue.y));
+        
         //float Axis5 = Input.GetAxis("CameraRotate");
         //Debug.Log("Axis 5");
-        
-        
-        
+
+
+
         //float mHor = Input.GetAxisRaw("Horizontal");
         //float mVer = Input.GetAxisRaw("Vertical");
 

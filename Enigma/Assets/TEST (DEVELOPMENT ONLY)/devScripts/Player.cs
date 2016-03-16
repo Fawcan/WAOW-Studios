@@ -16,10 +16,23 @@ public class Player : BaseUnit
     public void Move(Vector2 direction)
     {
         Vector3 mMovement = new Vector3();
+
+        
+
         mMovement.Set(direction.x, 0f, direction.y);
         mMovement = mMovement.normalized * mSpeed * Time.deltaTime;
+
+        //  Räkna ut vector från vart spelaren är till vart spelaren ska
+        Vector3 targetPos = (transform.position + mMovement) - transform.position;
+        //  Normalisera den för att få enhetsvektor ( 0 -> 1 )
+        targetPos.Normalize();
+        // Omvandla vectorn från world space till local space
+        var locVel = transform.InverseTransformDirection(targetPos);
+        Debug.Log(locVel);
+        //  Skicka in framåthastigheten
+        mAnimatorPlayer.SetFloat("VSpeed", locVel.z);
+
         mRigidBody.MovePosition(transform.position + mMovement);
-        mAnimatorPlayer.SetFloat("VSpeed", Input.GetAxis("Vertical"));
     }
 
 

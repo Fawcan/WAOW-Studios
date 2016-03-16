@@ -68,7 +68,7 @@ public class PlayerAnimator : MonoBehaviour
     {
         // Animation parameter for blend between Walking and Idle
 
-        mAnimator.SetFloat("VSpeed", Input.GetAxis("Vertical"));
+       // mAnimator.SetFloat("VSpeed", Input.GetAxis("Vertical"));
 
     }
 }
