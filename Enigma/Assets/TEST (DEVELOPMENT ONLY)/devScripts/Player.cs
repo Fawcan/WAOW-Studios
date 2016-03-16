@@ -21,7 +21,6 @@ public class Player : BaseUnit
 
         mMovement.Set(direction.x, 0f, direction.y);
         mMovement = mMovement.normalized * mSpeed * Time.deltaTime;
-
         //  Räkna ut vector från vart spelaren är till vart spelaren ska
         Vector3 targetPos = (transform.position + mMovement) - transform.position;
         //  Normalisera den för att få enhetsvektor ( 0 -> 1 )
