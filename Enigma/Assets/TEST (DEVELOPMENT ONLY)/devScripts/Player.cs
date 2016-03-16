@@ -31,6 +31,7 @@ public class Player : BaseUnit
         Debug.Log(locVel);
         //  Skicka in framåthastigheten
         mAnimatorPlayer.SetFloat("VSpeed", locVel.z);
+        mAnimatorPlayer.SetFloat("HSpeed", locVel.x);
 
         mRigidBody.MovePosition(transform.position + mMovement);
     }
