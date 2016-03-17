@@ -11,6 +11,7 @@ public class Player : BaseUnit
     public virtual void Start()
     {
         mAnimatorPlayer = GetComponent<Animator>();
+        mAnimatorPlayer.SetBool("Die", false);
     }
 
     public void Move(Vector2 direction)
