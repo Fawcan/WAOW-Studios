@@ -14,7 +14,7 @@ public class Enemy : BaseUnit
 
     public void Move(Vector3 destination)
     {
-        base.PlayAnimation("run");
+        //base.PlayAnimation("run");
         agent = gameObject.GetComponent<NavMeshAgent>();
         agent.SetDestination(destination);
     }
