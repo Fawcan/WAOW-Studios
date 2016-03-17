@@ -88,17 +88,10 @@ QualitySettings:
     name: Good
     pixelLightCount: 2
     shadows: 2
-<<<<<<< HEAD
     shadowResolution: 1
     shadowProjection: 1
     shadowCascades: 2
     shadowDistance: 40
-=======
-    shadowResolution: 3
-    shadowProjection: 1
-    shadowCascades: 4
-    shadowDistance: 100
->>>>>>> 1a5c821edd4f0c89d2b50737163ac4f5692e9c87
     shadowNearPlaneOffset: 2
     shadowCascade2Split: 0.33333334
     shadowCascade4Split: {x: 0.06666667, y: 0.2, z: 0.46666667}
@@ -145,7 +138,6 @@ QualitySettings:
     excludedTargetPlatforms: []
   - serializedVersion: 2
     name: Fantastic
-<<<<<<< HEAD
     pixelLightCount: 4
     shadows: 2
     shadowResolution: 2
@@ -160,22 +152,6 @@ QualitySettings:
     anisotropicTextures: 2
     antiAliasing: 2
     softParticles: 1
-=======
-    pixelLightCount: 64
-    shadows: 2
-    shadowResolution: 2
-    shadowProjection: 1
-    shadowCascades: 1
-    shadowDistance: 110
-    shadowNearPlaneOffset: 2
-    shadowCascade2Split: 0.33333334
-    shadowCascade4Split: {x: 0.06666667, y: 0.19999999, z: 0.46666664}
-    blendWeights: 4
-    textureQuality: 0
-    anisotropicTextures: 2
-    antiAliasing: 4
-    softParticles: 0
->>>>>>> 1a5c821edd4f0c89d2b50737163ac4f5692e9c87
     softVegetation: 1
     realtimeReflectionProbes: 1
     billboardsFaceCameraPosition: 1
@@ -187,7 +163,6 @@ QualitySettings:
     asyncUploadBufferSize: 4
     excludedTargetPlatforms: []
   m_PerPlatformDefaultQuality:
-<<<<<<< HEAD
     Android: 2
     BlackBerry: 2
     GLES Emulation: 5
@@ -208,14 +183,3 @@ QualitySettings:
     XboxOne: 5
     iPhone: 2
     tvOS: 5
-=======
-    Android: 0
-    BlackBerry: 0
-    Samsung TV: 0
-    Standalone: 5
-    WP8: 0
-    Web: 5
-    WebGL: 5
-    Windows Store Apps: 0
-    iPhone: 0
->>>>>>> 1a5c821edd4f0c89d2b50737163ac4f5692e9c87
