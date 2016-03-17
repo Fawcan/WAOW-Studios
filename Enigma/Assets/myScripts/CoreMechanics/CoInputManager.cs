@@ -46,6 +46,7 @@ public class CoInputManager : MonoBehaviour
     public void HandleWASD()
     {
          mPlayer.Move(new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")));
+       
     }
 
     void HandleMouseInput()
@@ -71,10 +72,13 @@ public class CoInputManager : MonoBehaviour
 
     public void HandleRotation()
     {
-        Vector2 rightAnalogue = new Vector2(Input.GetAxis("CameraRotateX"), Input.GetAxis("CameraRotateY"));
+        float horMovement = Input.GetAxis("CameraRotateX");
+        float verMovement = Input.GetAxis("CameraRotateY");
+        Vector2 rightAnalogue = new Vector2(horMovement, verMovement);
         rightAnalogue.Normalize();
         transform.LookAt(new Vector3(transform.position.x + rightAnalogue.x, transform.position.y, transform.position.z + rightAnalogue.y));
-        
+
+
         //float Axis5 = Input.GetAxis("CameraRotate");
         //Debug.Log("Axis 5");
 

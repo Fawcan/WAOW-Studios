@@ -49,6 +49,7 @@ public class BaseUnit : MonoBehaviour
     public virtual void Rotate(Quaternion rotation)
     {
         mRigidBody.MoveRotation(rotation);
+        Vector3 mRotation = transform.rotation.eulerAngles;
 
     }
     
