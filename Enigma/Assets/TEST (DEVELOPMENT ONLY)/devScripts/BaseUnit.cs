@@ -32,6 +32,8 @@ public class BaseUnit : MonoBehaviour
     protected Animator mAnimatorPlayer;     // Added by Maria 10/3 22:45
     Animation mAnimation;
     protected Rigidbody mRigidBody;
+    public bool mNotDead = true;
+    public GameObject mPlayer;
 
     private float mAttackSpeedCounter = 0.0f;
 
@@ -39,6 +41,7 @@ public class BaseUnit : MonoBehaviour
     {
         mAnimation = GetComponent<Animation>();
         mRigidBody = GetComponent<Rigidbody>();
+        mPlayer = GameObject.FindGameObjectWithTag("Player");
     }
         
     protected void PlayAnimation(string animationName)
@@ -67,8 +70,11 @@ public class BaseUnit : MonoBehaviour
     {
         mHealth -= damage;
 
-        if (mHealth <= 0)
-                Die();
+        if (mHealth <= 0 && mNotDead)
+        {
+            mNotDead = false;
+            Die();
+        }
     }
 
     public virtual void Attack(BaseUnit target)

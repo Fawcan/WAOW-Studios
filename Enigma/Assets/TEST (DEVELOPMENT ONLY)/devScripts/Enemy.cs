@@ -21,10 +21,14 @@ public class Enemy : BaseUnit
 
     public override void Attack(BaseUnit target)
     {
-        base.Attack(target);
-        base.PlayAnimation("attack");
-        //base.ApplyDamage(mDamage);
-        Debug.Log(mHealth);
+
+        if (mPlayer.GetComponent<Player>().mNotDead)
+        {
+            base.Attack(target);
+            base.PlayAnimation("attack");
+            //base.ApplyDamage(mDamage);
+            //Debug.Log(mHealth);
+        }
 
     }
 
@@ -35,7 +39,7 @@ public class Enemy : BaseUnit
 
     public override void Die()
     {
-      
+        //mPlayer.mNotDead = false;
         Destroy(gameObject);
         base.Die();
 

@@ -62,6 +62,7 @@ public class HealthBar : MonoBehaviour {
     IEnumerator StartDelay()
     {
         yield return new WaitForSeconds(0.3f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void decreaseHealth()

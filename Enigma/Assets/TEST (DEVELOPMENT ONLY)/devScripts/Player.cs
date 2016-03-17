@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class Player : BaseUnit
 {
     private float mInteractDist; // for debug purposue
-    public bool isGrounded;
+    public bool isGrounded;    
     public virtual void Start()
     {
         mAnimatorPlayer = GetComponent<Animator>();
@@ -44,7 +44,8 @@ public class Player : BaseUnit
     }
     public override void Attack(BaseUnit target)
     {
-        base.Attack(target);      
+        base.Attack(target);
+        base.PlayAnimation("attack");
         //mAnimatorPlayer.SetTrigger("Attacking");
     }
 
@@ -57,11 +58,9 @@ public class Player : BaseUnit
     {
         //mAnimatorPlayer.SetBool("Die", true);
         mAnimatorPlayer.SetTrigger("Die");
-        base.Die();
-        if (Input.GetButtonDown("Enter"))
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }
+        base.Die();       
+        
+        
     }
 
 
