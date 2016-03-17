@@ -16,7 +16,7 @@ using System.Collections;
 public class BaseUnit : MonoBehaviour
 {
     [SerializeField]
-    protected int mHealth = 10; 
+    protected int mHealth = 100; 
     [SerializeField]
     protected float mSpeed = 2;
     [SerializeField]

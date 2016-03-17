@@ -9,21 +9,30 @@ public class EnemyMovement : MonoBehaviour
     private Vector3 mHome;
     private Vector3 mCurrentDestination;
     float mTurnSpeed = 100f;
-    float mDetectionRange = 15.0f;
+    [SerializeField]
+    float mDetectionRange = 4.0f;
     private Enemy mEnemy;
+
+    //protected Animator mAnimatorEnemy;
 
     void Awake()
     {
         mEnemy = GetComponent<Enemy>();
-        //mPlayer = GameObject.FindGameObjectWithTag("Player").transform;
+        mPlayer = GameObject.FindGameObjectWithTag("Player").transform;
         mHome = transform.position;
         if (mPlayer == null)
             Debug.Log("Cant find player");
     }
 
+    void LateUpdate()
+    {
+        
+    }
+
     void Update()
     {
-        //Debug.Log("Name of player: " + mPlayer.);
+        
+        Debug.Log("Name of player: " + mPlayer.position);
         if (Vector3.Distance(transform.position, mPlayer.position) < mDetectionRange)
         {
             mCurrentDestination = mPlayer.position;
@@ -55,6 +64,7 @@ public class EnemyMovement : MonoBehaviour
             mEnemy.Rotate(Quaternion.LookRotation(newDir));*/
             //Move
             mEnemy.Move(mCurrentDestination);
+            
         }
 
 
