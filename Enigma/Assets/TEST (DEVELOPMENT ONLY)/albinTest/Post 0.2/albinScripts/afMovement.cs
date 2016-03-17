@@ -58,7 +58,7 @@ public class afMovement : MonoBehaviour
             //GetComponent<Animation>().Play(run.name);
         }
 
-        if (Input.GetMouseButton(0))
+        if (Input.GetKey("e"))
         {
             Debug.Log("POWEEEEEER");
             mSpeed = 4;
@@ -80,7 +80,7 @@ public class afMovement : MonoBehaviour
     public void ModeSelect()
     {
         StartCoroutine("Speed");
-        if (Input.GetMouseButton(0))
+        if (Input.GetKeyDown("e"))
         {
             Debug.Log("Idk");
 
