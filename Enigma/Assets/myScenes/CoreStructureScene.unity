@@ -259,15 +259,20 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 9581152, guid: 289815c6212334846b5805c1787f237c, type: 2}
       propertyPath: m_WarningMessage
-      value: "\nBinding warning: Some transforms are animated by both a Humanoid animation
-        clip and a Generic animation clip. Only the Humanoid clip will be applied
-        on those transforms.\n\tTransform 'Hips'\n\tTransform 'Spine1'\n\tTransform
-        'LeftHandMiddle2'\n\tTransform 'Neck'\n\tTransform 'LeftHandThumb1'\n\tTransform
-        'LeftHandRing2'\n\tTransform 'RightHandIndex3'\n\tTransform 'LeftHandRing3'\n\tTransform
-        'RightHandMiddle1'\n\tTransform 'LeftUpLeg'\n\tand more ...\n\tFrom animation
-        clip 'run'\n\tFrom animation clip 'takehit'\n\tFrom animation clip 'StrafeBackwards'\n\tFrom
-        animation clip 'StrafeLeft'\n\tFrom animation clip 'StrafeRight'"
+      value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 9581152, guid: 289815c6212334846b5805c1787f237c, type: 2}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 9000000, guid: f49a9aa7a8bea5e4e9e22ef58089386c, type: 3}
+    - target: {fileID: 13746546, guid: 289815c6212334846b5805c1787f237c, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b6910e8c67e190c47ac5ab55a60ef50d, type: 2}
+    - target: {fileID: 13746546, guid: 289815c6212334846b5805c1787f237c, type: 2}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: f49a9aa7a8bea5e4e9e22ef58089386c, type: 3}
     m_RemovedComponents:
     - {fileID: 11486118, guid: 289815c6212334846b5805c1787f237c, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 289815c6212334846b5805c1787f237c, type: 2}
