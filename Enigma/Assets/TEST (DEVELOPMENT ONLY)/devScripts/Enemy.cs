@@ -9,7 +9,8 @@ using System.Collections;
 
 public class Enemy : BaseUnit
 {
-    private NavMeshAgent agent;
+    [SerializeField]
+    protected NavMeshAgent agent;
     
     public void Move(Vector3 destination)
     {
