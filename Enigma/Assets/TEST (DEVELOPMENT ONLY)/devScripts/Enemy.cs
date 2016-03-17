@@ -35,8 +35,11 @@ public class Enemy : BaseUnit
 
     public override void Die()
     {
+      
         Destroy(gameObject);
         base.Die();
+
+
     }
 
 }

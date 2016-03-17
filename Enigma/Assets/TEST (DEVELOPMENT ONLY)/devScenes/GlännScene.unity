@@ -130,7 +130,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 401200, guid: 1dc7035ee15d3f7488ce4ffefcf08cbb, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 46.48
+      value: 43
       objectReference: {fileID: 0}
     - target: {fileID: 401200, guid: 1dc7035ee15d3f7488ce4ffefcf08cbb, type: 2}
       propertyPath: m_LocalPosition.y
@@ -471,8 +471,7 @@ GameObject:
 --- !u!114 &1952945532
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11423438, guid: f79374464d296aa44b89e9b61a4cb631,
-    type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1952945531}
   m_Enabled: 1
