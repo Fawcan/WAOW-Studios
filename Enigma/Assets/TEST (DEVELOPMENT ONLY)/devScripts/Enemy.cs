@@ -21,6 +21,8 @@ public class Enemy : BaseUnit
     public override void Attack(BaseUnit target)
     {
         base.Attack(target);
+        base.PlayAnimation("attack");
+
     }
 
     public override void Rotate(Quaternion rotation)

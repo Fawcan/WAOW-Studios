@@ -74,12 +74,10 @@ public class BaseUnit : MonoBehaviour
     public virtual void Attack(BaseUnit target)
     {
         // ("Attacking", true);//player
-        //mAnimation.Play("attack");//fiende
         mAttackSpeedCounter += Time.deltaTime;
 
         if(mAttackSpeedCounter >= mAttackSpeed)
         {
-            mAnimatorPlayer.SetTrigger("Attacking");
             target.ApplyDamage(mDamage);
             mAttackSpeedCounter = 0.0f;
         }
