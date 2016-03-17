@@ -31,13 +31,13 @@ public class CoInputManager : MonoBehaviour
 
     }//End Awake()
 
-    void FixedUpdate()
+    void LateUpdate()
     {
         
         //Debug.Log(Input.GetAxisRaw("CameraRotateX"));
         HandleWASD();
         HandleMouseInput();
-        OnMouseClick();
+        OnButtonClick();
         HandleRotation();
         //OnMouseEnter();
         //onMouseExit();
@@ -124,14 +124,16 @@ public class CoInputManager : MonoBehaviour
         //mPlayer.Rotate();
     }
 
-    void OnMouseClick()
+    void OnButtonClick()
     {
-        if (Input.GetMouseButton(0))
+        if(Input.GetButtonDown("Attack"))
         {
-            Debug.Log("Mousebutton left is clicked");
-            HandleMouseInput();            
+            Debug.Log("Attacking!");
         }
-    }//End OnMouseClick()
+    }
+       
+
+   
 
     
 

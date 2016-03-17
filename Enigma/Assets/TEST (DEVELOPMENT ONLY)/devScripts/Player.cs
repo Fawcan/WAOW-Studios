@@ -27,7 +27,7 @@ public class Player : BaseUnit
         targetPos.Normalize();
         // Omvandla vectorn från world space till local space
         var locVel = transform.InverseTransformDirection(targetPos);
-        Debug.Log(locVel);
+        //Debug.Log(locVel);
         //  Skicka in framåthastigheten
         mAnimatorPlayer.SetFloat("VSpeed", locVel.z);
         mAnimatorPlayer.SetFloat("HSpeed", locVel.x);
@@ -44,6 +44,7 @@ public class Player : BaseUnit
     public override void Attack(BaseUnit target)
     {
             base.Attack(target);
+        //attack anim
     }
 
     public override void Rotate(Quaternion rotation)
