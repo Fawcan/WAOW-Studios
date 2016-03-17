@@ -48,6 +48,7 @@ public class EnemyMovement : MonoBehaviour
             if (mCurrentDestination == mPlayer.position)
             {
                 mEnemy.Attack(mPlayer.GetComponent<BaseUnit>());
+                
             }
             else if(mCurrentDestination == mHome)
             {

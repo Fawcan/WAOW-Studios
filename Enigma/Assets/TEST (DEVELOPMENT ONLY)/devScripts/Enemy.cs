@@ -23,6 +23,8 @@ public class Enemy : BaseUnit
     {
         base.Attack(target);
         base.PlayAnimation("attack");
+        //base.ApplyDamage(mDamage);
+        Debug.Log(mHealth);
 
     }
 

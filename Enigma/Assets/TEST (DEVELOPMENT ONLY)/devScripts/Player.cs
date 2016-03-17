@@ -54,8 +54,8 @@ public class Player : BaseUnit
 
     public override void Die()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        base.Die();
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        //base.Die();
     }
 
 
