@@ -88,10 +88,17 @@ QualitySettings:
     name: Good
     pixelLightCount: 2
     shadows: 2
+<<<<<<< HEAD
     shadowResolution: 3
     shadowProjection: 1
     shadowCascades: 4
     shadowDistance: 100
+=======
+    shadowResolution: 1
+    shadowProjection: 1
+    shadowCascades: 2
+    shadowDistance: 40
+>>>>>>> 603fc9f4e54a7520fa843f8f9e9b0403c3ae2c05
     shadowNearPlaneOffset: 2
     shadowCascade2Split: 0.33333334
     shadowCascade4Split: {x: 0.06666667, y: 0.2, z: 0.46666667}
@@ -138,6 +145,7 @@ QualitySettings:
     excludedTargetPlatforms: []
   - serializedVersion: 2
     name: Fantastic
+<<<<<<< HEAD
     pixelLightCount: 64
     shadows: 2
     shadowResolution: 2
@@ -152,6 +160,22 @@ QualitySettings:
     anisotropicTextures: 2
     antiAliasing: 4
     softParticles: 0
+=======
+    pixelLightCount: 4
+    shadows: 2
+    shadowResolution: 2
+    shadowProjection: 1
+    shadowCascades: 4
+    shadowDistance: 150
+    shadowNearPlaneOffset: 2
+    shadowCascade2Split: 0.33333334
+    shadowCascade4Split: {x: 0.06666667, y: 0.2, z: 0.46666667}
+    blendWeights: 4
+    textureQuality: 0
+    anisotropicTextures: 2
+    antiAliasing: 2
+    softParticles: 1
+>>>>>>> 603fc9f4e54a7520fa843f8f9e9b0403c3ae2c05
     softVegetation: 1
     realtimeReflectionProbes: 1
     billboardsFaceCameraPosition: 1
@@ -163,6 +187,7 @@ QualitySettings:
     asyncUploadBufferSize: 4
     excludedTargetPlatforms: []
   m_PerPlatformDefaultQuality:
+<<<<<<< HEAD
     Android: 0
     BlackBerry: 0
     Samsung TV: 0
@@ -172,3 +197,25 @@ QualitySettings:
     WebGL: 5
     Windows Store Apps: 0
     iPhone: 0
+=======
+    Android: 2
+    BlackBerry: 2
+    GLES Emulation: 5
+    Nintendo 3DS: 5
+    PS3: 5
+    PS4: 5
+    PSM: 5
+    PSP2: 2
+    Samsung TV: 2
+    Standalone: 5
+    Tizen: 2
+    WP8: 5
+    Web: 5
+    WebGL: 3
+    WiiU: 5
+    Windows Store Apps: 5
+    XBOX360: 5
+    XboxOne: 5
+    iPhone: 2
+    tvOS: 5
+>>>>>>> 603fc9f4e54a7520fa843f8f9e9b0403c3ae2c05
