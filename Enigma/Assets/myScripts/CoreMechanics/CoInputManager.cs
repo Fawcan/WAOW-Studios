@@ -26,7 +26,7 @@ public class CoInputManager : MonoBehaviour
     {
         mFloorMask = LayerMask.GetMask("Floor");
         mPlayer = GetComponent<Player>();
-        mRigidBody = GetComponent<Rigidbody>();
+        //mRigidBody = GetComponent<Rigidbody>();
                    
 
     }//End Awake()
@@ -75,8 +75,21 @@ public class CoInputManager : MonoBehaviour
         float horMovement = Input.GetAxis("CameraRotateX");
         float verMovement = Input.GetAxis("CameraRotateY");
         Vector2 rightAnalogue = new Vector2(horMovement, verMovement);
-        rightAnalogue.Normalize();
-        transform.LookAt(new Vector3(transform.position.x + rightAnalogue.x, transform.position.y, transform.position.z + rightAnalogue.y));
+        if(rightAnalogue.magnitude > 0.5f)
+        //if (rightAnalogue != Vector2.zero)
+        {
+            rightAnalogue.Normalize();
+            transform.LookAt(new Vector3(transform.position.x + rightAnalogue.x, transform.position.y, transform.position.z + rightAnalogue.y));
+        }
+        else
+        {
+            Vector2 moveVector = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+            if (moveVector != Vector2.zero)
+            {
+                transform.LookAt(new Vector3(transform.position.x + moveVector.x, transform.position.y, transform.position.z + moveVector.y));
+            }
+            //Debug.Log(mRigidBody.velocity.ToString());
+        }
 
 
         //float Axis5 = Input.GetAxis("CameraRotate");
