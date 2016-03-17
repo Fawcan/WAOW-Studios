@@ -289,7 +289,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 172263562}
   - 111: {fileID: 172263561}
-  - 143: {fileID: 172263560}
   - 136: {fileID: 172263558}
   - 195: {fileID: 172263559}
   - 114: {fileID: 172263565}
@@ -335,24 +334,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 5
   m_ObstacleAvoidanceType: 4
---- !u!143 &172263560
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 14332250, guid: 788303403238e8c4bb628672e728435c,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 172263557}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Height: 1
-  m_Radius: 0.25
-  m_SlopeLimit: 45
-  m_StepOffset: 10
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 1
-  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!111 &172263561
 Animation:
   m_ObjectHideFlags: 0
@@ -1725,7 +1706,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 702046075}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8c028756935cc784f8c0fd539948c06b, type: 3}
   m_Name: 
@@ -1917,7 +1898,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11491670, guid: 289815c6212334846b5805c1787f237c, type: 2}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5487144, guid: 289815c6212334846b5805c1787f237c, type: 2}
       propertyPath: m_Constraints
