@@ -18,6 +18,7 @@ public class CoInputManager : MonoBehaviour
     private float mSpeed;
     //Public variables below
     public float mRotationSpeed = 100f;
+
   
 
     void Awake()
@@ -70,7 +71,8 @@ public class CoInputManager : MonoBehaviour
         {
             mAnimator.SetTrigger("Attacking");
             Debug.Log("Attacking!");
-        }
+            Debug.Log("Animation played");
+        }        
     }
 
 }// End Class
