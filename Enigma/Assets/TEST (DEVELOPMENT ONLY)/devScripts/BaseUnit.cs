@@ -74,7 +74,7 @@ public class BaseUnit : MonoBehaviour
     public virtual void Attack(BaseUnit target)
     {
         // ("Attacking", true);//player
-        mAnimation.Play("attack");//fiende
+        //mAnimation.Play("attack");//fiende
         mAttackSpeedCounter += Time.deltaTime;
 
         if(mAttackSpeedCounter >= mAttackSpeed)
@@ -83,7 +83,7 @@ public class BaseUnit : MonoBehaviour
             target.ApplyDamage(mDamage);
             mAttackSpeedCounter = 0.0f;
         }
-
+      
 
       
 
