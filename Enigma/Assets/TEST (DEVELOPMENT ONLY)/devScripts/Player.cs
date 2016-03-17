@@ -43,8 +43,8 @@ public class Player : BaseUnit
     }
     public override void Attack(BaseUnit target)
     {
-            base.Attack(target);
-        //attack anim
+        base.Attack(target);      
+        //mAnimatorPlayer.SetTrigger("Attacking");
     }
 
     public override void Rotate(Quaternion rotation)

@@ -2,23 +2,21 @@
 using System.Collections;
 
 [RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(Animator))]
 
 public class CoInputManager : MonoBehaviour
 {
     //Serialized variables below
     [SerializeField] private float mInteractRange;
     [SerializeField] float mCamRayLenght = 100f;
-    [SerializeField] Rigidbody mRigidBody;
+    [SerializeField] Rigidbody mRigidBody;    
    
     //Private variables below
     private Player mPlayer;
+    private Animator mAnimator;
     private int mFloorMask;
     private float mSpeed;
-    //Vector3 mMoveDirection = new Vector3();
-    //private int mPlayerInput;
-    //private bool mRotating = false;
-    //private float mPrevAngle = 0.0f;
-
+    //Public variables below
     public float mRotationSpeed = 100f;
   
 
@@ -26,49 +24,23 @@ public class CoInputManager : MonoBehaviour
     {
         mFloorMask = LayerMask.GetMask("Floor");
         mPlayer = GetComponent<Player>();
-        //mRigidBody = GetComponent<Rigidbody>();
-                   
+        mAnimator = GetComponent<Animator>();
 
     }//End Awake()
 
     void LateUpdate()
-    {
-        
-        //Debug.Log(Input.GetAxisRaw("CameraRotateX"));
-        HandleWASD();
-        HandleMouseInput();
-        OnButtonClick();
+    {              
+        HandleInput();
         HandleRotation();
-        //OnMouseEnter();
-        //onMouseExit();
+        ButtonResponse();
+                
     }//End FixedUpdate()
 
-    public void HandleWASD()
+    public void HandleInput()
     {
          mPlayer.Move(new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")));
        
-    }
-
-    void HandleMouseInput()
-    {
-        //Ray mCamRay = Camera.main.ScreenPointToRay(Input.mousePosition);
-        //RaycastHit mFloorHit;
-        //if(Physics.Raycast(mCamRay, out mFloorHit, mCamRayLenght, mFloorMask))
-        //{
-        //    Vector3 mPlayerToMouse = mFloorHit.point - transform.position;
-        //    mPlayerToMouse.y = 0f;
-
-        //    Quaternion mNewRotate = Quaternion.LookRotation(mPlayerToMouse);
-        //    mPlayer.Rotate(mNewRotate);
-
-        //    if(mFloorHit.transform.tag == "Enemy")
-        //    {
-        //        mPlayer.Attack(mFloorHit.transform.GetComponent<BaseUnit>());
-        //    }
-
-            
-        //}
-    }//End HandleMouse()
+    } //End HandleInput 
 
     public void HandleRotation()
     {
@@ -88,56 +60,17 @@ public class CoInputManager : MonoBehaviour
             {
                 transform.LookAt(new Vector3(transform.position.x + moveVector.x, transform.position.y, transform.position.z + moveVector.y));
             }
-            //Debug.Log(mRigidBody.velocity.ToString());
-        }
+            
+        }        
+    }// End HandleRotation()
 
-
-        //float Axis5 = Input.GetAxis("CameraRotate");
-        //Debug.Log("Axis 5");
-
-
-
-        //float mHor = Input.GetAxisRaw("Horizontal");
-        //float mVer = Input.GetAxisRaw("Vertical");
-
-        //if(mRotating)
-        //{
-        //    if(Mathf.Abs(mHor) < 0.99f && Mathf.Abs(mVer) < 0.99f)
-        //    {
-        //        mRotating = false;
-        //        return;
-        //    }
-        //    float mAngle = Mathf.Atan2(mVer, mHor) * Mathf.Rad2Deg;
-        //    transform.Rotate(0.0f, 0.0f, -(mAngle - mPrevAngle));
-        //    mPrevAngle = mAngle;
-        //}
-        //else
-        //{
-        //    if(Mathf.Abs(mHor) > 0.99f || Mathf.Abs(mVer) > 0.99f)
-        //    {
-        //        mPrevAngle = Mathf.Atan2(mVer, mHor) * Mathf.Rad2Deg;
-        //        mRotating = true;
-        //    }
-        //}
-        //Read the axis of the controller
-        //Send to mPlayer.Rotate(Quaternion):
-        //mPlayer.Rotate();
-    }
-
-    void OnButtonClick()
+    void ButtonResponse()
     {
-        if(Input.GetButtonDown("Attack"))
+        if (Input.GetButtonDown("Attack"))
         {
+            mAnimator.SetTrigger("Attacking");
             Debug.Log("Attacking!");
         }
     }
-       
 
-   
-
-    
-
-
-
-
-}
+}// End Class
