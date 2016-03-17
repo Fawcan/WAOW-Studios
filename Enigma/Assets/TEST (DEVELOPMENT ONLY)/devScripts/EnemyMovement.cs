@@ -13,12 +13,7 @@ public class EnemyMovement : MonoBehaviour
     float mDetectionRange = 4.0f;
     private Enemy mEnemy;
 
-    protected Animator mAnimatorEnemy;
-
-    void Start()
-    {
-        mAnimatorEnemy = GetComponent<Animator>();
-    }
+    //protected Animator mAnimatorEnemy;
 
     void Awake()
     {
@@ -29,10 +24,14 @@ public class EnemyMovement : MonoBehaviour
             Debug.Log("Cant find player");
     }
 
+    void LateUpdate()
+    {
+        
+    }
+
     void Update()
     {
-        mAnimatorEnemy.SetFloat("VSpeed", Input.GetAxis("Vertical"));
-
+        
         Debug.Log("Name of player: " + mPlayer.position);
         if (Vector3.Distance(transform.position, mPlayer.position) < mDetectionRange)
         {
@@ -65,6 +64,7 @@ public class EnemyMovement : MonoBehaviour
             mEnemy.Rotate(Quaternion.LookRotation(newDir));*/
             //Move
             mEnemy.Move(mCurrentDestination);
+            
         }
 
 

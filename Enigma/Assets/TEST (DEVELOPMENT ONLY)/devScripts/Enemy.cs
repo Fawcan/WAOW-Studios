@@ -10,11 +10,21 @@ using System.Collections;
 public class Enemy : BaseUnit
 {
     private NavMeshAgent agent;
+    private Animator mAnimatorEnemy;
+
+    void Start()
+    {
+        mAnimatorEnemy = GetComponent<Animator>();
+    }
+
+    void Update()
+    {
+        mAnimatorEnemy.SetFloat("EVSpeed", Input.GetAxis("Vertical"));
+    }
 
 
     public void Move(Vector3 destination)
     {
-        //base.PlayAnimation("run");
         agent = gameObject.GetComponent<NavMeshAgent>();
         agent.SetDestination(destination);
     }
