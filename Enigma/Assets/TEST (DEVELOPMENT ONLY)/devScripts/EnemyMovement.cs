@@ -32,7 +32,7 @@ public class EnemyMovement : MonoBehaviour
     void Update()
     {
         
-        Debug.Log("Name of player: " + mPlayer.position);
+        //Debug.Log("Name of player: " + mPlayer.position);
         if (Vector3.Distance(transform.position, mPlayer.position) < mDetectionRange)
         {
             mCurrentDestination = mPlayer.position;
@@ -57,11 +57,11 @@ public class EnemyMovement : MonoBehaviour
         }
         else
         {
-            //Rotate
-            /*Vector3 targetDir = mCurrentDestination - transform.position;
-            float step = mTurnSpeed * Time.deltaTime;
-            Vector3 newDir = Vector3.RotateTowards(transform.forward, targetDir, step, 0.0F);
-            mEnemy.Rotate(Quaternion.LookRotation(newDir));*/
+            ////Rotate
+            //Vector3 targetDir = mCurrentDestination - transform.position;
+            //float step = mTurnSpeed * Time.deltaTime;
+            //Vector3 newDir = Vector3.RotateTowards(transform.forward, targetDir, step, 0.0F);
+            //mEnemy.Rotate(Quaternion.LookRotation(newDir));
             //Move
             mEnemy.Move(mCurrentDestination);
             
