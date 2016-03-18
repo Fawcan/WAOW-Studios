@@ -24,7 +24,7 @@ public class BaseUnit : MonoBehaviour
     [SerializeField]
     protected float mAttackRange = 10f;
     [SerializeField]
-    protected int mDamage = 3;
+    public int mDamage = 3;
     [SerializeField]
     protected AnimationClip Attacking;     // Added by Maria 10/3 22:45
 
@@ -66,9 +66,9 @@ public class BaseUnit : MonoBehaviour
         //Do not write here
     }
 
-    public virtual void ApplyDamage(int damage)
+    public virtual void ApplyDamage(int mDamage)
     {
-        mHealth -= damage;
+        mHealth -= mDamage;
 
         if (mHealth <= 0 && mNotDead)
         {
@@ -81,7 +81,7 @@ public class BaseUnit : MonoBehaviour
     public virtual void Attack(BaseUnit target)
     {
         // ("Attacking", true);//player
-        mAttackSpeedCounter += Time.deltaTime;
+        mAttackSpeedCounter += Time.fixedDeltaTime;//cooldown
 
         if(mAttackSpeedCounter >= mAttackSpeed)
         {

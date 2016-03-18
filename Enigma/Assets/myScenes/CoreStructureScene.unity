@@ -85,6 +85,10 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualCellSize: 0
   m_NavMeshData: {fileID: 23800000, guid: 8507b971b0869814ebf377279ac70a3f, type: 2}
+--- !u!1 &146383968 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 115432, guid: de69b8c973aebb24ca6924a2c0f4ab11, type: 2}
+  m_PrefabInternal: {fileID: 923434274}
 --- !u!4 &151297313 stripped
 Transform:
   m_PrefabParentObject: {fileID: 449122, guid: 289815c6212334846b5805c1787f237c, type: 2}
@@ -119,7 +123,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!1 &914843242
 GameObject:
   m_ObjectHideFlags: 0
@@ -146,7 +150,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!1001 &923434274
 Prefab:
   m_ObjectHideFlags: 0
@@ -213,7 +217,7 @@ Prefab:
     - target: {fileID: 11417642, guid: de69b8c973aebb24ca6924a2c0f4ab11, type: 2}
       propertyPath: mPlayer
       value: 
-      objectReference: {fileID: 1234254470}
+      objectReference: {fileID: 146383968}
     - target: {fileID: 19593830, guid: de69b8c973aebb24ca6924a2c0f4ab11, type: 2}
       propertyPath: m_Speed
       value: 1.5
@@ -221,6 +225,22 @@ Prefab:
     - target: {fileID: 11417642, guid: de69b8c973aebb24ca6924a2c0f4ab11, type: 2}
       propertyPath: mSpeed
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11417642, guid: de69b8c973aebb24ca6924a2c0f4ab11, type: 2}
+      propertyPath: mHealth
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 19593830, guid: de69b8c973aebb24ca6924a2c0f4ab11, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19593830, guid: de69b8c973aebb24ca6924a2c0f4ab11, type: 2}
+      propertyPath: m_Radius
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 19593830, guid: de69b8c973aebb24ca6924a2c0f4ab11, type: 2}
+      propertyPath: m_Height
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: de69b8c973aebb24ca6924a2c0f4ab11, type: 2}
@@ -299,11 +319,7 @@ Transform:
   m_LocalScale: {x: 27.739985, y: 5.048106, z: 21.6364}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
---- !u!1 &1234254470 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 105160, guid: 289815c6212334846b5805c1787f237c, type: 2}
-  m_PrefabInternal: {fileID: 1702605269}
+  m_RootOrder: 1
 --- !u!1 &1685592822 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 225828fc6588b694f938b8344ddf8942, type: 3}
@@ -386,7 +402,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11491670, guid: 289815c6212334846b5805c1787f237c, type: 2}
       propertyPath: mAttackSpeed
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 11491670, guid: 289815c6212334846b5805c1787f237c, type: 2}
       propertyPath: mSpeed
@@ -394,7 +410,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11491670, guid: 289815c6212334846b5805c1787f237c, type: 2}
       propertyPath: mHealth
-      value: 10
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 11491670, guid: 289815c6212334846b5805c1787f237c, type: 2}
+      propertyPath: mDamage
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 13622966, guid: 289815c6212334846b5805c1787f237c, type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 146048, guid: 289815c6212334846b5805c1787f237c, type: 2}
+      propertyPath: m_Name
+      value: Sword
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11486118, guid: 289815c6212334846b5805c1787f237c, type: 2}
@@ -460,7 +488,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 6
 --- !u!1001 &2004481001
 Prefab:
   m_ObjectHideFlags: 0
@@ -515,6 +543,10 @@ Prefab:
     - target: {fileID: 100000, guid: 225828fc6588b694f938b8344ddf8942, type: 3}
       propertyPath: m_TagString
       value: Weapon
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 225828fc6588b694f938b8344ddf8942, type: 3}
+      propertyPath: m_Name
+      value: Sword
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 225828fc6588b694f938b8344ddf8942, type: 3}
@@ -605,7 +637,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 2
 --- !u!114 &2025752836
 MonoBehaviour:
   m_ObjectHideFlags: 0
