@@ -69,11 +69,14 @@ public class CoInputManager : MonoBehaviour
     {
         if (Input.GetButtonDown("Attack"))
         {
+            
             mAnimator.SetTrigger("Attacking");            
             Debug.Log("Attacking!");
             Debug.Log("Animation played");
             Debug.Log("Damage inflicted on eneme: ");
         }        
     }
+
+    
 
 }// End Class

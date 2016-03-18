@@ -74,6 +74,7 @@ public class BaseUnit : MonoBehaviour
         {
             mNotDead = false;
             Die();
+            
         }
     }
 

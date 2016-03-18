@@ -55,14 +55,14 @@ public class HealthBar : MonoBehaviour {
         mTimeCount -= Time.deltaTime; //Counts down time per seconds per frame
         if (mTimeCount <= 0f)
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(1);
         }
     }
 
     IEnumerator StartDelay()
     {
         yield return new WaitForSeconds(0.3f);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void decreaseHealth()

@@ -38,14 +38,15 @@ public class Player : BaseUnit
 
     void Update()
     {
-        Vector3 mRayOrigin = transform.position + new Vector3(0, 1, 0);
-        Ray ray = new Ray(mRayOrigin, transform.forward);
-        Debug.DrawRay(mRayOrigin, transform.forward * mInteractDist, Color.green);
+        //Vector3 mRayOrigin = transform.position + new Vector3(0, 1, 0);
+        //Ray ray = new Ray(mRayOrigin, transform.forward);
+        //Debug.DrawRay(mRayOrigin, transform.forward * mInteractDist, Color.green);
     }
     public override void Attack(BaseUnit target)
     {
         base.Attack(target);
         base.PlayAnimation("attack");
+        
         //mAnimatorPlayer.SetTrigger("Attacking");
     }
 
