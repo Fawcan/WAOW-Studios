@@ -15993,6 +15993,10 @@ MeshFilter:
 Transform:
   m_PrefabParentObject: {fileID: 436926, guid: 969677c73aad12c418d07d083ea8b268, type: 2}
   m_PrefabInternal: {fileID: 106659209}
+--- !u!4 &1342481128 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 429512, guid: a4cd5c836f5a2cc44b98475fef39d68d, type: 2}
+  m_PrefabInternal: {fileID: 1959550191}
 --- !u!1001 &1347702581
 Prefab:
   m_ObjectHideFlags: 0
@@ -17132,7 +17136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7bced140059b694e91f0e48210059c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 1342481128}
   smoothing: 8
 --- !u!1001 &1421280795
 Prefab:
@@ -24975,6 +24979,10 @@ Prefab:
     - target: {fileID: 429512, guid: a4cd5c836f5a2cc44b98475fef39d68d, type: 2}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11485824, guid: a4cd5c836f5a2cc44b98475fef39d68d, type: 2}
+      propertyPath: mSpeed
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a4cd5c836f5a2cc44b98475fef39d68d, type: 2}
