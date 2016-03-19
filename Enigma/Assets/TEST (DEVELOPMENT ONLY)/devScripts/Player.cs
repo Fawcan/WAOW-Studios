@@ -39,20 +39,23 @@ public class Player : BaseUnit
 
 
     //void Update()
+
     //{
     //    Vector3 mRayOrigin = transform.position + new Vector3(0, 1, 0);
     //    Ray mRay = new Ray(mRayOrigin, transform.forward);
     //    Debug.DrawRay(mRayOrigin, transform.forward * mInteractDist, Color.green);
     //}
+
     public override void Attack(BaseUnit target)
     {
-        if(target.GetComponent<Enemy>().mNotDead && Input.GetButton("Attack"))
+        /*if(target.GetComponent<Enemy>().mNotDead && Input.GetButton("Attack"))
         {            
             base.Attack(target);
             mAnimatorPlayer.SetTrigger("Attacking");
             base.ApplyDamage(mDamage);
             
-        }      
+        }
+		*/
 
     }
 

@@ -81,7 +81,7 @@ public class BaseUnit : MonoBehaviour
     public virtual void Attack(BaseUnit target)
     {
         // ("Attacking", true);//player
-        mAttackSpeedCounter += Time.fixedDeltaTime;//cooldown
+		mAttackSpeedCounter += Time.deltaTime;//cooldown
 
         if(mAttackSpeedCounter >= mAttackSpeed)
         {

@@ -27,7 +27,7 @@ public class Enemy : BaseUnit
             base.Attack(target);
             base.PlayAnimation("attack");
             base.ApplyDamage(mDamage);
-            //Debug.Log(mHealth);
+            Debug.Log(mHealth);
         }
 
     }
@@ -39,8 +39,8 @@ public class Enemy : BaseUnit
 
     public override void Die()
     {
-        base.mNotDead = false;
-        Destroy(gameObject);
+        //base.mNotDead = false;
+        //Destroy(gameObject);
         base.Die();
 
 
