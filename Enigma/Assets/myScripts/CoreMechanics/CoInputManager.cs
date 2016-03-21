@@ -8,13 +8,13 @@ public class CoInputManager : MonoBehaviour
 {
     //Serialized variables below
     [SerializeField] private float mInteractRange;
-    [SerializeField] float mCamRayLenght = 100f;
+    //[SerializeField] float mCamRayLenght = 100f;
     [SerializeField] Rigidbody mRigidBody;    
    
     //Private variables below
     private Player mPlayer;
     private Animator mAnimator;
-    private int mFloorMask;
+    int mFloorMask; 
     private float mSpeed;
     //Public variables below
     public float mRotationSpeed = 100f;
@@ -65,18 +65,16 @@ public class CoInputManager : MonoBehaviour
         }        
     }// End HandleRotation()
 
-    void ButtonResponse()
+    public void ButtonResponse()
     {
         if (Input.GetButtonDown("Attack"))
         {
             
             mAnimator.SetTrigger("Attacking");            
             Debug.Log("Attacking!");
-            Debug.Log("Animation played");
-            Debug.Log("Damage inflicted on eneme: ");
-        }        
-    }
-
-    
+            //Debug.Log("Animation played");
+            //Debug.Log("Damage inflicted on eneme: ");
+        }
+    }   
 
 }// End Class

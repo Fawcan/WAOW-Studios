@@ -22,16 +22,16 @@ public class Enemy : BaseUnit
     public override void Attack(BaseUnit target)
     {
 
-        if (mPlayer.GetComponent<Player>().mNotDead)
+        if (target.GetComponent<Player>().mNotDead)
         {
             base.Attack(target);
             base.PlayAnimation("attack");
-            //base.ApplyDamage(mDamage);
-            //Debug.Log(mHealth);
+            base.ApplyDamage(mDamage);
+            Debug.Log(mHealth);
         }
 
     }
-
+    
     public override void Rotate(Quaternion rotation)
     {
         base.Rotate(rotation);
@@ -39,8 +39,8 @@ public class Enemy : BaseUnit
 
     public override void Die()
     {
-        //mPlayer.mNotDead = false;
-        Destroy(gameObject);
+        //base.mNotDead = false;
+        //Destroy(gameObject);
         base.Die();
 
 

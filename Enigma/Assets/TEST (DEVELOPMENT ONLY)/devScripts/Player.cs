@@ -6,8 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class Player : BaseUnit
 {
-    private float mInteractDist; // for debug purposue
-    public bool isGrounded;    
+    [SerializeField]
+    private float mInteractDist = 2f; // for debug purposue
+    public bool isGrounded;
+       
     public virtual void Start()
     {
         mAnimatorPlayer = GetComponent<Animator>();
@@ -36,18 +38,25 @@ public class Player : BaseUnit
     }
 
 
-    void Update()
-    {
-        //Vector3 mRayOrigin = transform.position + new Vector3(0, 1, 0);
-        //Ray ray = new Ray(mRayOrigin, transform.forward);
-        //Debug.DrawRay(mRayOrigin, transform.forward * mInteractDist, Color.green);
-    }
+    //void Update()
+
+    //{
+    //    Vector3 mRayOrigin = transform.position + new Vector3(0, 1, 0);
+    //    Ray mRay = new Ray(mRayOrigin, transform.forward);
+    //    Debug.DrawRay(mRayOrigin, transform.forward * mInteractDist, Color.green);
+    //}
+
     public override void Attack(BaseUnit target)
     {
-        base.Attack(target);
-        base.PlayAnimation("attack");
-        
-        //mAnimatorPlayer.SetTrigger("Attacking");
+        /*if(target.GetComponent<Enemy>().mNotDead && Input.GetButton("Attack"))
+        {            
+            base.Attack(target);
+            mAnimatorPlayer.SetTrigger("Attacking");
+            base.ApplyDamage(mDamage);
+            
+        }
+		*/
+
     }
 
     public override void Rotate(Quaternion rotation)
@@ -59,6 +68,7 @@ public class Player : BaseUnit
     {
         //mAnimatorPlayer.SetBool("Die", true);
         mAnimatorPlayer.SetTrigger("Die");
+        base.mNotDead = false;
         base.Die();       
         
         

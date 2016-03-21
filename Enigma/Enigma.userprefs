@@ -1,0 +1,14 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\TEST (DEVELOPMENT ONLY)\devScripts\Player.cs">
+    <Files>
+      <File FileName="Assets\TEST (DEVELOPMENT ONLY)\devScripts\Enemy.cs" Line="30" Column="13" />
+      <File FileName="Assets\TEST (DEVELOPMENT ONLY)\devScripts\Player.cs" Line="41" Column="7" />
+      <File FileName="Assets\TEST (DEVELOPMENT ONLY)\devScripts\BaseUnit.cs" Line="84" Column="51" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
