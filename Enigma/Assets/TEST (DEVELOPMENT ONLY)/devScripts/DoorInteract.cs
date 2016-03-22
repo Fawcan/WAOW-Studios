@@ -17,19 +17,23 @@ public class DoorInteract : MonoBehaviour
     AudioSource audio;
     [SerializeField]
     private float mInteractDist = 10f; //This variable determines the distance from wich the player can interact with the door, needs tweaking. 
-
+    private bool doorIsOpen = false;
 	void Start ()
     {
         audio = GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
-    void Update ()
+    void Awake()
     {
-        
+
+    }
+
+    
+    void Update()
+    {
 
         //Checks if player has clicked and if player is within collision, then change door state.
-        if (Input.GetButtonDown("Interact"))
+        if (Input.GetButtonDown("Interact") && !doorIsOpen)
         {
             Vector3 mRayOrigin = transform.position + new Vector3(0, 1, 0);
 
@@ -43,7 +47,8 @@ public class DoorInteract : MonoBehaviour
                 if (hit.collider.CompareTag("Door"))
                 {
                     Debug.Log(hit.collider.gameObject.name);
-                    
+
+                    doorIsOpen = true;
                     hit.collider.gameObject.GetComponent<DoorMovement>().ChangeDoorState();
                     GetComponent<AudioSource>().PlayOneShot(DoorOpen);
 
