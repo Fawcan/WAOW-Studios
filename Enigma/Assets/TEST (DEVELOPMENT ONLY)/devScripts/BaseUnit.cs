@@ -34,6 +34,7 @@ public class BaseUnit : MonoBehaviour
     protected Rigidbody mRigidBody;
     public bool mNotDead = true;
     public GameObject mPlayer;
+    public GameObject mEnemy;
 
     private float mAttackSpeedCounter = 0.0f;
 
@@ -42,6 +43,7 @@ public class BaseUnit : MonoBehaviour
         mAnimation = GetComponent<Animation>();
         mRigidBody = GetComponent<Rigidbody>();
         mPlayer = GameObject.FindGameObjectWithTag("Player");
+        mEnemy = GameObject.FindGameObjectWithTag("Enemy");
     }
         
     protected void PlayAnimation(string animationName)
@@ -73,13 +75,14 @@ public class BaseUnit : MonoBehaviour
         if (mHealth <= 0 && mNotDead)
         {
             mNotDead = false;
-            Die();
-            
+            Die();                       
         }
     }
 
     public virtual void Attack(BaseUnit target)
     {
+        
+        
         // ("Attacking", true);//player
 		mAttackSpeedCounter += Time.deltaTime;//cooldown
 

@@ -9,10 +9,12 @@ public class Player : BaseUnit
     [SerializeField]
     private float mInteractDist = 2f; // for debug purposue
     public bool isGrounded;
+    
        
     public virtual void Start()
     {
         mAnimatorPlayer = GetComponent<Animator>();
+        base.mNotDead = true;
         //mAnimatorPlayer.SetBool("Die", false);
     }
 
@@ -48,14 +50,14 @@ public class Player : BaseUnit
 
     public override void Attack(BaseUnit target)
     {
-        /*if(target.GetComponent<Enemy>().mNotDead && Input.GetButton("Attack"))
+        if (target.GetComponent<Player>().mNotDead)
         {            
             base.Attack(target);
             mAnimatorPlayer.SetTrigger("Attacking");
             base.ApplyDamage(mDamage);
             
         }
-		*/
+		
 
     }
 

@@ -146,6 +146,7 @@ MonoBehaviour:
   mAnimatorPlayer: {fileID: 0}
   mNotDead: 1
   mPlayer: {fileID: 0}
+  mEnemy: {fileID: 0}
 --- !u!54 &818916091
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -246,11 +247,11 @@ Prefab:
     - target: {fileID: 11475158, guid: de69b8c973aebb24ca6924a2c0f4ab11, type: 2}
       propertyPath: destination
       value: 
-      objectReference: {fileID: 622959867}
+      objectReference: {fileID: 0}
     - target: {fileID: 11475158, guid: de69b8c973aebb24ca6924a2c0f4ab11, type: 2}
       propertyPath: mPlayer
       value: 
-      objectReference: {fileID: 622959867}
+      objectReference: {fileID: 0}
     - target: {fileID: 11417642, guid: de69b8c973aebb24ca6924a2c0f4ab11, type: 2}
       propertyPath: mPlayer
       value: 
@@ -277,6 +278,14 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 19593830, guid: de69b8c973aebb24ca6924a2c0f4ab11, type: 2}
       propertyPath: m_Height
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 13670156, guid: de69b8c973aebb24ca6924a2c0f4ab11, type: 2}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11190830, guid: de69b8c973aebb24ca6924a2c0f4ab11, type: 2}
+      propertyPath: m_AnimatePhysics
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -455,11 +464,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 13622966, guid: 289815c6212334846b5805c1787f237c, type: 2}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 146048, guid: 289815c6212334846b5805c1787f237c, type: 2}
       propertyPath: m_Name
       value: Sword
+      objectReference: {fileID: 0}
+    - target: {fileID: 13622966, guid: 289815c6212334846b5805c1787f237c, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9581152, guid: 289815c6212334846b5805c1787f237c, type: 2}
+      propertyPath: m_ApplyRootMotion
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11486118, guid: 289815c6212334846b5805c1787f237c, type: 2}
@@ -670,7 +687,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2025752830}
   m_LocalRotation: {x: 0.3743751, y: 0, z: 0, w: 0.9272774}
-  m_LocalPosition: {x: 0, y: 2.097, z: -2.985}
+  m_LocalPosition: {x: 0, y: 4.07, z: -5.57}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
