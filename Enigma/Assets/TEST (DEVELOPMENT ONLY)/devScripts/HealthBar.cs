@@ -26,8 +26,6 @@ public class HealthBar : MonoBehaviour {
     [SerializeField]
     private float mTimeCount = 60f; //This serialized variable is mincapped @ 60 seconds.
     private float mMaxTimeCount;
-    [SerializeField]
-    AnimationClip die;
     private Animator mAnimator;
 
 
