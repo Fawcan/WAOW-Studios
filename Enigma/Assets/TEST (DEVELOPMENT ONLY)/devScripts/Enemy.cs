@@ -25,7 +25,7 @@ public class Enemy : BaseUnit
         {
             base.Attack(target);
             base.PlayAnimation("attack");
-            Debug.Log(mHealth);
+            //Debug.Log(mHealth);
 
         }
 

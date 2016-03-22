@@ -12,7 +12,7 @@ public class CoInputManager : MonoBehaviour
     [SerializeField] Rigidbody mRigidBody;    
    
     //Private variables below
-    private Player mPlayer;
+    Player mPlayer;
     private Animator mAnimator;
     //int mFloorMask; 
     private float mSpeed;
@@ -67,11 +67,22 @@ public class CoInputManager : MonoBehaviour
 
     public void ButtonResponse()
     {
+        Vector3 forward = transform.TransformDirection(Vector3.forward) * 2f;
+        Debug.DrawRay(new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z), forward, Color.green);
+
         if (Input.GetButtonDown("Attack"))
         {
+            RaycastHit hit;            
+
+                        
+
+            if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z), forward, out hit, 5f) && hit.transform.tag == "Enemy")
+            {
+                Debug.Log("Träff!");
+            }
             
             mAnimator.SetTrigger("Attacking");            
-            Debug.Log("Attacking!");
+            //Debug.Log("Attacking!");
            
                     
 
