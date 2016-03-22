@@ -288,6 +288,10 @@ Prefab:
       propertyPath: m_AnimatePhysics
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 115432, guid: de69b8c973aebb24ca6924a2c0f4ab11, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: de69b8c973aebb24ca6924a2c0f4ab11, type: 2}
   m_IsPrefabParent: 0

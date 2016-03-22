@@ -22,8 +22,6 @@ public class Player : BaseUnit
     {
         Vector3 mMovement = new Vector3();
 
-        
-
         mMovement.Set(direction.x, 0f, direction.y);
         mMovement = mMovement.normalized * mSpeed * Time.deltaTime;
         //  Räkna ut vector från vart spelaren är till vart spelaren ska
