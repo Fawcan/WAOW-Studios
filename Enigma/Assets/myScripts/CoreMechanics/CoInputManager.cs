@@ -72,6 +72,14 @@ public class CoInputManager : MonoBehaviour
             
             mAnimator.SetTrigger("Attacking");            
             Debug.Log("Attacking!");
+           
+                    
+
+            //gör en ray cast
+            //Skapa och använd layers "Enemy" 
+            //if "hit" tag =  Enemy"
+            //mPlayer.Attack(hit)
+
             //Debug.Log("Animation played");
             //Debug.Log("Damage inflicted on eneme: ");
         }

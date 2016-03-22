@@ -21,13 +21,10 @@ public class Enemy : BaseUnit
 
     public override void Attack(BaseUnit target)
     {
-
-
         if (target.GetComponent<Player>().mNotDead)
         {
             base.Attack(target);
             base.PlayAnimation("attack");
-            base.ApplyDamage(mDamage);
             Debug.Log(mHealth);
 
         }
