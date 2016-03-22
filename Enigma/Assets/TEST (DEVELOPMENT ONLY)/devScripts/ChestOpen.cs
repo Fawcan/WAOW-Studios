@@ -9,10 +9,13 @@ using System.Collections;
 */
 [RequireComponent(typeof(Animation))]
 [RequireComponent(typeof(Collider))]
+[RequireComponent(typeof(AudioSource))]
 public class ChestOpen : MonoBehaviour
 {
 
-
+    [SerializeField]
+    AudioClip ChestAudio;
+    AudioSource audio;
     [SerializeField]
     private bool mChestOpen = false; //- [IF NECESSARY, REMOVE]    
     private Animation mAnimChest;
@@ -24,6 +27,7 @@ public class ChestOpen : MonoBehaviour
     {
         mAnimChest = GetComponent<Animation>();
         mAnimChest["ChestAnim"].wrapMode = WrapMode.ClampForever;
+        audio = GetComponent<AudioSource>();
     }
 
     void FixedUpdate()
@@ -31,7 +35,7 @@ public class ChestOpen : MonoBehaviour
         //Checks if player has clicked and if player is within collision, then play chest animation.
 
        
-        if (Input.GetMouseButtonDown(0) && !mChestOpen)
+        if (Input.GetButton("Interact") && !mChestOpen)
         {
             Ray ray = new Ray(transform.position, transform.right);
             RaycastHit hit;
@@ -45,6 +49,7 @@ public class ChestOpen : MonoBehaviour
                     Debug.Log("CHEST IS CLICKED!");
                     //gameObject.GetComponent<Collider>().enabled = false;                    
                     GetComponent<Animation>().Play("ChestAnim", PlayMode.StopAll);
+                    GetComponent<AudioSource>().PlayOneShot(ChestAudio);
                     Debug.Log("ANIMATION IS PLAYED!");
                     mChestOpen = true;
                     Debug.Log("CHEST OPENED!");

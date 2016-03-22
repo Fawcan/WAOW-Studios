@@ -12,9 +12,9 @@ public class CoInputManager : MonoBehaviour
     [SerializeField] Rigidbody mRigidBody;    
    
     //Private variables below
-    private Player mPlayer;
+    Player mPlayer;
     private Animator mAnimator;
-    int mFloorMask; 
+    //int mFloorMask; 
     private float mSpeed;
     //Public variables below
     public float mRotationSpeed = 100f;
@@ -23,7 +23,7 @@ public class CoInputManager : MonoBehaviour
 
     void Awake()
     {
-        mFloorMask = LayerMask.GetMask("Floor");
+        //mFloorMask = LayerMask.GetMask("Floor");
         mPlayer = GetComponent<Player>();
         mAnimator = GetComponent<Animator>();
 
@@ -67,11 +67,30 @@ public class CoInputManager : MonoBehaviour
 
     public void ButtonResponse()
     {
+        Vector3 forward = transform.TransformDirection(Vector3.forward) * 2f;
+        Debug.DrawRay(new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z), forward, Color.green);
+
         if (Input.GetButtonDown("Attack"))
         {
+            RaycastHit mRayHit;
+
+            if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z), forward, out mRayHit, 5f) && mRayHit.transform.tag == "Enemy")
+            {
+                Debug.Log("Träff!");
+            }
+           
+            
             
             mAnimator.SetTrigger("Attacking");            
-            Debug.Log("Attacking!");
+            //Debug.Log("Attacking!");
+           
+                    
+
+            //gör en ray cast
+            //Skapa och använd layers "Enemy" 
+            //if "hit" tag =  Enemy"
+            //mPlayer.Attack(hit)
+
             //Debug.Log("Animation played");
             //Debug.Log("Damage inflicted on eneme: ");
         }

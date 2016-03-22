@@ -5,7 +5,7 @@ public class Barrel : MonoBehaviour
 {
     
     [SerializeField]
-    int mHp = 1;        //hit points for the barrel.
+    public int mHp = 1;        //hit points for the barrel.
 
    
     //DamageBarrel is called when the player attacks a barrel.

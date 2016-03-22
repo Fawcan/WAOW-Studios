@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using System;
 
 //[RequireComponent(typeof(Animation))]
 
@@ -9,18 +10,18 @@ public class Player : BaseUnit
     [SerializeField]
     private float mInteractDist = 2f; // for debug purposue
     public bool isGrounded;
+    
        
     public virtual void Start()
     {
         mAnimatorPlayer = GetComponent<Animator>();
+        base.mNotDead = true;
         //mAnimatorPlayer.SetBool("Die", false);
     }
 
     public void Move(Vector2 direction)
     {
         Vector3 mMovement = new Vector3();
-
-        
 
         mMovement.Set(direction.x, 0f, direction.y);
         mMovement = mMovement.normalized * mSpeed * Time.deltaTime;
@@ -48,14 +49,14 @@ public class Player : BaseUnit
 
     public override void Attack(BaseUnit target)
     {
-        /*if(target.GetComponent<Enemy>().mNotDead && Input.GetButton("Attack"))
+        if (target.GetComponent<Player>().mNotDead)
         {            
             base.Attack(target);
             mAnimatorPlayer.SetTrigger("Attacking");
             base.ApplyDamage(mDamage);
             
         }
-		*/
+		
 
     }
 
@@ -74,5 +75,8 @@ public class Player : BaseUnit
         
     }
 
-
+    internal void ApplyDamage(object mDamage)
+    {
+        throw new NotImplementedException();
+    }
 }
