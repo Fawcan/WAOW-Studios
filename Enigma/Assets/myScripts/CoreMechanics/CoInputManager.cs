@@ -72,14 +72,14 @@ public class CoInputManager : MonoBehaviour
 
         if (Input.GetButtonDown("Attack"))
         {
-            RaycastHit hit;            
+            RaycastHit mRayHit;
 
-                        
-
-            if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z), forward, out hit, 5f) && hit.transform.tag == "Enemy")
+            if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z), forward, out mRayHit, 5f) && mRayHit.transform.tag == "Enemy")
             {
                 Debug.Log("Träff!");
             }
+           
+            
             
             mAnimator.SetTrigger("Attacking");            
             //Debug.Log("Attacking!");

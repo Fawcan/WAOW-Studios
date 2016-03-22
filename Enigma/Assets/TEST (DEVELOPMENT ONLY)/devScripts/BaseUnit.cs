@@ -15,26 +15,20 @@ using System.Collections;
 [RequireComponent(typeof(Rigidbody))]
 public class BaseUnit : MonoBehaviour
 {
-    [SerializeField]
-    protected int mHealth = 100; 
-    [SerializeField]
-    protected float mSpeed = 2;
-    [SerializeField]
-    protected float mAttackSpeed = 1;
-    [SerializeField]
-    protected float mAttackRange = 10f;
-    [SerializeField]
-    public int mDamage = 3;
-    [SerializeField]
-    protected AnimationClip Attacking;     // Added by Maria 10/3 22:45
+    [SerializeField] protected int mHealth = 100; 
+    [SerializeField] protected float mSpeed = 2;
+    [SerializeField] protected float mAttackSpeed = 1;
+    [SerializeField] protected float mAttackRange = 10f;
+    [SerializeField] public int mDamage = 3;
+    [SerializeField] protected AnimationClip Attacking;     // Added by Maria 10/3 22:45
 
-    [SerializeField]
-    protected Animator mAnimatorPlayer;     // Added by Maria 10/3 22:45
+    [SerializeField] protected Animator mAnimatorPlayer;     // Added by Maria 10/3 22:45
     Animation mAnimation;
     protected Rigidbody mRigidBody;
     public bool mNotDead = true;
     public GameObject mPlayer;
     public GameObject mEnemy;
+    
 
     private float mAttackSpeedCounter = 0.0f;
 

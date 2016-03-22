@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using System;
 
 //[RequireComponent(typeof(Animation))]
 
@@ -74,5 +75,8 @@ public class Player : BaseUnit
         
     }
 
-
+    internal void ApplyDamage(object mDamage)
+    {
+        throw new NotImplementedException();
+    }
 }
