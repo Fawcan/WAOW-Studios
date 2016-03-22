@@ -5,6 +5,7 @@ using System.Collections;
 This script works as of 22/3-16
 // Albin
 */
+
 [RequireComponent(typeof(AudioSource))]
 public class DamageObjectScript : MonoBehaviour
 {
@@ -26,8 +27,6 @@ public class DamageObjectScript : MonoBehaviour
             {
                 Destroy(DestroyObject.gameObject);
                 GetComponent<AudioSource>().PlayOneShot(BarrelBreak);
-                Debug.Log("Sound");
-
 
             }
         }
