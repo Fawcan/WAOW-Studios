@@ -14,7 +14,7 @@ public class CoInputManager : MonoBehaviour
     //Private variables below
     private Player mPlayer;
     private Animator mAnimator;
-    int mFloorMask; 
+    //int mFloorMask; 
     private float mSpeed;
     //Public variables below
     public float mRotationSpeed = 100f;
@@ -23,7 +23,7 @@ public class CoInputManager : MonoBehaviour
 
     void Awake()
     {
-        mFloorMask = LayerMask.GetMask("Floor");
+        //mFloorMask = LayerMask.GetMask("Floor");
         mPlayer = GetComponent<Player>();
         mAnimator = GetComponent<Animator>();
 

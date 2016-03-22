@@ -5,12 +5,19 @@ using System.Collections;
 This script works as of 22/3-16
 // Albin
 */
-
+[RequireComponent(typeof(AudioSource))]
 public class DamageObjectScript : MonoBehaviour
 {
+    [SerializeField]
+    AudioClip BarrelBreak;
+    AudioSource audio;
 
+    void Start()
+    {
+        audio = GetComponent<AudioSource>();
+    }
 
-        // Working script that allows you to destroy objects with the controller
+    // Working script that allows you to destroy objects with the controller
     void OnTriggerEnter (Collider DestroyObject)
     {
         if (DestroyObject.CompareTag("Destroyable"))
@@ -18,6 +25,10 @@ public class DamageObjectScript : MonoBehaviour
             if (Input.GetButton("Attack"))
             {
                 Destroy(DestroyObject.gameObject);
+                GetComponent<AudioSource>().PlayOneShot(BarrelBreak);
+                Debug.Log("Sound");
+
+
             }
         }
     }
