@@ -39,6 +39,7 @@ public class Enemy : BaseUnit
 
     public override void Die()
     {
+        base.PlayAnimation("die");
         //base.mNotDead = false;
         //Destroy(gameObject);
         base.Die();
