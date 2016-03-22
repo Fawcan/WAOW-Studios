@@ -28,7 +28,7 @@ public class DoorInteract : MonoBehaviour
         
 
         //Checks if player has clicked and if player is within collision, then change door state.
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetButton("Interact"))
         {
             Vector3 mRayOrigin = transform.position + new Vector3(0, 1, 0);
 
