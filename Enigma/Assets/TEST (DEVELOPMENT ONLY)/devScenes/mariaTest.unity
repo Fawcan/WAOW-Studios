@@ -1299,6 +1299,10 @@ Prefab:
       propertyPath: m_CullingMode
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11471126, guid: 289815c6212334846b5805c1787f237c, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 289815c6212334846b5805c1787f237c, type: 2}
   m_IsPrefabParent: 0
