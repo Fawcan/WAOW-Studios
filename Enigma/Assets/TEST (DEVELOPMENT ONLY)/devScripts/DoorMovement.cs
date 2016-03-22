@@ -12,8 +12,6 @@ using System.Collections;
 
 */
 
-
-
 public class DoorMovement : MonoBehaviour
 {
     [SerializeField]
@@ -29,11 +27,10 @@ public class DoorMovement : MonoBehaviour
 
     private float mSmooth = 2f;
 
-	// Use this for initialization
 	void Start ()
     {
-	
-	}
+
+    }
 
     public void ChangeDoorState()
     {
@@ -48,7 +45,7 @@ public class DoorMovement : MonoBehaviour
             Quaternion targetRotation = Quaternion.Euler(0, mOpenAngle, 0);
             transform.localRotation = Quaternion.Slerp(transform.localRotation, targetRotation, mSmooth * Time.deltaTime);
         }
-        
+
         /*
         The section below is not needed at this time but
         commented out in case of later use. The else statement
@@ -61,6 +58,6 @@ public class DoorMovement : MonoBehaviour
             transform.localRotation = Quaternion.Slerp(transform.localRotation, targetRotation2, mSmooth * Time.deltaTime);
         }
         */
-	
-	}
+
+    }
 }
