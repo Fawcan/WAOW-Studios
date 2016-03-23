@@ -56,8 +56,7 @@ public class BaseUnit : MonoBehaviour
     
     void Update()
     {
-        mTestCurrentHP -= mDamage;
-        mTestMaxHP = mHealth;
+        mTestCurrentHP = mHealth;        
         Vector3 forward = transform.forward;
         Debug.DrawRay(new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z), forward, Color.red);
     }
@@ -87,7 +86,7 @@ public class BaseUnit : MonoBehaviour
         //{
             target.ApplyDamage(mDamage);
             mAttackSpeedCounter = 0.0f;
-            decreaseHealth();
+            //decreaseHealth();
         //}
 
 
@@ -98,13 +97,13 @@ public class BaseUnit : MonoBehaviour
 
 
     }
-    public void decreaseHealth()
-    {
-        //mTestCurrentHP -= 2f;
-        float mCalcHealth = mTestCurrentHP / mTestMaxHP; //Calculation for how much the Healthbar will shrink when HP is reduced.
+    //public void decreaseHealth()
+    //{
+    //    //mTestCurrentHP -= 2f;
+    //    float mCalcHealth = mTestCurrentHP / mTestMaxHP; //Calculation for how much the Healthbar will shrink when HP is reduced.
 
-        //Calls function SetHealthBar from the 'userInterface' Script.
-        GameObject.FindGameObjectWithTag("Canvas").GetComponent<UserInterface>().SetHealthBar(mCalcHealth);
-    }
+    //    //Calls function SetHealthBar from the 'userInterface' Script.
+    //    GameObject.FindGameObjectWithTag("Canvas").GetComponent<UserInterface>().SetHealthBar(mCalcHealth);
+    //}
 
 }
