@@ -11,6 +11,8 @@ public class Enemy : BaseUnit
 {
     [SerializeField]
     protected NavMeshAgent agent;
+
+    private BaseUnit mTarget;
     
     public void Move(Vector3 destination)
     {
@@ -23,12 +25,18 @@ public class Enemy : BaseUnit
     {
         if (target.GetComponent<Player>().mNotDead)
         {
-            base.Attack(target);
+            mTarget = target;
             base.PlayAnimation("attack");
             //Debug.Log(mHealth);
 
-        }        
+        }       
 
+    }
+
+    public void TriggerAttack()
+    {
+        base.Attack(mTarget);
+        mTarget = null;
     }
     
     public override void Rotate(Quaternion rotation)

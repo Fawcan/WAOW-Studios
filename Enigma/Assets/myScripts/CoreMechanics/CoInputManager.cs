@@ -71,16 +71,16 @@ public class CoInputManager : MonoBehaviour
     {
         Vector3 forward = transform.TransformDirection(Vector3.forward) * 2f;
         Debug.DrawRay(new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z), forward, Color.green);
-
-        if (Input.GetButtonDown("Attack"))
+        bool allowAttack = true;
+        if (mAnimator.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
         {
-            RaycastHit mRayHit;
+            allowAttack = false;
+            // Avoid any reload.
+        }
 
-            if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z), forward, out mRayHit, 5f) && mRayHit.transform.tag == "Enemy")
-            {
-                Debug.Log("Träff!");
-                //mPlayer.Attack();
-            }
+        if (Input.GetButtonDown("Attack") && allowAttack)
+        {
+            
            
             
             

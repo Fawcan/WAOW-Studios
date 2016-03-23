@@ -78,11 +78,11 @@ public class BaseUnit : MonoBehaviour
         // ("Attacking", true);//player
 		mAttackSpeedCounter += Time.deltaTime;//cooldown
 
-        if(mAttackSpeedCounter >= mAttackSpeed)
-        {
+        //if(mAttackSpeedCounter >= mAttackSpeed)
+        //{
             target.ApplyDamage(mDamage);
             mAttackSpeedCounter = 0.0f;
-        }
+        //}
       
 
       
