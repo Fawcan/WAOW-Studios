@@ -36,6 +36,7 @@ public class Player : BaseUnit
         var locVel = transform.InverseTransformDirection(targetPos);
         //Debug.Log(locVel);
         //  Skicka in framåthastigheten
+        mAnimatorPlayer.SetFloat("FSpeed", mSpeed);
         mAnimatorPlayer.SetFloat("VSpeed", locVel.z * Mathf.Abs( direction.x ));
         mAnimatorPlayer.SetFloat("HSpeed", locVel.x * Mathf.Abs( direction.y ));
         mRigidBody.MovePosition(transform.position + mMovement);
