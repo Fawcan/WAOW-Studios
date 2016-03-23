@@ -1009,6 +1009,7 @@ MonoBehaviour:
   mAnimatorPlayer: {fileID: 0}
   mNotDead: 1
   mPlayer: {fileID: 0}
+  mEnemy: {fileID: 0}
 --- !u!64 &702046084
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1546,6 +1547,7 @@ MonoBehaviour:
   mAnimatorPlayer: {fileID: 0}
   mNotDead: 1
   mPlayer: {fileID: 0}
+  mEnemy: {fileID: 0}
 --- !u!4 &848711061
 Transform:
   m_ObjectHideFlags: 0
@@ -1640,6 +1642,10 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 18eb18d560952ef4bb246daa7ecb9487, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1064955587 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 118214, guid: 529b1471dc4471c40875042c2fce2902, type: 2}
+  m_PrefabInternal: {fileID: 1921843601}
 --- !u!1001 &1120037502
 Prefab:
   m_ObjectHideFlags: 0
@@ -2141,6 +2147,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11493310, guid: 529b1471dc4471c40875042c2fce2902, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 22458524, guid: 529b1471dc4471c40875042c2fce2902, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2213,6 +2223,18 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11493310, guid: 529b1471dc4471c40875042c2fce2902, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11493310, guid: 529b1471dc4471c40875042c2fce2902, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11493310, guid: 529b1471dc4471c40875042c2fce2902, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1064955587}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 529b1471dc4471c40875042c2fce2902, type: 2}
   m_IsPrefabParent: 0
