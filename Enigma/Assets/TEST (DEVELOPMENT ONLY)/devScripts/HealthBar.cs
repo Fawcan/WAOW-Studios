@@ -22,7 +22,7 @@ public class HealthBar : MonoBehaviour {
     [SerializeField]
     private float mTestMaxHP = 100f;
     [SerializeField]
-    private float mTestCurrentHP = 0f;
+    public float mTestCurrentHP = 0f;
     [SerializeField]
     private float mTimeCount = 60f; //This serialized variable is mincapped @ 60 seconds.
     private float mMaxTimeCount;
@@ -33,7 +33,7 @@ public class HealthBar : MonoBehaviour {
     void Start ()
     {
         mTestCurrentHP = mTestMaxHP;
-        InvokeRepeating("decreaseHealth", 1f, 1f);
+        //InvokeRepeating("decreaseHealth", 1f, 1f);
         mMaxTimeCount = mTimeCount;
         mAnimator = GetComponent<Animator>();
     }
@@ -41,7 +41,8 @@ public class HealthBar : MonoBehaviour {
     // Update is called once per frame
     void Update ()
     {
-        if(mTestCurrentHP <= 0)
+        mTestCurrentHP = GameObject.FindGameObjectWithTag("Player").GetComponent<BaseUnit>().mDamage;
+        if (mTestCurrentHP <= 0)
         {
             mAnimator.SetBool("Die", true);
             StartCoroutine(StartDelay());    
@@ -65,7 +66,7 @@ public class HealthBar : MonoBehaviour {
 
     public void decreaseHealth()
     {
-        mTestCurrentHP -= 2f;
+        //mTestCurrentHP -= 2f;
         float mCalcHealth = mTestCurrentHP / mTestMaxHP; //Calculation for how much the Healthbar will shrink when HP is reduced.
         
         //Calls function SetHealthBar from the 'userInterface' Script.

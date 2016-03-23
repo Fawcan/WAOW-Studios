@@ -21,6 +21,8 @@ public class BaseUnit : MonoBehaviour
     [SerializeField] protected float mAttackRange = 10f;
     [SerializeField] public int mDamage = 3;
     [SerializeField] protected AnimationClip Attacking;     // Added by Maria 10/3 22:45
+    [SerializeField] private float mTestMaxHP = 100f;
+    [SerializeField] public float mTestCurrentHP = 0f;
 
     [SerializeField] protected Animator mAnimatorPlayer;     // Added by Maria 10/3 22:45
     Animation mAnimation;
@@ -54,6 +56,8 @@ public class BaseUnit : MonoBehaviour
     
     void Update()
     {
+        mTestCurrentHP -= mDamage;
+        mTestMaxHP = mHealth;
         Vector3 forward = transform.forward;
         Debug.DrawRay(new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z), forward, Color.red);
     }
@@ -83,15 +87,24 @@ public class BaseUnit : MonoBehaviour
         //{
             target.ApplyDamage(mDamage);
             mAttackSpeedCounter = 0.0f;
+            decreaseHealth();
         //}
-      
 
-      
+
+
 
         //mAnimator.SetBool("Attacking", true);   // Added by Maria 10/3 22:45
         //mAnimation.Play("attack", PlayMode.StopAll);  *** This code is used only for 'Legacy' animations and is NOT compatible with the Player Character Animations! - Maria ***
 
 
+    }
+    public void decreaseHealth()
+    {
+        //mTestCurrentHP -= 2f;
+        float mCalcHealth = mTestCurrentHP / mTestMaxHP; //Calculation for how much the Healthbar will shrink when HP is reduced.
+
+        //Calls function SetHealthBar from the 'userInterface' Script.
+        GameObject.FindGameObjectWithTag("Canvas").GetComponent<UserInterface>().SetHealthBar(mCalcHealth);
     }
 
 }
