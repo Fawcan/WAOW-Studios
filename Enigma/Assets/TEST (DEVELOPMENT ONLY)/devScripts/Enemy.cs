@@ -18,7 +18,7 @@ public class Enemy : BaseUnit
     {
         base.PlayAnimation("run");
         agent = gameObject.GetComponent<NavMeshAgent>();
-        agent.SetDestination(destination);
+        //agent.SetDestination(destination);
     }
 
     public override void Attack(BaseUnit target)

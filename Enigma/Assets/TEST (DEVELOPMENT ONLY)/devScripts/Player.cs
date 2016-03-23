@@ -21,24 +21,33 @@ public class Player : BaseUnit
 
     public void Move(Vector2 direction)
     {
-
+        Debug.Log(direction);
         Vector3 mMovement = new Vector3();
+        Vector3 animationSpeed = new Vector3(direction.x, 0, direction.y);
+        //animationSpeed.Normalize();
+        //animationSpeed.x *= direction.x;
+        //animationSpeed.y *= direction.y;
 
         mMovement.Set(direction.x, 0f, direction.y);
-        mMovement = mMovement.normalized * mSpeed * Time.deltaTime;
+        mMovement = new Vector3(direction.x, 0, direction.y) * mSpeed * Time.deltaTime;
+        Vector3 nonNormalizedMovement = mMovement;
         mMovement.x *= Mathf.Abs( direction.x );
         mMovement.y *= Mathf.Abs( direction.y );
         //  Räkna ut vector från vart spelaren är till vart spelaren ska
-        Vector3 targetPos = (transform.position + mMovement) - transform.position;
+        //Vector3 targetPos = (transform.position + mMovement) - transform.position;
         //  Normalisera den för att få enhetsvektor ( 0 -> 1 )
-        targetPos.Normalize();
+        //targetPos.Normalize();
         // Omvandla vectorn från world space till local space
-        var locVel = transform.InverseTransformDirection(targetPos);
+
+        var locVel = transform.InverseTransformDirection(animationSpeed);
         //Debug.Log(locVel);
+        float speedZ = locVel.z;//(locVelFullSpeed.z == 0) ? 0 : locVel.z / locVelFullSpeed.z;
+        float speedX = locVel.x;//(locVelFullSpeed.x == 0) ? 0 : locVel.x / locVelFullSpeed.x;
+
         //  Skicka in framåthastigheten
-        mAnimatorPlayer.SetFloat("FSpeed", mSpeed);
-        mAnimatorPlayer.SetFloat("VSpeed", locVel.z * Mathf.Abs( direction.x ));
-        mAnimatorPlayer.SetFloat("HSpeed", locVel.x * Mathf.Abs( direction.y ));
+        mAnimatorPlayer.SetFloat("FSpeed", locVel.z);
+        mAnimatorPlayer.SetFloat("VSpeed", speedZ);
+        mAnimatorPlayer.SetFloat("HSpeed", speedX);
         mRigidBody.MovePosition(transform.position + mMovement);
     }
 
