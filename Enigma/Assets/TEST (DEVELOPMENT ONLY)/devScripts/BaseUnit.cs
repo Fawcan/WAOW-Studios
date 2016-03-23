@@ -21,9 +21,6 @@ public class BaseUnit : MonoBehaviour
     [SerializeField] protected float mAttackRange = 10f;
     [SerializeField] public int mDamage = 3;
     [SerializeField] protected AnimationClip Attacking;     // Added by Maria 10/3 22:45
-    [SerializeField] private float mTestMaxHP = 100f;
-    [SerializeField] public float mTestCurrentHP = 0f;
-
     [SerializeField] protected Animator mAnimatorPlayer;     // Added by Maria 10/3 22:45
     Animation mAnimation;
     protected Rigidbody mRigidBody;
@@ -55,8 +52,7 @@ public class BaseUnit : MonoBehaviour
     }
     
     void Update()
-    {
-        mTestCurrentHP = mHealth;        
+    {    
         Vector3 forward = transform.forward;
         Debug.DrawRay(new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z), forward, Color.red);
     }
@@ -73,21 +69,17 @@ public class BaseUnit : MonoBehaviour
         if (mHealth <= 0 && mNotDead)
         {
             mNotDead = false;
-            Die();                       
+            //Die();                       
         }
     }
 
     public virtual void Attack(BaseUnit target)
     {
         // ("Attacking", true);//player
-		mAttackSpeedCounter += Time.deltaTime;//cooldown
-
-        //if(mAttackSpeedCounter >= mAttackSpeed)
-        //{
-            target.ApplyDamage(mDamage);
-            mAttackSpeedCounter = 0.0f;
-            //decreaseHealth();
-        //}
+		mAttackSpeedCounter += Time.deltaTime;//cooldown      
+        target.ApplyDamage(mDamage);
+        mAttackSpeedCounter = 0.0f;
+          
 
 
 

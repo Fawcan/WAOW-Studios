@@ -139,8 +139,6 @@ MonoBehaviour:
   mAttackRange: 10
   mDamage: 3
   Attacking: {fileID: 0}
-  mTestMaxHP: 100
-  mTestCurrentHP: 0
   mAnimatorPlayer: {fileID: 0}
   mNotDead: 1
   mPlayer: {fileID: 0}
@@ -425,6 +423,10 @@ Prefab:
     - target: {fileID: 479368, guid: 392d74e66c0a5cb41908ff0e73a80682, type: 2}
       propertyPath: m_RootOrder
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11456644, guid: 392d74e66c0a5cb41908ff0e73a80682, type: 2}
+      propertyPath: mDamage
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 392d74e66c0a5cb41908ff0e73a80682, type: 2}
