@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class lightswitch : MonoBehaviour
+public class Lightswitch : MonoBehaviour
 {
-    [SerializeField]
-    private Light objLight;
+    [SerializeField] private Light mObjLight;
+    
 
     // check if somthing enters the trigger
     void OnTriggerEnter(Collider other)
@@ -13,7 +13,7 @@ public class lightswitch : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             // turn on the light
-            objLight.enabled = true;
+            mObjLight.enabled = true;
         }
     }
     // check if somthing leaves the trigger
@@ -23,7 +23,7 @@ public class lightswitch : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             // turn off the light
-            objLight.enabled = false;
+            mObjLight.enabled = false;
         }
     }
 
