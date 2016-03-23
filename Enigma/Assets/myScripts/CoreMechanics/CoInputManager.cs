@@ -3,9 +3,13 @@ using System.Collections;
 
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(Animator))]
-
+[RequireComponent(typeof(AudioSource))]
 public class CoInputManager : MonoBehaviour
 {
+
+    [SerializeField]
+    AudioClip SwordSwing;
+    AudioSource audio;
     //Serialized variables below
     [SerializeField] private float mInteractRange;
     //[SerializeField] float mCamRayLenght = 100f;
@@ -19,7 +23,11 @@ public class CoInputManager : MonoBehaviour
     //Public variables below
     public float mRotationSpeed = 100f;
 
-  
+    void Start()
+    {
+        audio = GetComponent<AudioSource>();
+
+    }
 
     void Awake()
     {
@@ -74,9 +82,15 @@ public class CoInputManager : MonoBehaviour
         bool allowAttack = true;
         if (mAnimator.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
         {
+<<<<<<< HEAD
             allowAttack = false;
             // Avoid any reload.
         }
+=======
+            GetComponent<AudioSource>().PlayOneShot(SwordSwing);
+
+            RaycastHit mRayHit;
+>>>>>>> 92f3efab30095efbf47e1dd4b57a9fa7f47f53f8
 
         if (Input.GetButtonDown("Attack") && allowAttack)
         {
