@@ -3,9 +3,13 @@ using System.Collections;
 
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(Animator))]
-
+[RequireComponent(typeof(AudioSource))]
 public class CoInputManager : MonoBehaviour
 {
+
+    [SerializeField]
+    AudioClip SwordSwing;
+    AudioSource audio;
     //Serialized variables below
     [SerializeField] private float mInteractRange;
     //[SerializeField] float mCamRayLenght = 100f;
@@ -19,7 +23,11 @@ public class CoInputManager : MonoBehaviour
     //Public variables below
     public float mRotationSpeed = 100f;
 
-  
+    void Start()
+    {
+        audio = GetComponent<AudioSource>();
+
+    }
 
     void Awake()
     {
@@ -74,6 +82,8 @@ public class CoInputManager : MonoBehaviour
 
         if (Input.GetButtonDown("Attack"))
         {
+            GetComponent<AudioSource>().PlayOneShot(SwordSwing);
+
             RaycastHit mRayHit;
 
             if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z), forward, out mRayHit, 5f) && mRayHit.transform.tag == "Enemy")
