@@ -35,6 +35,18 @@ public class Enemy : BaseUnit
 
     public void TriggerAttack()
     {
+        Debug.Log("Enemy Triggered Attack!");
+
+        RaycastHit mHit;
+        Vector3 forward = transform.TransformDirection(Vector3.forward) * 2f;
+        if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y + 0.2f, transform.position.z), forward, out mHit, 2f) && mHit.transform.tag == "Player")
+        {
+            Debug.Log("Enemy träff!");
+            BaseUnit player = mHit.transform.GetComponent<BaseUnit>();
+            if (player == null)
+                Debug.LogError("Couldnt find the BaseUnit component");
+            this.Attack(player);
+        } 
         base.Attack(mTarget);
         mTarget = null;
     }
