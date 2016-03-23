@@ -54,7 +54,8 @@ public class BaseUnit : MonoBehaviour
     
     void Update()
     {
-       
+        Vector3 forward = transform.forward;
+        Debug.DrawRay(new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z), forward, Color.red);
     }
 
     public virtual void Die()

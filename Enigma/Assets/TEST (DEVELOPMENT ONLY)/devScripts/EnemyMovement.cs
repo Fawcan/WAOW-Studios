@@ -8,6 +8,7 @@ public class EnemyMovement : MonoBehaviour
     public Transform mPlayer;
     private Vector3 mHome;
     private Vector3 mCurrentDestination;
+    private Animation mAnimation;
     float mTurnSpeed = 100f;
     [SerializeField]
     float mDetectionRange = 4.0f;
@@ -19,6 +20,7 @@ public class EnemyMovement : MonoBehaviour
     {
         mEnemy = GetComponent<Enemy>();
         mPlayer = GameObject.FindGameObjectWithTag("Player").transform;
+        mAnimation = GetComponent<Animation>();
         mHome = transform.position;
         if (mPlayer == null)
             Debug.Log("Cant find player");
@@ -42,9 +44,14 @@ public class EnemyMovement : MonoBehaviour
             mCurrentDestination = mHome;
         }
 
-        if(Vector3.Distance(transform.position, mCurrentDestination) < 2.0f)
+        Vector3 dir = mPlayer.position - transform.position;
+        dir = transform.InverseTransformDirection(dir);
+        float angle = Mathf.Atan2(dir.z, dir.x) * Mathf.Rad2Deg;
+        Debug.Log(angle);
+
+        if (Vector3.Distance(transform.position, mCurrentDestination) < 2.0f && angle >= 65 && angle <= 115)
         {
- 
+            //mEnemy.transform.LookAt(mPlayer, transform.up);
             if (mCurrentDestination == mPlayer.position)
             {
                 mEnemy.Attack(mPlayer.GetComponent<BaseUnit>());

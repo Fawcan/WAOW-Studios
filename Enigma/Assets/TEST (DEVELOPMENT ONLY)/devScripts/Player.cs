@@ -21,7 +21,7 @@ public class Player : BaseUnit
 
     public void Move(Vector2 direction)
     {
-        Debug.Log(direction.ToString());
+
         Vector3 mMovement = new Vector3();
 
         mMovement.Set(direction.x, 0f, direction.y);
