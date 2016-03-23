@@ -26,6 +26,7 @@ public class CoInputManager : MonoBehaviour
         //mFloorMask = LayerMask.GetMask("Floor");
         mPlayer = GetComponent<Player>();
         mAnimator = GetComponent<Animator>();
+        
 
     }//End Awake()
 
@@ -39,7 +40,8 @@ public class CoInputManager : MonoBehaviour
 
     public void HandleInput()
     {
-         mPlayer.Move(new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")));
+        mPlayer.Move(new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")));
+        
        
     } //End HandleInput 
 
@@ -77,6 +79,7 @@ public class CoInputManager : MonoBehaviour
             if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z), forward, out mRayHit, 5f) && mRayHit.transform.tag == "Enemy")
             {
                 Debug.Log("Träff!");
+                //mPlayer.Attack();
             }
            
             
