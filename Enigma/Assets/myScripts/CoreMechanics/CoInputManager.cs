@@ -82,15 +82,15 @@ public class CoInputManager : MonoBehaviour
         bool allowAttack = true;
         if (mAnimator.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
         {
-<<<<<<< HEAD
+
             allowAttack = false;
             // Avoid any reload.
         }
-=======
+
             GetComponent<AudioSource>().PlayOneShot(SwordSwing);
 
             RaycastHit mRayHit;
->>>>>>> 92f3efab30095efbf47e1dd4b57a9fa7f47f53f8
+
 
         if (Input.GetButtonDown("Attack") && allowAttack)
         {
