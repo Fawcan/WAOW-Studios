@@ -1459,7 +1459,7 @@ Animation:
   - {fileID: 7400008, guid: 86c591ebd74142c4d93243d9fa9544da, type: 3}
   - {fileID: 7400002, guid: 86c591ebd74142c4d93243d9fa9544da, type: 3}
   - {fileID: 7400004, guid: 86c591ebd74142c4d93243d9fa9544da, type: 3}
-  - {fileID: 7400006, guid: 86c591ebd74142c4d93243d9fa9544da, type: 3}
+  - {fileID: 7400006, guid: 88b03dd1e1d8d1240a7d4afd3f49af32, type: 3}
   - {fileID: 7400010, guid: 86c591ebd74142c4d93243d9fa9544da, type: 3}
   - {fileID: 7400012, guid: 86c591ebd74142c4d93243d9fa9544da, type: 3}
   - {fileID: 7400014, guid: 86c591ebd74142c4d93243d9fa9544da, type: 3}
@@ -1481,6 +1481,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destination: {fileID: 0}
   mPlayer: {fileID: 0}
+  mTurnSpeed: 100
   mDetectionRange: 8
 --- !u!114 &11495650
 MonoBehaviour:
@@ -1498,9 +1499,7 @@ MonoBehaviour:
   mAttackSpeed: 2
   mAttackRange: 10
   mDamage: 2
-  Attacking: {fileID: 0}
-  mTestMaxHP: 100
-  mTestCurrentHP: 0
+  Attacking: {fileID: 7400006, guid: 88b03dd1e1d8d1240a7d4afd3f49af32, type: 3}
   mAnimatorPlayer: {fileID: 0}
   mNotDead: 1
   mPlayer: {fileID: 0}

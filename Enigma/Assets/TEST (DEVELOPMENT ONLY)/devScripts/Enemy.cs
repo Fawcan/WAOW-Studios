@@ -61,8 +61,9 @@ public class Enemy : BaseUnit
     {
         base.PlayAnimation("die");
         mNotDead = false;
-        //Destroy(gameObject);
         base.Die();
+        //Destroy(gameObject);
+
 
 
     }

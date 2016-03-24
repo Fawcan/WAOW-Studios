@@ -9,9 +9,8 @@ public class EnemyMovement : MonoBehaviour
     private Vector3 mHome;
     private Vector3 mCurrentDestination;
     private Animation mAnimation;
-    float mTurnSpeed = 100f;
-    [SerializeField]
-    float mDetectionRange = 4.0f;
+    [SerializeField] float mTurnSpeed = 100f;
+    [SerializeField] float mDetectionRange = 4.0f;
     private Enemy mEnemy;
 
     //protected Animator mAnimatorEnemy;
@@ -54,7 +53,7 @@ public class EnemyMovement : MonoBehaviour
             //mEnemy.transform.LookAt(mPlayer, transform.up);
             if (mCurrentDestination == mPlayer.position)
             {
-                mEnemy.Attack(mPlayer.GetComponent<BaseUnit>());
+                mEnemy.Attack(mPlayer.GetComponent<BaseUnit>());             
                 
             }
             else if(mCurrentDestination == mHome)

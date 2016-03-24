@@ -224,14 +224,18 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11463716, guid: 7b0682939b119444b9dc03a1cfa3c9d0, type: 2}
-      propertyPath: destination
-      value: 
-      objectReference: {fileID: 622959867}
     - target: {fileID: 11495650, guid: 7b0682939b119444b9dc03a1cfa3c9d0, type: 2}
       propertyPath: mPlayer
       value: 
       objectReference: {fileID: 750821433}
+    - target: {fileID: 5438600, guid: 7b0682939b119444b9dc03a1cfa3c9d0, type: 2}
+      propertyPath: m_Interpolate
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5438600, guid: 7b0682939b119444b9dc03a1cfa3c9d0, type: 2}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7b0682939b119444b9dc03a1cfa3c9d0, type: 2}
   m_IsPrefabParent: 0
@@ -427,6 +431,10 @@ Prefab:
     - target: {fileID: 11456644, guid: 392d74e66c0a5cb41908ff0e73a80682, type: 2}
       propertyPath: mDamage
       value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 11456644, guid: 392d74e66c0a5cb41908ff0e73a80682, type: 2}
+      propertyPath: mHealth
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 392d74e66c0a5cb41908ff0e73a80682, type: 2}

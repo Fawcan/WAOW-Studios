@@ -21,7 +21,7 @@ public class Player : BaseUnit
 
     public void Move(Vector2 direction)
     {
-        Debug.Log(direction);
+        //Debug.Log(direction);
         Vector3 mMovement = new Vector3();
         Vector3 animationSpeed = new Vector3(direction.x, 0, direction.y);
         //animationSpeed.Normalize();
