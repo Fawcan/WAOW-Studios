@@ -16,12 +16,13 @@ public class Enemy : BaseUnit
 
 
     private BaseUnit mTarget;
-    
+
+    private bool inCombat = false;
     public void Move(Vector3 destination)
-    {
-        base.PlayAnimation("run");
-        agent = gameObject.GetComponent<NavMeshAgent>();
-        agent.SetDestination(destination);
+    {        
+            base.PlayAnimation("run");
+            agent = gameObject.GetComponent<NavMeshAgent>();
+            agent.SetDestination(destination);        
     }
 
     public override void Attack(BaseUnit target)

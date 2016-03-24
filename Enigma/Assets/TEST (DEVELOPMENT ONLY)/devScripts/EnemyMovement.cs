@@ -18,9 +18,10 @@ public class EnemyMovement : MonoBehaviour
     void Awake()
     {
         mEnemy = GetComponent<Enemy>();
-        mPlayer = GameObject.FindGameObjectWithTag("Player").transform;
+        mPlayer = GameObject.FindGameObjectWithTag("Player").transform;        
         mAnimation = GetComponent<Animation>();
         mHome = transform.position;
+        mAnimation.Play("waitingforbattle", PlayMode.StopAll);
         if (mPlayer == null)
             Debug.Log("Cant find player");
     }
@@ -32,9 +33,10 @@ public class EnemyMovement : MonoBehaviour
 
     void Update()
     {
-        
+
         //Debug.Log("Name of player: " + mPlayer.position);
-        if(mEnemy.mNotDead == false)
+        
+        if (mEnemy.mNotDead == false)
         {
             return;
         }
@@ -60,11 +62,14 @@ public class EnemyMovement : MonoBehaviour
                 mEnemy.Attack(mPlayer.GetComponent<BaseUnit>());             
                 
             }
-            else if(mCurrentDestination == mHome)
-            {
-                //Idle
-            }
+            
 
+        }
+        else if (mCurrentDestination == mHome && Vector3.Distance(transform.position, mCurrentDestination) < 0.03f)
+        {
+            //Idle
+            mAnimation.Play("waitingforbattle", PlayMode.StopAll);
+            Debug.Log("IS home");
         }
         else
         {
