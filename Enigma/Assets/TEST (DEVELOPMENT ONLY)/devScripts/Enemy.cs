@@ -11,6 +11,8 @@ public class Enemy : BaseUnit
 {
     [SerializeField]
     protected NavMeshAgent agent;
+    
+    
 
     private BaseUnit mTarget;
     
@@ -51,6 +53,17 @@ public class Enemy : BaseUnit
         
         mTarget = null;
     }
+
+    void Update()
+    {
+        if(mHealth <= 0)
+        {
+            Debug.Log("The health reached: " + mHealth);
+            base.PlayAnimation("die");
+            Die();
+        }
+        
+    }
     
     public override void Rotate(Quaternion rotation)
     {
@@ -59,13 +72,9 @@ public class Enemy : BaseUnit
 
     public override void Die()
     {
-        base.PlayAnimation("die");
-        mNotDead = false;
         base.Die();
-        //Destroy(gameObject);
-
-
-
+        mNotDead = false;        
+        Destroy(gameObject);
     }
 
 }

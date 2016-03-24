@@ -107,8 +107,8 @@ public class Player : BaseUnit
         
     }
 
-    internal void ApplyDamage(object mDamage)
-    {
-        throw new NotImplementedException();
-    }
+    //internal void ApplyDamage(object mDamage)
+    //{
+    //    throw new NotImplementedException();
+    //}
 }

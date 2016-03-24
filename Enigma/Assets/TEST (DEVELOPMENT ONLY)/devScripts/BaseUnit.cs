@@ -21,6 +21,7 @@ public class BaseUnit : MonoBehaviour
     [SerializeField] protected float mAttackRange = 10f;
     [SerializeField] public int mDamage = 3;
     [SerializeField] protected AnimationClip Attacking;     // Added by Maria 10/3 22:45
+    
     [SerializeField] protected Animator mAnimatorPlayer;     // Added by Maria 10/3 22:45
     Animation mAnimation;
     protected Rigidbody mRigidBody;
@@ -42,6 +43,7 @@ public class BaseUnit : MonoBehaviour
     protected void PlayAnimation(string animationName)
     {
         mAnimation.Play(animationName, PlayMode.StopAll);
+
     }
 
     public virtual void Rotate(Quaternion rotation)
