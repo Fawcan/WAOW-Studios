@@ -12,22 +12,23 @@ public class CaveSound : MonoBehaviour
     AudioSource audio;
     bool mCavePlaying = false;
 
-    void Start ()
+    void Start()
     {
         audio = GetComponent<AudioSource>();
         GetComponent<AudioSource>().PlayOneShot(FieldSound);
-
+        Debug.Log("Once");
     }
 
-    // Update is called once per frame
     void OnTriggerEnter(Collider StartCave)
     {
-        audio.Stop();
         if (StartCave.CompareTag("Player") && !mCavePlaying)
         {
+            audio.Stop();
+
             mCavePlaying = true;
             GetComponent<AudioSource>().PlayOneShot(CaveAmbience);
-            Debug.Log("Play");
+            Debug.Log("Cave");
+
         }
     }
     void OnTriggerExit(Collider EndCave)
@@ -38,8 +39,7 @@ public class CaveSound : MonoBehaviour
             //GetComponent<AudioSource>().PlayOneShot(CaveAmbience);
             audio.Stop();
             GetComponent<AudioSource>().PlayOneShot(FieldSound);
-
-            Debug.Log("Stop");
+            Debug.Log("Field");
 
         }
     }
