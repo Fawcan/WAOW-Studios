@@ -43,7 +43,7 @@ public class BaseUnit : MonoBehaviour
     protected void PlayAnimation(string animationName)
     {
         mAnimation.Play(animationName, PlayMode.StopAll);
-
+        
     }
 
     public virtual void Rotate(Quaternion rotation)
@@ -61,7 +61,7 @@ public class BaseUnit : MonoBehaviour
 
     public virtual void Die()
     {
-        //Do not write here
+        //Do not write here       
     }
 
     public virtual void ApplyDamage(int mDamage)
@@ -71,7 +71,7 @@ public class BaseUnit : MonoBehaviour
         if (mHealth <= 0 && mNotDead)
         {
             mNotDead = false;
-            //Die();                       
+            Die();                       
         }
     }
 

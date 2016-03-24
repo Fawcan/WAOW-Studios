@@ -34,6 +34,10 @@ public class EnemyMovement : MonoBehaviour
     {
         
         //Debug.Log("Name of player: " + mPlayer.position);
+        if(mEnemy.mNotDead == false)
+        {
+            return;
+        }
         if (Vector3.Distance(transform.position, mPlayer.position) < mDetectionRange)
         {
             mCurrentDestination = mPlayer.position;

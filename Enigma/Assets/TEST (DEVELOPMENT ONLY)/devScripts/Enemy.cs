@@ -11,8 +11,9 @@ public class Enemy : BaseUnit
 {
     [SerializeField]
     protected NavMeshAgent agent;
-    
-    
+    [SerializeField]
+    protected AnimationClip die;
+
 
     private BaseUnit mTarget;
     
@@ -54,17 +55,23 @@ public class Enemy : BaseUnit
         mTarget = null;
     }
 
+    private bool mTriggeredDead = false;
     void Update()
     {
-        if(mHealth <= 0)
+
+        if (mHealth <= 0 && !mTriggeredDead)
         {
+            mTriggeredDead = true;
             Debug.Log("The health reached: " + mHealth);
-            base.PlayAnimation("die");
+
+            //mNotDead = false;
             Die();
         }
-        
+
+
+
     }
-    
+
     public override void Rotate(Quaternion rotation)
     {
         base.Rotate(rotation);
@@ -72,9 +79,15 @@ public class Enemy : BaseUnit
 
     public override void Die()
     {
+        Debug.Log("Död");
+        //base.PlayAnimation("die", PlayMode.StopAll);
+        //mAnimation.Play(animationName, PlayMode.StopAll);
+        base.PlayAnimation("die");
+        mNotDead = false;
         base.Die();
-        mNotDead = false;        
-        Destroy(gameObject);
+      
+                
+       // Destroy(gameObject);
     }
 
 }
