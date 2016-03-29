@@ -87,17 +87,17 @@ public class CoInputManager : MonoBehaviour
             // Avoid any reload.
         }
 
-            GetComponent<AudioSource>().PlayOneShot(SwordSwing);
 
             RaycastHit mRayHit;
 
 
         if (Input.GetButtonDown("Attack") && allowAttack)
         {
-            
-           
-            
-            
+
+
+            GetComponent<AudioSource>().PlayOneShot(SwordSwing);
+
+
             mAnimator.SetTrigger("Attacking");            
             //Debug.Log("Attacking!");
            
