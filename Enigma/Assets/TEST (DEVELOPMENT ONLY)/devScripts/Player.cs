@@ -10,13 +10,22 @@ public class Player : BaseUnit
     [SerializeField]
     private float mInteractDist = 2f; // for debug purposue
     public bool isGrounded;
-    
-       
+
+
     public virtual void Start()
     {
         mAnimatorPlayer = GetComponent<Animator>();
         base.mNotDead = true;
         //mAnimatorPlayer.SetBool("Die", false);
+        mPlayer.GetComponent<CoInputManager>().enabled = true;
+    }
+
+    void Update()
+    {
+        if (mNotDead == false)
+        {
+            return;
+        }
     }
 
     public void Move(Vector2 direction)
@@ -99,12 +108,19 @@ public class Player : BaseUnit
 
     public override void Die()
     {
+        mPlayer.GetComponent<CoInputManager>().enabled = false;
         //mAnimatorPlayer.SetBool("Die", true);
         mAnimatorPlayer.SetTrigger("Die");
         base.mNotDead = false;
-        base.Die();       
-        
-        
+        base.Die();
+        StartCoroutine(StartDelay());
+
+
+    }
+    IEnumerator StartDelay()
+    {
+        yield return new WaitForSeconds(6f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     //internal void ApplyDamage(object mDamage)
