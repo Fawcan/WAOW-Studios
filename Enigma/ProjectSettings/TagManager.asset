@@ -12,6 +12,7 @@ TagManager:
   - Floor
   - Obstacle
   - Weapon
+  - HealthFull
   layers:
   - Default
   - TransparentFX

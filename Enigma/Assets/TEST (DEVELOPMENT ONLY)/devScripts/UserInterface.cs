@@ -2,7 +2,8 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class UserInterface : MonoBehaviour
+
+public class UserInterface : Player
 {
 
     /*
@@ -22,20 +23,28 @@ public class UserInterface : MonoBehaviour
     private GameObject mHealthBar;
     public int mCurrentHealth;
     Image mHealthBarFull;
+    private bool mHasHealth = true;
+       
 
+    
 	// Use this for initialization
-	void Start()
+	void Awake()
     {
         mHealthBarFull = GameObject.FindGameObjectWithTag("Canvas").transform.FindChild("HealthFull").GetComponent<Image>();
 
+    }//End Awake()
 
-    }//End Start()
-	
-	// Update is called once per frame
-	void Update ()
+    // Update is called once per frame
+    void FixedUpdate(float mHealth)
     {
-        // mHealthBarFull.fillAmount = HÄR VILL JAG HA HEALTHEN!!
-	}//End Update()
+
+        mHealthBarFull.fillAmount = mHealth;
+        //mHealthBar.transform.localScale = new Vector3(Mathf.Clamp(mHealth, 0f, 1f), mHealthBar.transform.localScale.y, mHealthBar.transform.localScale.z);
+    }
+
+
+
+    }//End Update()
 
     ////This function is called by the 'testHealthBar' Script.
     //public void SetHealthBar(float mHealth)
@@ -43,3 +52,4 @@ public class UserInterface : MonoBehaviour
     //    mHealthBar.transform.localScale = new Vector3(Mathf.Clamp(mHealth, 0f, 1f), mHealthBar.transform.localScale.y, mHealthBar.transform.localScale.z);
     //}//End SetHealthBar
 }
+
