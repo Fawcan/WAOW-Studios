@@ -22,7 +22,6 @@ public class CoInputManager : MonoBehaviour
     private float mSpeed;
     //Public variables below
     public float mRotationSpeed = 100f;
-
     void Start()
     {
         audio = GetComponent<AudioSource>();
@@ -45,6 +44,8 @@ public class CoInputManager : MonoBehaviour
         ButtonResponse();
                 
     }//End FixedUpdate()
+
+
 
     public void HandleInput()
     {
@@ -94,7 +95,6 @@ public class CoInputManager : MonoBehaviour
         if (Input.GetButtonDown("Attack") && allowAttack)
         {
 
-
             GetComponent<AudioSource>().PlayOneShot(SwordSwing);
 
 
@@ -111,6 +111,13 @@ public class CoInputManager : MonoBehaviour
             //Debug.Log("Animation played");
             //Debug.Log("Damage inflicted on eneme: ");
         }
-    }   
-
+    }
+    //TO BE REMOVED
+    //void Update() 
+    //{
+    //    if (BossKilled == true)
+    //    {
+    //        Application.LoadLevel("VictoryScene");
+    //    }
+    //}
 }// End Class
