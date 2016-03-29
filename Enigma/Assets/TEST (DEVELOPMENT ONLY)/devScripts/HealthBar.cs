@@ -64,12 +64,12 @@ public class HealthBar : MonoBehaviour {
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    public void decreaseHealth()
-    {
-        //mTestCurrentHP -= 2f;
-        float mCalcHealth = mTestCurrentHP / mTestMaxHP; //Calculation for how much the Healthbar will shrink when HP is reduced.
-        
-        //Calls function SetHealthBar from the 'userInterface' Script.
-        GameObject.FindGameObjectWithTag("Canvas").GetComponent<UserInterface>().SetHealthBar(mCalcHealth);
-    }
+    //public void decreaseHealth()
+    //{
+    //    //mTestCurrentHP -= 2f;
+    //    float mCalcHealth = mTestCurrentHP / mTestMaxHP; //Calculation for how much the Healthbar will shrink when HP is reduced.
+
+    //    //Calls function SetHealthBar from the 'userInterface' Script.
+    //    GameObject.FindGameObjectWithTag("Canvas").GetComponent<UserInterface>().SetHealthBar(mCalcHealth);
+    //}
 }
