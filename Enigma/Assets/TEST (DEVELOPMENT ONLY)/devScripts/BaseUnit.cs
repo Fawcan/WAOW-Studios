@@ -15,8 +15,7 @@ using System.Collections;
 [RequireComponent(typeof(Rigidbody))]
 public class BaseUnit : MonoBehaviour
 {
-    [SerializeField] protected int mHealth = 100;
-    [SerializeField] protected int mMaxHealth = 100; 
+    [SerializeField] protected int mHealth = 100; 
     [SerializeField] protected float mSpeed = 2;
     [SerializeField] protected float mAttackSpeed = 1;
     [SerializeField] protected float mAttackRange = 10f;
@@ -28,9 +27,7 @@ public class BaseUnit : MonoBehaviour
     protected Rigidbody mRigidBody;
     public bool mNotDead = true;
     public GameObject mPlayer;
-    public GameObject mEnemy;
-    public bool mIsDamaged = false; // Bool used for healthbar decrease.
-    
+    public GameObject mEnemy;    
 
     private float mAttackSpeedCounter = 0.0f;
 
@@ -58,13 +55,7 @@ public class BaseUnit : MonoBehaviour
     void Update()
     {    
         Vector3 forward = transform.forward;
-        Debug.DrawRay(new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z), forward, Color.red);
-
-        if(mIsDamaged == true)
-        {
-            DecreaseHealth();
-            mIsDamaged = false;
-        }
+        Debug.DrawRay(new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z), forward, Color.red); 
     }
 
     public virtual void Die()
@@ -81,15 +72,6 @@ public class BaseUnit : MonoBehaviour
             mNotDead = false;
             Die();                       
         }
-    }
-
-    void DecreaseHealth()
-    {
-        //Calculation for how much the Healthbar will shrink when HP is reduced.
-        float mCalcHealth = mHealth / mMaxHealth; 
-
-        //Calls function SetHealthBar from the 'userInterface' Script.
-        GameObject.FindGameObjectWithTag("Canvas").GetComponent<UserInterface>().SetHealthBar(mCalcHealth);
     }
 
     public virtual void Attack(BaseUnit target)
