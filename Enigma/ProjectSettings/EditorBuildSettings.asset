@@ -11,13 +11,13 @@ EditorBuildSettings:
     path: Assets/TEST (DEVELOPER ONLY)/_CompletedAssets/Scenes/Level 01 5.x.unity
   - enabled: 0
     path: Assets/myScenes/myScene2.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/TEST (DEVELOPMENT ONLY)/devScenes/mariaTest.unity
+  - enabled: 1
+    path: Assets/TEST (DEVELOPMENT ONLY)/devScenes/FirstLevel.unity
   - enabled: 0
     path: Assets/myScenes/CoreStructureScene.unity
   - enabled: 0
     path: Assets/TEST (DEVELOPMENT ONLY)/devScenes/albinTest.unity
-  - enabled: 1
-    path: Assets/TEST (DEVELOPMENT ONLY)/devScenes/FirstLevel.unity
   - enabled: 0
     path: Assets/myScenes/VictoryScene.unity

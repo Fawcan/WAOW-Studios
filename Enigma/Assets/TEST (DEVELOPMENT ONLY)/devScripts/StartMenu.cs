@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class StartMenu : MonoBehaviour {
 
@@ -19,7 +20,10 @@ public class StartMenu : MonoBehaviour {
 
     void Update()
     {
-        if(Input.GetButtonDown("Start"))
+        if (Input.GetButtonDown("Start"))
+        {
+            SceneManager.LoadScene(1);
+        }
     }
 
     //function to blink the text 
@@ -37,10 +41,4 @@ public class StartMenu : MonoBehaviour {
             yield return new WaitForSeconds(.5f);
         }
     }
-
-    // Update is called once per frame
-    void Update ()
-    {
-	
-	}
 }
