@@ -10,7 +10,22 @@ public class Player : BaseUnit
     [SerializeField]
     private float mInteractDist = 2f; // for debug purposue
     public bool isGrounded;
+    [SerializeField]
+    protected UserInterface mUI;
 
+    protected override int Health
+    {
+        get
+        {
+            return base.Health;
+        }
+
+        set
+        {
+            base.Health = value;
+            mUI.CurrentHealth = Health;
+        }
+    }
 
     public virtual void Start()
     {
@@ -114,15 +129,15 @@ public class Player : BaseUnit
         base.mNotDead = false;
         base.Die();
         StartCoroutine(StartDelay());
-
-
     }
+
     IEnumerator StartDelay()
     {
         yield return new WaitForSeconds(6f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
+    
     //internal void ApplyDamage(object mDamage)
     //{
     //    throw new NotImplementedException();

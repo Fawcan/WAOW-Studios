@@ -60,10 +60,10 @@ public class Enemy : BaseUnit
     void Update()
     {
 
-        if (mHealth <= 0 && !mTriggeredDead)
+        if (Health <= 0 && !mTriggeredDead)
         {
             mTriggeredDead = true;
-            Debug.Log("The health reached: " + mHealth);
+            Debug.Log("The health reached: " + Health);
 
             //mNotDead = false;
             Die();

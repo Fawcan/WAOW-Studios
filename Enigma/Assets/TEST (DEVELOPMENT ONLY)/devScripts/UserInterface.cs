@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 
 
-public class UserInterface : Player
+public class UserInterface : MonoBehaviour
 {
 
     /*
@@ -20,26 +20,34 @@ public class UserInterface : Player
     */
 
     [SerializeField]
-    private GameObject mHealthBar;
+    private Image mHealthBarFull;
     public int mCurrentHealth;
-    Image mHealthBarFull;
-    private bool mHasHealth = true;
-    private int mHPloss;
-       
+    public int CurrentHealth
+    {
+        get
+        {
+            return mCurrentHealth;
+        }
+        set
+        {
+            mCurrentHealth = Mathf.Clamp(value, 0, 100);
+            mHealthBarFull.fillAmount = mCurrentHealth / 100f;
 
+        }
+    }
+    
     
 	// Use this for initialization
 	void Start()
     {
-        mHealthBarFull = GameObject.FindGameObjectWithTag("Canvas").transform.FindChild("HealthFull").GetComponent<Image>();
-
+        //mHealthBarFull = GameObject.FindGameObjectWithTag("Canvas").transform.FindChild("HealthFull").GetComponent<Image>();
+        //this.CurrentHealth = 5;
     }//End Awake()
 
     // Update is called once per frame
     void Update()
     {
 
-        //mHealthBarFull.fillAmount = mHealth--;
         //mHealthBar.transform.localScale = new Vector3(Mathf.Clamp(mHealth, 0f, 1f), mHealthBar.transform.localScale.y, mHealthBar.transform.localScale.z);
 
     }//End Update()
@@ -50,18 +58,9 @@ public class UserInterface : Player
     //    mHealthBar.transform.localScale = new Vector3(Mathf.Clamp(mHealth, 0f, 1f), mHealthBar.transform.localScale.y, mHealthBar.transform.localScale.z);
     //}//End SetHealthBar
 
-    public void SetHealthBar(float mHealth)
-    {
-        mHealthBar.transform.localScale = new Vector3(Mathf.Clamp(mHealth, 0f, 1f), mHealthBar.transform.localScale.y, mHealthBar.transform.localScale.z);
-    }
-
-    public void DecreaseHealth()
-    {
-        if(mHasHealth)
-        {
-            mHPloss = mHealth - mDamage;
-            mHealthBarFull.fillAmount = mHealth;
-        }
-    }
+    //public void SetHealthBar(float mHealth)
+    //{
+    //    mHealthBar.transform.localScale = new Vector3(Mathf.Clamp(mHealth, 0f, 1f), mHealthBar.transform.localScale.y, mHealthBar.transform.localScale.z);
+    //}
 }
 

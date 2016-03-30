@@ -17,6 +17,11 @@ using UnityEngine.UI;
 public class BaseUnit : MonoBehaviour
 {
     [SerializeField] protected int mHealth = 100; 
+    virtual protected int Health
+    {
+        get { return mHealth; }
+        set { mHealth = value; }
+    }
     [SerializeField] protected float mSpeed = 2;
     [SerializeField] protected float mAttackSpeed = 1;
     [SerializeField] protected float mAttackRange = 10f;
@@ -66,9 +71,9 @@ public class BaseUnit : MonoBehaviour
 
     public virtual void ApplyDamage(int mDamage)
     {
-        mHealth -= mDamage;
+        Health -= mDamage;
 
-        if (mHealth <= 0 && mNotDead)
+        if (Health <= 0 && mNotDead)
         {
             mNotDead = false;
             Die();                       
