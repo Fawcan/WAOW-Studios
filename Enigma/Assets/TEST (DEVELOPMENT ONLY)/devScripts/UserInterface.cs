@@ -40,10 +40,7 @@ public class UserInterface : Player
 
         mHealthBarFull.fillAmount = mHealth;
         //mHealthBar.transform.localScale = new Vector3(Mathf.Clamp(mHealth, 0f, 1f), mHealthBar.transform.localScale.y, mHealthBar.transform.localScale.z);
-    }
-
-
-
+    
     }//End Update()
 
     ////This function is called by the 'testHealthBar' Script.
