@@ -24,6 +24,12 @@ public class StartMenu : MonoBehaviour {
         {
             SceneManager.LoadScene(1);
         }
+
+        if (Input.GetButtonDown("Back"))
+        {
+            Debug.Log("Quittat!");
+            Application.Quit();
+        }
     }
 
     //function to blink the text 
