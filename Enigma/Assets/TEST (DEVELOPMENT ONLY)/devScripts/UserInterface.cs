@@ -24,23 +24,24 @@ public class UserInterface : Player
     public int mCurrentHealth;
     Image mHealthBarFull;
     private bool mHasHealth = true;
+    private int mHPloss;
        
 
     
 	// Use this for initialization
-	void Awake()
+	void Start()
     {
         mHealthBarFull = GameObject.FindGameObjectWithTag("Canvas").transform.FindChild("HealthFull").GetComponent<Image>();
 
     }//End Awake()
 
     // Update is called once per frame
-    void FixedUpdate(float mHealth)
+    void Update()
     {
 
-        mHealthBarFull.fillAmount = mHealth;
+        //mHealthBarFull.fillAmount = mHealth--;
         //mHealthBar.transform.localScale = new Vector3(Mathf.Clamp(mHealth, 0f, 1f), mHealthBar.transform.localScale.y, mHealthBar.transform.localScale.z);
-    
+
     }//End Update()
 
     ////This function is called by the 'testHealthBar' Script.
@@ -48,5 +49,19 @@ public class UserInterface : Player
     //{
     //    mHealthBar.transform.localScale = new Vector3(Mathf.Clamp(mHealth, 0f, 1f), mHealthBar.transform.localScale.y, mHealthBar.transform.localScale.z);
     //}//End SetHealthBar
+
+    public void SetHealthBar(float mHealth)
+    {
+        mHealthBar.transform.localScale = new Vector3(Mathf.Clamp(mHealth, 0f, 1f), mHealthBar.transform.localScale.y, mHealthBar.transform.localScale.z);
+    }
+
+    public void DecreaseHealth()
+    {
+        if(mHasHealth)
+        {
+            mHPloss = mHealth - mDamage;
+            mHealthBarFull.fillAmount = mHealth;
+        }
+    }
 }
 
