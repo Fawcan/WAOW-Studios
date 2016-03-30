@@ -5,13 +5,18 @@ using System;
 
 //[RequireComponent(typeof(Animation))]
 
+[RequireComponent(typeof(AudioSource))]
 public class Player : BaseUnit
 {
+    [SerializeField]
+    AudioClip EnemyHit;
+    AudioSource audio;
     [SerializeField]
     private float mInteractDist = 2f; // for debug purposue
     public bool isGrounded;
     [SerializeField]
     protected UserInterface mUI;
+
 
     protected override int Health
     {
@@ -29,6 +34,8 @@ public class Player : BaseUnit
 
     public virtual void Start()
     {
+        audio = GetComponent<AudioSource>();
+
         mAnimatorPlayer = GetComponent<Animator>();
         base.mNotDead = true;
         //mAnimatorPlayer.SetBool("Die", false);
@@ -106,6 +113,7 @@ public class Player : BaseUnit
         if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z), forward, out mRayHit, 5f) && mRayHit.transform.tag == "Enemy")
         {
             Debug.Log("Träff! " + mRayHit.transform.name);
+            GetComponent<AudioSource>().PlayOneShot(EnemyHit);
 
             BaseUnit enemy = mRayHit.transform.GetComponent<BaseUnit>();
             if (enemy == null)

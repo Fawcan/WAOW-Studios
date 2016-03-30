@@ -6,9 +6,12 @@ using System.Collections;
 
 */
 
-
+[RequireComponent(typeof(AudioSource))]
 public class Enemy : BaseUnit
 {
+    [SerializeField]
+    AudioClip EnemyHit;
+    AudioSource audio;
     [SerializeField]
     protected NavMeshAgent agent;
     [SerializeField]
@@ -18,6 +21,11 @@ public class Enemy : BaseUnit
     private BaseUnit mTarget;
 
     private bool inCombat = false;
+
+    void Start()
+    {
+        audio = GetComponent<AudioSource>();
+    }
     public void Move(Vector3 destination)
     {        
             base.PlayAnimation("run");
@@ -46,6 +54,7 @@ public class Enemy : BaseUnit
         if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y + 0.2f, transform.position.z), forward, out mHit, 2f) && mHit.transform.tag == "Player")
         {
             Debug.Log("Enemy träff!");
+            GetComponent<AudioSource>().PlayOneShot(EnemyHit);
             BaseUnit player = mHit.transform.GetComponent<BaseUnit>();
             if (player == null)
                 Debug.LogError("Couldnt find the BaseUnit component");
