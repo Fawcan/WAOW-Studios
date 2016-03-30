@@ -16,6 +16,8 @@ public class Enemy : BaseUnit
     protected NavMeshAgent agent;
     [SerializeField]
     protected AnimationClip die;
+    [SerializeField]
+    protected AnimationClip idle;
 
 
     private BaseUnit mTarget;
@@ -24,6 +26,7 @@ public class Enemy : BaseUnit
 
     void Start()
     {
+        base.PlayAnimation("idle");
         audio = GetComponent<AudioSource>();
     }
     public void Move(Vector3 destination)
