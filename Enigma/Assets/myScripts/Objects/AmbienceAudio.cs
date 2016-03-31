@@ -15,7 +15,7 @@ public class AmbienceAudio : MonoBehaviour
     void Start()
     {
         audio = GetComponent<AudioSource>();
-        GetComponent<AudioSource>().PlayOneShot(FieldSound);
+        //GetComponent<AudioSource>().PlayOneShot(FieldSound);
         Debug.Log("Once");
     }
 
