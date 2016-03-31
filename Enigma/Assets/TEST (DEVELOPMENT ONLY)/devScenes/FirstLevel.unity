@@ -1760,6 +1760,10 @@ Prefab:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 1e02babcb71ae9f4c9fc35ba4c6f5a48, type: 2}
+    - target: {fileID: 9500000, guid: d25aeeffff38d35418e9a11fa109a7d2, type: 3}
+      propertyPath: m_CullingMode
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d25aeeffff38d35418e9a11fa109a7d2, type: 3}
   m_IsPrefabParent: 0
@@ -7583,6 +7587,10 @@ Prefab:
     - target: {fileID: 100008, guid: d25aeeffff38d35418e9a11fa109a7d2, type: 3}
       propertyPath: m_Name
       value: female_villager3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: d25aeeffff38d35418e9a11fa109a7d2, type: 3}
+      propertyPath: m_CullingMode
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d25aeeffff38d35418e9a11fa109a7d2, type: 3}
@@ -29601,7 +29609,7 @@ Prefab:
     - target: {fileID: 9500000, guid: e4683f2e8ef4d22478d4680de58b6305, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: ab9f24138db432a4ca2846f6096be822, type: 2}
+      objectReference: {fileID: 9100000, guid: aa9389242df501a498ac44354a7e31d8, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e4683f2e8ef4d22478d4680de58b6305, type: 3}
   m_IsPrefabParent: 0
