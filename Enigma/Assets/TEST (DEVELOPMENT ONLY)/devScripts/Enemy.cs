@@ -114,9 +114,14 @@ public class Enemy : BaseUnit
         base.PlayAnimation("die");
         mNotDead = false;
         base.Die();
-      
-                
-       // Destroy(gameObject);
+        StartCoroutine(StartDelay());
+
+        // Destroy(gameObject);
+    }
+    IEnumerator StartDelay()
+    {
+        yield return new WaitForSeconds(2.367f);
+        Destroy(gameObject);
     }
 
 }
