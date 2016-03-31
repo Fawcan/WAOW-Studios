@@ -18,11 +18,27 @@ public class Enemy : BaseUnit
     protected AnimationClip die;
     [SerializeField]
     protected AnimationClip idle;
+    [SerializeField]
+    protected UserInterface mUI;
 
 
     private BaseUnit mTarget;
 
     private bool inCombat = false;
+
+    protected override int Health
+    {
+        get
+        {
+            return base.Health;
+        }
+
+        set
+        {
+            base.Health = value;
+            mUI.CurrentHealth = Health;
+        }
+    }
 
     void Start()
     {
