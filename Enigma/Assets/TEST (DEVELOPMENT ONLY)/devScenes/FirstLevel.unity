@@ -24148,7 +24148,6 @@ Prefab:
     - target: {fileID: 499846, guid: c1bd09688f4492247af679b15f247af8, type: 2}
       propertyPath: m_RootOrder
       value: 3
-<<<<<<< HEAD
       objectReference: {fileID: 0}
     - target: {fileID: 5405540, guid: c1bd09688f4492247af679b15f247af8, type: 2}
       propertyPath: m_Constraints
@@ -24181,21 +24180,7 @@ Prefab:
     - target: {fileID: 13661524, guid: c1bd09688f4492247af679b15f247af8, type: 2}
       propertyPath: m_IsTrigger
       value: 1
-=======
->>>>>>> 3ed26932ace707aa52b8e96f726734fddac5ec94
-      objectReference: {fileID: 0}
-    - target: {fileID: 11402452, guid: c1bd09688f4492247af679b15f247af8, type: 2}
-      propertyPath: mUI
-      value: 
-      objectReference: {fileID: 1247633170}
-    - target: {fileID: 8255396, guid: c1bd09688f4492247af679b15f247af8, type: 2}
-      propertyPath: Loop
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: c1bd09688f4492247af679b15f247af8, type: 2}
-  m_IsPrefabParent: 0
---- !u!1001 &1211410186
+
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -33998,9 +33983,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1602980596}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
-<<<<<<< HEAD
-=======
---- !u!1001 &1604423013
+
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -34042,8 +34025,7 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 336fedd7da9ef4e408644cb808f11521, type: 2}
   m_IsPrefabParent: 0
->>>>>>> 3ed26932ace707aa52b8e96f726734fddac5ec94
---- !u!1001 &1606593425
+
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
