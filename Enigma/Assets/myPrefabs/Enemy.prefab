@@ -61,6 +61,7 @@ GameObject:
   - 195: {fileID: 19541310}
   - 114: {fileID: 11496664}
   - 114: {fileID: 11406770}
+  - 82: {fileID: 8261260}
   m_Layer: 9
   m_Name: Enemy
   m_TagString: Enemy
@@ -1052,7 +1053,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 102804}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -41.38777, y: 5, z: 176.96342}
+  m_LocalPosition: {x: -41.38777, y: 5, z: 177.27}
   m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
   m_Children:
   - {fileID: 415168}
@@ -1404,6 +1405,80 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!82 &8261260
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 102804}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 0beceb6d2f0eca74fae706518054f8b1, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!111 &11125258
 Animation:
   m_ObjectHideFlags: 1
@@ -1489,8 +1564,10 @@ MonoBehaviour:
   mNotDead: 1
   mPlayer: {fileID: 0}
   mEnemy: {fileID: 0}
+  EnemyHit: {fileID: 8300000, guid: 0beceb6d2f0eca74fae706518054f8b1, type: 3}
   agent: {fileID: 19541310}
   die: {fileID: 7400010, guid: 88b03dd1e1d8d1240a7d4afd3f49af32, type: 3}
+  idle: {fileID: 7400004, guid: 86c591ebd74142c4d93243d9fa9544da, type: 3}
 --- !u!114 &11496664
 MonoBehaviour:
   m_ObjectHideFlags: 1

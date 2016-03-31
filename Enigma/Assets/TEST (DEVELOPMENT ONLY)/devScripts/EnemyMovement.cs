@@ -26,10 +26,11 @@ public class EnemyMovement : MonoBehaviour
             Debug.Log("Cant find player");
     }
 
-    void LateUpdate()
+    void Start()
     {
-        
+        mAnimation.Play("waitingforbattle", PlayMode.StopAll);
     }
+
 
     void Update()
     {
