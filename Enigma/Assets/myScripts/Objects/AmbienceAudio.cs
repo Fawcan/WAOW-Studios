@@ -9,14 +9,12 @@ public class AmbienceAudio : MonoBehaviour
     AudioClip FieldSound;
     [SerializeField]
     AudioClip CaveAmbience;
-    AudioSource FieldAudio;
-    AudioSource CaveAudio;
+    AudioSource audio;
     bool mCavePlaying = false;
 
     void Start()
     {
-        FieldAudio = GetComponent<AudioSource>();
-        CaveAudio = GetComponent<AudioSource>();
+        audio = GetComponent<AudioSource>();
         GetComponent<AudioSource>().PlayOneShot(FieldSound);
         Debug.Log("Once");
     }
@@ -25,11 +23,11 @@ public class AmbienceAudio : MonoBehaviour
     {
         if (StartCave.CompareTag("Player") && !mCavePlaying)
         {
-            FieldAudio.Stop();
+            audio.Stop();
 
             mCavePlaying = true;
             GetComponent<AudioSource>().PlayOneShot(CaveAmbience);
-            CaveAudio.loop = true;
+            audio.loop = true;
             Debug.Log("Cave");
         }
     }
@@ -39,9 +37,9 @@ public class AmbienceAudio : MonoBehaviour
         {
             mCavePlaying = false;
             //GetComponent<AudioSource>().PlayOneShot(CaveAmbience);
-            CaveAudio.Stop();
+            audio.Stop();
             GetComponent<AudioSource>().PlayOneShot(FieldSound);
-            FieldAudio.loop = true;
+            audio.loop = true;
             Debug.Log("Field");
         }
     }
