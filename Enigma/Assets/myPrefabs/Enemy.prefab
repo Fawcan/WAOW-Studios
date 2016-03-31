@@ -52,24 +52,10 @@ GameObject:
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-<<<<<<< HEAD
-  - 4: {fileID: 475962}
-  - 111: {fileID: 11186068}
-  - 54: {fileID: 5411570}
-  - 136: {fileID: 13610748}
-  - 195: {fileID: 19541310}
-  - 114: {fileID: 11496664}
-  - 114: {fileID: 11406770}
-  - 82: {fileID: 8261260}
-  m_Layer: 9
-  m_Name: Enemy
-  m_TagString: Enemy
-=======
   - 4: {fileID: 450688}
   m_Layer: 0
   m_Name: R_Shin
   m_TagString: Untagged
->>>>>>> 3ed26932ace707aa52b8e96f726734fddac5ec94
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1027,17 +1013,10 @@ Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 102804}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -41.38777, y: 5, z: 177.27}
-  m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
-=======
   m_GameObject: {fileID: 186156}
   m_LocalRotation: {x: -0.20560032, y: 0.4933981, z: 0.0493836, w: 0.8437109}
   m_LocalPosition: {x: -0.07086522, y: -0.0000000023841857, z: 0.000000076293944}
   m_LocalScale: {x: 1, y: 1.0000001, z: 1}
->>>>>>> 3ed26932ace707aa52b8e96f726734fddac5ec94
   m_Children:
   - {fileID: 419930}
   m_Father: {fileID: 465300}
@@ -1426,20 +1405,12 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
-<<<<<<< HEAD
---- !u!82 &8261260
-=======
 --- !u!82 &8242036
->>>>>>> 3ed26932ace707aa52b8e96f726734fddac5ec94
 AudioSource:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 102804}
-=======
   m_GameObject: {fileID: 193304}
->>>>>>> 3ed26932ace707aa52b8e96f726734fddac5ec94
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
@@ -1508,9 +1479,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
-<<<<<<< HEAD
---- !u!111 &11125258
-=======
 --- !u!111 &11108460
 Animation:
   m_ObjectHideFlags: 1
@@ -1526,7 +1494,6 @@ Animation:
   m_AnimatePhysics: 0
   m_CullingType: 0
 --- !u!111 &11128804
->>>>>>> 3ed26932ace707aa52b8e96f726734fddac5ec94
 Animation:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -1613,32 +1580,10 @@ MonoBehaviour:
   mPlayer: {fileID: 0}
   mEnemy: {fileID: 0}
   EnemyHit: {fileID: 8300000, guid: 0beceb6d2f0eca74fae706518054f8b1, type: 3}
-<<<<<<< HEAD
-  agent: {fileID: 19541310}
-  die: {fileID: 7400010, guid: 88b03dd1e1d8d1240a7d4afd3f49af32, type: 3}
-  idle: {fileID: 7400004, guid: 86c591ebd74142c4d93243d9fa9544da, type: 3}
---- !u!114 &11496664
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 102804}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3e2b23ea5359284290c3650a253a7d9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destination: {fileID: 0}
-  mPlayer: {fileID: 0}
-  mTurnSpeed: 100
-  mDetectionRange: 8
---- !u!136 &13610748
-=======
   agent: {fileID: 19575670}
   die: {fileID: 7400010, guid: 88b03dd1e1d8d1240a7d4afd3f49af32, type: 3}
   idle: {fileID: 7400004, guid: 86c591ebd74142c4d93243d9fa9544da, type: 3}
 --- !u!136 &13678972
->>>>>>> 3ed26932ace707aa52b8e96f726734fddac5ec94
 CapsuleCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
